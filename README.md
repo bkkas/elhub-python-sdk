@@ -6,11 +6,13 @@
 [![codecov](https://codecov.io/gh/bkkas/elhub-python-sdk/branch/main/graphs/badge.svg)](https://codecov.io/github/bkkas/elhub-python-sdk)
 
 
-
 Welcome to the **non official** Open Source Python SDK for ElHub API.
 
-The objective is to create an SDK that will speed up and improve the quality of the development against the ElHub API.
+The objective is to create an SDK that will improve the speed and quality of the development against the ElHub API,
+supported by the community.
 
+We are at a very early stage of development, we welcome all the contributions in any kind, please have a look
+at the following if you are interested.
 
 
 ## Contributing
@@ -23,7 +25,6 @@ The objective is to create an SDK that will speed up and improve the quality of 
 ## License
 
 GPL-3.0
-
 
 
 ## Credits
