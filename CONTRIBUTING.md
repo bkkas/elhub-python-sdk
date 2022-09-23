@@ -74,7 +74,7 @@ Ready to contribute? Here's how to set up `elhub-python-sdk` for local developme
    tests, including testing other Python versions, with tox:
 
     ```
-    $ poetry run tox
+    $ poetry run tox -r
     ```
 
 7. Commit your changes and push your branch to GitHub:
