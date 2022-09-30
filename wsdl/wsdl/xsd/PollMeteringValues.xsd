@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" xmlns:ns1="urn:no:elhub:emif:metering:RequestCollectedData:v2" xmlns:ns2="urn:no:elhub:emif:metering:NotifyValidatedDataForBillingEnergy:v2" xmlns:ns3="urn:no:elhub:emif:wsdl:common:v2" xmlns:ns4="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:ns5="urn:no:elhub:emif:common:BusinessDataType:v2" xmlns:ns6="urn:no:elhub:emif:Acknowledgement:v2" xmlns:ns7="urn:no:elhub:emif:metering:PriceVolumeCombinationForReconciliation:v2" xmlns:ns8="urn:no:elhub:emif:PollForData:v2" xmlns:ns9="urn:no:elhub:emif:necs:ConsumptionToNECS:v2" xmlns:ns10="urn:no:elhub:emif:metering:CollectedData:v2" targetNamespace="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:metering:RequestCollectedData:v2" schemaLocation="../../bim/metering/RequestCollectedData.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:metering:NotifyValidatedDataForBillingEnergy:v2" schemaLocation="../../bim/metering/NotifyValidatedDataForBillingEnergy.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:wsdl:common:v2" schemaLocation="common.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:common:BusinessDataType:v2" schemaLocation="../../bim/common/Elhub_BusinessDataType.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:metering:PriceVolumeCombinationForReconciliation:v2" schemaLocation="../../bim/metering/PriceVolumeCombinationForReconciliation.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:Acknowledgement:v2" schemaLocation="../../bim/Acknowledgement.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:PollForData:v2" schemaLocation="../../bim/PollForData.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:metering:CollectedData:v2" schemaLocation="../../bim/metering/CollectedData.xsd"/>
+	<xsd:element name="PollForDataRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns8:PollForData"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PollForDataResponse" nillable="true">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Identification" type="ns5:UUIDType"/>
+				<xsd:element name="ResultDataSet" type="tns:ResultDataSetType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ResultDataSetType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="ns2:NotifyValidatedDataForBillingEnergy"/>
+			<xsd:element ref="ns10:CollectedData"/>
+			<xsd:element ref="ns7:PriceVolumeCombinationForReconciliation"/>
+			<xsd:element ref="ns1:RequestCollectedData"/>
+			<xsd:element ref="ns6:Acknowledgement"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:element name="AcknowledgePollRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns6:Acknowledgement"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:RequestUpfrontMeteringPointCharacteristics  xmlns:rsm="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2 ../bim/query/RequestUpfrontMeteringPointCharacteristics.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655445910</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E10</abie:DocumentType>
+		<abie:Creation>2015-04-30T13:54:12+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>			
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-611</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMPEvent>
+		<abie:ConsumerInvolvedCustomerParty>
+			<abie:Identification schemeAgencyIdentifier="82">984321567</abie:Identification>
+		</abie:ConsumerInvolvedCustomerParty>
+		<abie:MPAddressMeteringPointAddress>
+			<abie:StreetName>Storg*</abie:StreetName>
+			<abie:BuildingNumber>2*</abie:BuildingNumber>
+			<abie:Postcode>5000</abie:Postcode>
+		</abie:MPAddressMeteringPointAddress>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>008756432</abie:MeterIdentification>
+		</abie:MeteringInstallationMeterFacility>
+	</rsm:PayloadMPEvent>
+</rsm:RequestUpfrontMeteringPointCharacteristics>

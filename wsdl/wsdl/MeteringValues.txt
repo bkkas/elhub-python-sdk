@@ -1,0 +1,249 @@
+
+Prefixes:
+     xsd: http://www.w3.org/2001/XMLSchema
+     ns0: urn:no:elhub:emif:wsdl:meteringvalues:v2
+     ns1: urn:no:elhub:emif:metering:CollectedData:v2
+     ns2: urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2
+     ns3: urn:no:elhub:emif:common:BusinessDataType:v2
+     ns4: urn:no:elhub:emif:Acknowledgement:v2
+     ns5: urn:no:elhub:emif:wsdl:common:v2
+
+Global elements:
+     
+     ns4:Acknowledgement(ns4:Acknowledgement)
+     ns1:CollectedData(ns1:CollectedData)
+     ns5:ElhubSOAPFault(ns5:ElhubSOAPFaultType)
+     ns0:AcknowledgeRequest(Acknowledgement: ns4:Acknowledgement)
+     ns0:CollectedDataRequest(CollectedData: ns1:CollectedData)
+
+Global types:
+     xsd:anyType
+     xsd:ENTITIES
+     xsd:ENTITY
+     xsd:ID
+     xsd:IDREF
+     xsd:IDREFS
+     xsd:NCName
+     xsd:NMTOKEN
+     xsd:NMTOKENS
+     xsd:NOTATION
+     xsd:Name
+     xsd:QName
+     xsd:anySimpleType
+     xsd:anyURI
+     xsd:base64Binary
+     xsd:boolean
+     xsd:byte
+     xsd:date
+     xsd:dateTime
+     xsd:decimal
+     xsd:double
+     xsd:duration
+     xsd:float
+     xsd:gDay
+     xsd:gMonth
+     xsd:gMonthDay
+     xsd:gYear
+     xsd:gYearMonth
+     xsd:hexBinary
+     xsd:int
+     xsd:integer
+     xsd:language
+     xsd:long
+     xsd:negativeInteger
+     xsd:nonNegativeInteger
+     xsd:nonPositiveInteger
+     xsd:normalizedString
+     xsd:positiveInteger
+     xsd:short
+     xsd:string
+     xsd:time
+     xsd:token
+     xsd:unsignedByte
+     xsd:unsignedInt
+     xsd:unsignedLong
+     xsd:unsignedShort
+     ns4:Acknowledgement(Header: ns2:Elhub_HeaderType, ProcessEnergyContext: ns2:Elhub_EnergyContextType, PayloadResponseEvent: ns2:Elhub_Acknowledgement)
+     ns2:Elhub_Acknowledgement(StatusType: ns3:AcknowledgementStatusType, ResponseReasonType: ns3:Elhub_ResponseReasonCodeType[], OriginalBusinessDocumentReference: ns3:UUIDType, OriginalPayloadReference: ns3:UUIDType)
+     ns2:Elhub_CollectedDataMeteringPointCharacteristicType(Direction: ns3:DirectionType)
+     ns2:Elhub_CollectedDataType(Identification: ns3:UUIDType, RegistrationDateTime: ns3:Elhub_dateTime9DecType, ObservationPeriodTimeSeriesPeriod: ns2:Elhub_TimeSeriesPeriodType, ProductIncludedProductCharacteristics: ns2:Elhub_ProductCharacteristic, MPDetailMeasurementMeteringPointCharacteristic: ns2:Elhub_CollectedDataMeteringPointCharacteristicType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, ({Observation: ns2:QuantityMeteredCollect[]} | {ProfiledObservation: ns2:QuantityProfiledCollect} | {AnnualPeriodEstimatedMetrics: ns2:Elhub_EstimatedAnnualVolumeType}))
+     ns2:Elhub_Communication(CommunicationChannel: ns3:CommunicationChannelType, CompleteNumber: ns3:String100Type, Description: ns3:String100Type)
+     ns2:Elhub_ConfirmEndOfSupplyType(EndOfOccurrence: ns3:Elhub_dateTimeType, OriginalBusinessDocumentReference: ns3:UUIDType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_ConfirmStartOfSupplyType(StartOfOccurrence: ns3:Elhub_dateTimeType, OriginalBusinessDocumentReference: ns3:UUIDType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_CustomerPartyEndOfSupplyType(Identification: ns3:Elhub_EndUserIdentifierType, Name: ns3:String80Type, GivenName: ns3:String80Type, FamilyName: ns3:String40Type, Communication: ns2:Elhub_Communication[])
+     ns2:Elhub_CustomerPartyNotifyType(Identification: ns3:Elhub_EndUserIdentifierType, Name: ns3:String80Type, GivenName: ns3:String80Type, FamilyName: ns3:String40Type, ExtendedStorageMeteringValues: ns3:Elhub_boolean, Communication: ns2:Elhub_Communication[])
+     ns2:Elhub_CustomerPartyStartOfSupplyType(Identification: ns3:Elhub_EndUserIdentifierType, Name: ns3:String80Type, GivenName: ns3:String80Type, FamilyName: ns3:String40Type, ExtendedStorageMeteringValues: ns3:Elhub_boolean, NACE_DivisionCode: ns3:String10Type, Communication: ns2:Elhub_Communication[])
+     ns2:Elhub_CustomerPartyType(Identification: ns3:Elhub_EndUserIdentifierType, Name: ns3:String80Type, GivenName: ns3:String80Type, FamilyName: ns3:String40Type, ExtendedStorageMeteringValues: ns3:Elhub_boolean, Communication: ns2:Elhub_Communication[])
+     ns2:Elhub_DetailMeteringPointCharacteristicType(MeteringPointType: ns3:Elhub_MeteringPointTypeCodeType, MeteringPointSubTypeConsumption: ns3:ConsumptionCodeType, MeteringPointSubTypeProduction: ns3:ProductionCodeType, MeterReadingCharacteristics: ns3:Elhub_MeterReadingCharacteristicsType, SettlementMethodType: ns3:Elhub_SettlementMethodCodeType, PhysicalStatusType: ns3:Elhub_PhysicalStatusCodeType, ContractedConnectionCapacityValue: ns3:integer9, InstalledCapacity: ns3:integer9, MeterReadingStartDate: ns3:Elhub_dateTimeType, MeterReadingFrequencyDuration: ns3:integer4, Description: ns3:String80Type, Priority: ns3:PriorityCodeType, BlockedForSwitching: ns3:Elhub_boolean, MeterReadingOccurrence: ns3:MeterReadingOccurrenceType)
+     ns2:Elhub_EndUserIdentificationType(Identification: ns3:Elhub_EndUserIdentifierType)
+     ns2:Elhub_EndUserType(ExtendedStorageMeteringValues: ns3:Elhub_boolean)
+     ns2:Elhub_EnergyContextType(EnergyBusinessProcess: ns3:Elhub_BusinessProcessType, EnergyBusinessProcessRole: ns3:Elhub_BusinessProcessRoleType, EnergyIndustryClassification: ns3:Elhub_EnergyIndustryClassificationType)
+     ns2:Elhub_EnergyObservationNECSType(GeneratedQuantity: ns3:long12)
+     ns2:Elhub_EnergyPartyType(Identification: ns3:Elhub_EnergyPartyIdentifierType)
+     ns2:Elhub_EstimatedAnnualVolumeDetailType(Total: ns3:long12, CalculationMethod: ns3:CalculationMethod)
+     ns2:Elhub_EstimatedAnnualVolumeType(Total: ns3:long12)
+     ns2:Elhub_HeaderType(Identification: ns3:UUIDType, DocumentType: ns3:Elhub_DocumentNameCodeType, Creation: ns3:Elhub_dateTime9DecType, RequestPositiveAcknowledgement: ns3:Elhub_boolean, PhysicalSenderEnergyParty: ns2:Elhub_EnergyPartyType, JuridicalSenderEnergyParty: ns2:Elhub_EnergyPartyType, JuridicalRecipientEnergyParty: ns2:Elhub_EnergyPartyType)
+     ns2:Elhub_InvoiceeAddressType(AddressType: ns3:AddressTypeType, StreetName: ns3:String150Type, StreetCode: ns3:String10Type, BuildingNumber: ns3:String10Type, FloorIdentification: ns3:String10Type, RoomIdentification: ns3:String10Type, Postcode: ns3:String10Type, CityName: ns3:String50Type, CitySubDivisionName: ns3:String50Type, MunicipalityCode: ns3:String10Type, CountryCode: ns3:Elhub_CountryCodeType, AddressFreeForm: ns3:String100Type, PostOfficeBox: ns3:String40Type, CareOf: ns3:String80Type, AttentionOf: ns3:String80Type, OnBehalf: ns3:String80Type)
+     ns2:Elhub_InvoiceePartyType(Name: ns3:String80Type, GivenName: ns3:String40Type, FamilyName: ns3:String80Type)
+     ns2:Elhub_MPAddressCadastralType(Gnr: ns3:String10Type, Bnr: ns3:String10Type, Snr: ns3:String10Type, Fnr: ns3:String10Type)
+     ns2:Elhub_MPAddressSearchType(StreetName: ns3:String150Type, BuildingNumber: ns3:String10Type, Postcode: ns3:String10Type)
+     ns2:Elhub_MPAddressType(StreetName: ns3:String150Type, StreetCode: ns3:String10Type, BuildingNumber: ns3:String10Type, FloorIdentification: ns3:String10Type, RoomIdentification: ns3:String10Type, Postcode: ns3:String10Type, CityName: ns3:String50Type, CitySubDivisionName: ns3:String50Type, MunicipalityCode: ns3:String10Type, CountryCode: ns3:Elhub_CountryCodeType, AddressFreeForm: ns3:String100Type)
+     ns2:Elhub_MPCustomerSearchType(Identification: ns3:Elhub_EndUserIdentifierType, Name: ns3:String80Type, GivenName: ns3:String80Type, FamilyName: ns3:String40Type, PreviousEndUser: ns3:Elhub_boolean)
+     ns2:Elhub_MeasurementDefinitionType(ProductIncludedProductCharacteristics: ns2:Elhub_ProductCharacteristic, Direction: ns3:DirectionType, Resolution: ns3:ChannelResolutionType, ExcludeFromSettlement: ns3:Elhub_boolean)
+     ns2:Elhub_MeterFacilityType(MeterIdentification: ns3:String18Type, NumberOfDigits: ns3:integer2, Constant: ns3:decimal125, MeterLocation: ns3:String80Type)
+     ns2:Elhub_MeterSearchType(MeterIdentification: ns3:String18Type)
+     ns2:Elhub_MeteringGridAreaType(Identification: ns3:Elhub_MeteringGridAreaIdentifierType)
+     ns2:Elhub_MeteringPointCharacteristicSimpleType(MeteringPointType: ns3:Elhub_MeteringPointTypeCodeType, BusinessType: ns3:Elhub_BusinessTypeType)
+     ns2:Elhub_MeteringPointGeographicalCoordinateType(Latitude: ns3:decimal85, Longitude: ns3:decimal85)
+     ns2:Elhub_MeteringPointType(Identification: ns3:Elhub_MeteringPointIdentifierType)
+     ns2:Elhub_NACEConsType(ConsumptionCode: ns3:String10Type, NACE_DivisionCode: ns3:String10Type)
+     ns2:Elhub_NotifyCustomerInformationType(OriginalBusinessDocumentReference: ns3:UUIDType, StartOfOccurrence: ns3:Elhub_dateTimeType, SnapShotOccurrence: ns3:Elhub_dateTime9DecType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyNotifyType, ConsumerInvolvedCustomerAddress: ns2:Elhub_InvoiceeAddressType[])
+     ns2:Elhub_NotifyEndOfSupplyEventType(EndOfOccurrence: ns3:Elhub_dateTimeType, ReasonForTransaction: ns3:EndReasonType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyEndOfSupplyType, ConsumerInvolvedCustomerAddress: ns2:Elhub_InvoiceeAddressType[])
+     ns2:Elhub_NotifyMeteringPointCharacteristicsEventType(Identification: ns3:UUIDType, OriginalBusinessDocumentReference: ns3:UUIDType, StartOfOccurrence: ns3:Elhub_dateTimeType, EndOfOccurrence: ns3:Elhub_dateTimeType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, MPAddressMeteringPointAddress: ns2:Elhub_MPAddressType, MPPositionMeteringPointGeographicalCoordinate: ns2:Elhub_MeteringPointGeographicalCoordinateType, MPAddressCadastral: ns2:Elhub_MPAddressCadastralType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyNotifyType, MeteringGridAreaUsedDomainLocation: ns2:Elhub_MeteringGridAreaType, MpDetailMeteringPointCharacteristic: ns2:Elhub_DetailMeteringPointCharacteristicType, AnnualPeriodEstimatedMetrics: ns2:Elhub_EstimatedAnnualVolumeDetailType, MeteringInstallationMeterFacility: ns2:Elhub_MeterFacilityType, MPTaxationProfile: ns2:Elhub_TaxationProfileMeteringPointType, MeasurementDefinition: ns2:Elhub_MeasurementDefinitionType[])
+     ns2:Elhub_NotifyStartOfSupplyEventType(StartOfOccurrence: ns3:Elhub_dateTimeType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, MeteringGridAreaUsedDomainLocation: ns2:Elhub_MeteringGridAreaType, MPAddressMeteringPointAddress: ns2:Elhub_MPAddressType, MPPositionMeteringPointGeographicalCoordinate: ns2:Elhub_MeteringPointGeographicalCoordinateType, MPAddressCadastral: ns2:Elhub_MPAddressCadastralType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyStartOfSupplyType, ConsumerInvolvedCustomerAddress: ns2:Elhub_InvoiceeAddressType[], MPDetailMeteringPointCharacteristics: ns2:Elhub_DetailMeteringPointCharacteristicType, AnnualPeriodEstimatedMetrics: ns2:Elhub_EstimatedAnnualVolumeDetailType, MeteringInstallationMeterFacility: ns2:Elhub_MeterFacilityType, MPTaxationProfile: ns2:Elhub_TaxationProfileMeteringPointType, MeasurementDefinition: ns2:Elhub_MeasurementDefinitionType[])
+     ns2:Elhub_NotifyValidatedDataForBillingEnergyType(Identification: ns3:UUIDType, RegistrationDateTime: ns3:Elhub_dateTime9DecType, InsertDateTime: ns3:Elhub_dateTime9DecType, RequestReference: ns3:UUIDType, ObservationPeriodTimeSeriesPeriod: ns2:Elhub_TimeSeriesPeriodType, ProductIncludedProductCharacteristics: ns2:Elhub_ProductCharacteristic, MPDetailMeasurementMeteringPointCharacteristic: ns2:Elhub_ValidatedDataMeteringPointCharacteristicType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, MeteringGridAreaUsedDomainLocation: ns2:Elhub_MeteringGridAreaType, BalanceResponsibleInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, ({Observation: ns2:QuantityMeteredNotify[]} | {ProfiledObservation: ns2:QuantityProfiledNotify}))
+     ns2:Elhub_ObservationPeriodPriceType(BalanceVolume: ns3:decimal153Negative, BalanceAmount: ns3:decimal122Negative, Sequence: ns3:integer4)
+     ns2:Elhub_PeriodType(Start: ns3:Elhub_dateTimeType, End: ns3:Elhub_dateTimeType)
+     ns2:Elhub_PollForData(EnergyParty: ns2:Elhub_EnergyPartyType, EnergyBusinessProcessRole: ns3:Elhub_BusinessProcessRoleType)
+     ns2:Elhub_PriceVolumeCombinationFoReconciliationType(Identification: ns3:UUIDType, Currency: ns3:Elhub_CurrencyCodeType, ReconciliationDate: ns3:Elhub_dateTimeType, RequestReference: ns3:UUIDType, ObservationPeriodTimeSeriesPeriod: ns2:Elhub_TimeSeriesPeriodReconciliationType, ProductIncludedProductCharacteristics: ns2:Elhub_ProductCharacteristic, MPDetailMeasurementMeteringPointCharacteristic: ns2:Elhub_ReconciliationMeteringPointCharacteristicType, MeteringGridAreaUsedDomainLocation: ns2:Elhub_MeteringGridAreaType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, Observation: ns2:Elhub_ObservationPeriodPriceType[])
+     ns2:Elhub_ProductCharacteristic(Identification: ns3:Elhub_ProductIdentifierType, UnitType: ns3:Elhub_UnitType)
+     ns2:Elhub_ReconciliationMeteringPointCharacteristicType(Direction: ns3:DirectionType, BusinessType: ns3:Elhub_BusinessTypeType)
+     ns2:Elhub_RejectEventSingleMPType(OriginalBusinessDocumentReference: ns3:UUIDType, ResponseReasonType: ns3:Elhub_ResponseReasonCodeType[], MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_RejectEventType(OriginalBusinessDocumentReference: ns3:UUIDType, ResponseReasonType: ns3:Elhub_ResponseReasonCodeType[])
+     ns2:Elhub_ReminderType(Period: ns2:Elhub_PeriodType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_RequestCollectedDataType(ReminderType: ns3:ReminderType, Reminder: ns2:Elhub_ReminderType[])
+     ns2:Elhub_RequestDataFromElhubType(QueryTypeCode: ns3:QueryCategoryCodeType, SnapShotOccurrence: ns3:Elhub_dateTime9DecType, BusinessType: ns3:Elhub_BusinessTypeType, Period: ns2:Elhub_PeriodType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, MeteringGridAreaDomainLocation: ns2:Elhub_MeteringGridAreaType)
+     ns2:Elhub_RequestEndOfSupplyType(EndOfOccurrence: ns3:Elhub_dateTimeType, OriginalBusinessDocumentReference: ns3:UUIDType, ReasonForTransaction: ns3:EndReasonType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyEndOfSupplyType, ConsumerInvolvedCustomerAddress: ns2:Elhub_InvoiceeAddressType[])
+     ns2:Elhub_RequestStartOfSupplyType(StartOfOccurrence: ns3:Elhub_dateTimeType, OriginalBusinessDocumentReference: ns3:UUIDType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, BalanceSupplierInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyStartOfSupplyType, ConsumerInvolvedCustomerAddress: ns2:Elhub_InvoiceeAddressType[])
+     ns2:Elhub_RequestToElhubType(QueryCategory: ns3:String18Type, Subject: ns3:String40Type, Request: ns3:String300Type, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_RequestToGridAccessProviderType(QueryCategory: ns3:String18Type, Subject: ns3:String40Type, RequestPublic: ns3:String300Type, RequestPrivate: ns3:String300Type, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_RequestUpdateCustomerInformationType(StartOfOccurrence: ns3:Elhub_dateTimeType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, ConsumerInvolvedCustomerParty: ns2:Elhub_CustomerPartyType, ConsumerInvolvedCustomerAddress: ns2:Elhub_InvoiceeAddressType[])
+     ns2:Elhub_RequestUpdateMasterDataMeteringPointType(StartOfOccurrence: ns3:Elhub_dateTimeType, Identification: ns3:UUIDType, OriginalBusinessDocumentReference: ns3:UUIDType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, MeteringGridAreaUsedDomainLocation: ns2:Elhub_MeteringGridAreaType, MPAddressMeteringPointAddress: ns2:Elhub_MPAddressType, MPPositionMeteringPointGeographicalCoordinate: ns2:Elhub_MeteringPointGeographicalCoordinateType, MPAddressCadastral: ns2:Elhub_MPAddressCadastralType, MpDetailMeteringPointCharacteristic: ns2:Elhub_DetailMeteringPointCharacteristicType, AnnualPeriodEstimatedMetrics: ns2:Elhub_EstimatedAnnualVolumeDetailType, MeteringInstallationMeterFacility: ns2:Elhub_MeterFacilityType, MPTaxationProfile: ns2:Elhub_TaxationProfileMeteringPointType, MeasurementDefinition: ns2:Elhub_MeasurementDefinitionType[])
+     ns2:Elhub_RequestUpfrontMeteringPointCharacteristicsType(MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, ConsumerInvolvedCustomerParty: ns2:Elhub_EndUserIdentificationType, MPAddressMeteringPointAddress: ns2:Elhub_MPAddressSearchType, MeteringInstallationMeterFacility: ns2:Elhub_MeterSearchType)
+     ns2:Elhub_ResponseFromElhubType(OriginalBusinessDocumentReference: ns3:UUIDType, QueryCategory: ns3:String18Type, Subject: ns3:String40Type, Request: ns3:String300Type, Feedback: ns3:String300Type, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_ResponseFromGridAccessProviderType(OriginalBusinessDocumentReference: ns3:UUIDType, QueryCategory: ns3:String18Type, Subject: ns3:String40Type, RequestPublic: ns3:String300Type, RequestPrivate: ns3:String300Type, FeedbackPublic: ns3:String300Type, FeedbackPrivate: ns3:String300Type, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType)
+     ns2:Elhub_ResponseUpfrontMeteringPointCharacteristicsType(OriginalBusinessDocumentReference: ns3:UUIDType, SnapShotOccurrence: ns3:Elhub_dateTime9DecType, LastMeterReadingDate: ns3:Elhub_dateTimeType, DeliveryObligationDate: ns3:Elhub_dateTimeType, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, GridAccessProviderInvolvedEnergyParty: ns2:Elhub_EnergyPartyType, MPAddressMeteringPointAddress: ns2:Elhub_MPAddressType, MPAddressCadastral: ns2:Elhub_MPAddressCadastralType, MeteringGridAreaUsedDomainLocation: ns2:Elhub_MeteringGridAreaType, MpDetailMeteringPointCharacteristic: ns2:Elhub_DetailMeteringPointCharacteristicType, MeteringInstallationMeterFacility: ns2:Elhub_MeterFacilityType, AnnualPeriodEstimatedMetrics: ns2:Elhub_EstimatedAnnualVolumeType, MPTaxationProfile: ns2:Elhub_NACEConsType)
+     ns2:Elhub_TaxationProfileMeteringPointType(VATCode: ns3:VATCode, EnovaFeeType: ns3:EnovaFeeType, EnovaFee: ns3:decimal52, ElFee: ns3:decimal52, ElCertificateShare: ns3:decimal52, ConsumptionCode: ns3:String10Type, NACE_DivisionCode: ns3:String10Type)
+     ns2:Elhub_TimeSeriesPeriodReconciliationType(ResolutionDuration: ns3:DurationCodeType, Start: ns3:Elhub_dateTimeType, End: ns3:Elhub_dateTimeType)
+     ns2:Elhub_TimeSeriesPeriodType(ResolutionDuration: ns3:DurationCodeType, Start: ns3:Elhub_dateTimeType, MeterReadingStart: ns3:decimal153, End: ns3:Elhub_dateTimeType, MeterReadingEnd: ns3:decimal153)
+     ns2:Elhub_UpdateThirdPartyAccessType(UpdateIndicator: ns3:AddDeleteUpdate, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, ConsumerInvolvedCustomerParty: ns2:Elhub_EndUserType)
+     ns2:Elhub_ValidatedDataMeteringPointCharacteristicType(Direction: ns3:DirectionType, BusinessType: ns3:Elhub_BusinessTypeType)
+     ns2:QuantityMeteredCollect(({Metered: ns3:MeteredQuantityType} | {Estimated: ns3:EstimatedQuantityType} | {Temporary: ns3:TemporaryQuantityType}), Sequence: ns3:integer4)
+     ns2:QuantityMeteredNotify(({Metered: ns3:MeteredQuantityType} | {Estimated: ns3:EstimatedQuantityType} | {Temporary: ns3:TemporaryQuantityType} | {Calculated: ns3:CalculatedQuantityType}), Sequence: ns3:integer4)
+     ns2:QuantityProfiledCollect(({Metered: ns3:ProfiledMeteredQuantityType} | {Stipulated: ns3:ProfiledStipulatedQuantityType} | {Withdrawn: ns3:Elhub_boolean} | {MeterIndex: ns3:ProfiledMeterIndexType}))
+     ns2:QuantityProfiledNotify(({Metered: ns3:ProfiledMeteredQuantityType} | {Estimated: ns3:ProfiledEstimatedQuantityType} | {Stipulated: ns3:ProfiledStipulatedQuantityType} | {Withdrawn: ns3:Elhub_boolean}))
+     ns3:AcknowledgementStatus
+     ns3:AcknowledgementStatusType(ns3:AcknowledgementStatus, listAgencyIdentifier: ns3:listAgencyIdentifierType6)
+     ns3:AddDeleteUpdate
+     ns3:AddressTypeType
+     ns3:BRSIdentification
+     ns3:BusinessTypeCode
+     ns3:CalculatedQuantityType(ns3:decimal153Negative, ImbalanceSettlement: xsd:boolean)
+     ns3:CalculationMethod
+     ns3:ChannelResolutionType
+     ns3:CommunicationChannelType
+     ns3:ConsumptionCode
+     ns3:ConsumptionCodeType(ns3:ConsumptionCode, listAgencyIdentifier: ns3:listAgencyIdentifierType89)
+     ns3:CountryCode
+     ns3:CurrencyCode
+     ns3:DirectionType
+     ns3:DurationCodeType
+     ns3:Elhub_BusinessProcessRole
+     ns3:Elhub_BusinessProcessRoleType(ns3:Elhub_BusinessProcessRole, listAgencyIdentifier: ns3:listAgencyIdentifierType89_6)
+     ns3:Elhub_BusinessProcessType(ns3:BRSIdentification, listAgencyIdentifier: ns3:listAgencyIdentifierType89)
+     ns3:Elhub_BusinessTypeType(ns3:BusinessTypeCode, listAgencyIdentifier: ns3:listAgencyIdentifierType89)
+     ns3:Elhub_CountryCodeType(ns3:CountryCode, listAgencyIdentifier: ns3:listAgencyIdentifierType5)
+     ns3:Elhub_CurrencyCodeType(ns3:CurrencyCode, listAgencyIdentifier: ns3:listAgencyIdentifierType5)
+     ns3:Elhub_DocumentNameCodeType(ns3:Elhub_DocumentType, listAgencyIdentifier: ns3:listAgencyIdentifierType)
+     ns3:Elhub_DocumentType
+     ns3:Elhub_EndUserIdentifierType(ns3:String11Type, schemeAgencyIdentifier: ns3:Elhub_schemeAgencyIdentifierType)
+     ns3:Elhub_EnergyIndustryClassificationType
+     ns3:Elhub_EnergyPartyIdentifierType(ns3:String13Type, schemeAgencyIdentifier: ns3:schemeAgencyIdentifierGS1Type)
+     ns3:Elhub_MeterReadingCharacteristicsType(ns3:MeterReadingCharacteristicsCode, listAgencyIdentifier: ns3:listAgencyIdentifierType260)
+     ns3:Elhub_MeteringGridAreaIdentifierType(ns3:String16Type, schemeAgencyIdentifier: ns3:schemeAgencyIdentifierEICType)
+     ns3:Elhub_MeteringPointIdentifierType(ns3:MeteringPointType, schemeAgencyIdentifier: ns3:schemeAgencyIdentifierGS1Type)
+     ns3:Elhub_MeteringPointTypeCode
+     ns3:Elhub_MeteringPointTypeCodeType(ns3:Elhub_MeteringPointTypeCode, listAgencyIdentifier: ns3:listAgencyIdentifierType260)
+     ns3:Elhub_PhysicalStatusCode
+     ns3:Elhub_PhysicalStatusCodeType(ns3:Elhub_PhysicalStatusCode, listAgencyIdentifier: ns3:listAgencyIdentifierType260)
+     ns3:Elhub_ProductIdentifierCode
+     ns3:Elhub_ProductIdentifierType(ns3:Elhub_ProductIdentifierCode, schemeAgencyIdentifier: ns3:schemeAgencyIdentifierGS1ElhubType)
+     ns3:Elhub_ResponseReasonCode
+     ns3:Elhub_ResponseReasonCodeType(ns3:Elhub_ResponseReasonCode, listAgencyIdentifier: ns3:listAgencyIdentifierType89_260)
+     ns3:Elhub_SettlementMethodCode
+     ns3:Elhub_SettlementMethodCodeType(ns3:Elhub_SettlementMethodCode, listAgencyIdentifier: ns3:listAgencyIdentifierType89_260)
+     ns3:Elhub_UnitType
+     ns3:Elhub_boolean
+     ns3:Elhub_dateTime9DecType
+     ns3:Elhub_dateTimeType
+     ns3:Elhub_schemeAgencyIdentifierType
+     ns3:EndReasonType
+     ns3:EnovaFeeType
+     ns3:EstimatedQualityCodeType
+     ns3:EstimatedQuantityType(ns3:decimal153, Quality: ns3:EstimatedQualityCodeType, ValidationCode: ns3:ValidationCodeType, EstimationCode: ns3:EstimationCodeType)
+     ns3:EstimationCodeType
+     ns3:MeterReadReasonCodeType
+     ns3:MeterReadingCharacteristicsCode
+     ns3:MeterReadingOccurrenceType
+     ns3:MeteredQuantityType(ns3:decimal153)
+     ns3:MeteringPointType
+     ns3:PriorityCodeType
+     ns3:ProductionCode
+     ns3:ProductionCodeType(ns3:ProductionCode, listAgencyIdentifier: ns3:listAgencyIdentifierType89)
+     ns3:ProfiledEstimatedQuantityType(ns3:decimal153Negative)
+     ns3:ProfiledMeterIndexType(ns3:decimal153, MeterReadReasonCode: ns3:MeterReadReasonCodeType)
+     ns3:ProfiledMeteredQuantityType(ns3:decimal153Negative, MeterReadReasonCode: ns3:MeterReadReasonCodeType)
+     ns3:ProfiledStipulatedQuantityType(ns3:decimal153Negative, MeterReadReasonCode: ns3:MeterReadReasonCodeType)
+     ns3:QueryCategoryCodeType
+     ns3:ReminderType
+     ns3:String100Type
+     ns3:String10Type
+     ns3:String11Type
+     ns3:String13Type
+     ns3:String150Type
+     ns3:String16Type
+     ns3:String18Type
+     ns3:String300Type
+     ns3:String40Type
+     ns3:String50Type
+     ns3:String80Type
+     ns3:TemporaryQuantityType(ns3:decimal153, ValidationCode: ns3:ValidationCodeType, EstimationCode: ns3:EstimationCodeType)
+     ns3:UUIDType
+     ns3:VATCode
+     ns3:ValidationCodeType
+     ns3:ValuesIndicatorType
+     ns3:decimal122
+     ns3:decimal122Negative
+     ns3:decimal125
+     ns3:decimal153
+     ns3:decimal153Negative
+     ns3:decimal52
+     ns3:decimal85
+     ns3:integer2
+     ns3:integer4
+     ns3:integer5
+     ns3:integer9
+     ns3:listAgencyIdentifierType
+     ns3:listAgencyIdentifierType260
+     ns3:listAgencyIdentifierType5
+     ns3:listAgencyIdentifierType6
+     ns3:listAgencyIdentifierType89
+     ns3:listAgencyIdentifierType89_260
+     ns3:listAgencyIdentifierType89_6
+     ns3:long12
+     ns3:schemeAgencyIdentifierEICType
+     ns3:schemeAgencyIdentifierGS1ElhubType
+     ns3:schemeAgencyIdentifierGS1Type
+     ns1:CollectedData(Header: ns2:Elhub_HeaderType, ProcessEnergyContext: ns2:Elhub_EnergyContextType, PayloadEnergyTimeSeries: ns2:Elhub_CollectedDataType[])
+     ns5:CodeGroupType
+     ns5:ElhubSOAPFaultType(CodeGroup: ns5:CodeGroupType, Description: ns5:Description, ExceptionDateTime: ns5:ExceptionDateTime, FaultText: ns5:FaultText)
+
+Bindings:
+     Soap11Binding: {urn:no:elhub:emif:wsdl:meteringvalues:v2}MeteringValuesSoapBinding
+
+Service: MeteringValuesService
+     Port: MeteringValues (Soap11Binding: {urn:no:elhub:emif:wsdl:meteringvalues:v2}MeteringValuesSoapBinding)
+         Operations:
+            Acknowledge(Acknowledgement: ns4:Acknowledgement) -> None
+            CollectedData(CollectedData: ns1:CollectedData) -> None
+

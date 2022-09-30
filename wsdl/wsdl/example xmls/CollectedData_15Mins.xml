@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:CollectedData  xmlns:rsm="urn:no:elhub:emif:metering:CollectedData:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:no:elhub:emif:metering:CollectedData:v2 ../bim/metering/CollectedData.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655440000</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E13</abie:DocumentType>
+		<abie:Creation>2015-05-03T05:07:23+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-313</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDE</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Consumption-->
+		<abie:Identification>123e4567-e89b-12d3-a456-426655466200</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:12+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT15M</abie:ResolutionDuration>
+			<abie:Start>2020-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2020-05-02T01:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>	
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>	
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>10.456</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">	
+			<abie:Estimated Quality="56" EstimationCode="E001" ValidationCode="V002">15</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E004">34</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>12</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Production-->
+		<abie:Identification>196d08b8-1ad7-4e90-9391-d2043592d5ff</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:16+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT15M</abie:ResolutionDuration>
+			<abie:Start>2020-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2020-05-02T01:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>In</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939822</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>10000.456</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E006" ValidationCode="V002">10005</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E006">10034</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>10212</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Consumption for Prosumer-->
+		<abie:Identification>eaacd78c-e338-4b91-93ce-5216a426e5f8</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:15+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2020-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2020-05-02T01:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939839</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>0.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E001" ValidationCode="V002">0.3</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E004">0.4</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Production for Prosumer-->
+		<abie:Identification>04650a1f-2335-442a-b813-a822f3742846</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:16+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2020-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2020-05-02T01:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>In</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939839</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E006" ValidationCode="V002">0.1</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E001">0.1</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+</rsm:CollectedData>

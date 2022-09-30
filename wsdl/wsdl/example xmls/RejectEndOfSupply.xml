@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:RejectEndOfSupply  xmlns:rsm="urn:no:elhub:emif:market:RejectEndOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:market:RejectEndOfSupply:v2 ../bim/market/RejectEndOfSupply.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89c-12d3-a456-426655440453</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="6">406</abie:DocumentType>
+		<abie:Creation>2015-04-28T09:33:17+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-201</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadResponseEvent>
+		<abie:OriginalBusinessDocumentReference>123e4567-e89c-12d3-a456-426655440000</abie:OriginalBusinessDocumentReference>
+		<abie:ResponseReasonType listAgencyIdentifier="260">E10</abie:ResponseReasonType>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+	</rsm:PayloadResponseEvent>
+</rsm:RejectEndOfSupply>

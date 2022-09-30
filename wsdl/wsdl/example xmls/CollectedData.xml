@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:CollectedData  xmlns:rsm="urn:no:elhub:emif:metering:CollectedData:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:no:elhub:emif:metering:CollectedData:v2 ../bim/metering/CollectedData.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655440000</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E13</abie:DocumentType>
+		<abie:Creation>2015-05-03T05:07:23+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-313</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDE</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Consumption-->
+		<abie:Identification>123e4567-e89b-12d3-a456-426655466200</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:12+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2015-05-03T00:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>	
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>	
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>10.456</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">	
+			<abie:Estimated Quality="56" EstimationCode="E001" ValidationCode="V002">15</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E004">34</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>12</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:Metered>14.345</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="6">
+			<abie:Metered>7</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="7">
+			<abie:Metered>11</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="8">
+			<abie:Metered>15</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="9">
+			<abie:Metered>16</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="10">
+			<abie:Metered>19</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="11">
+			<abie:Metered>23</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="12">
+			<abie:Metered>10</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="13">
+			<abie:Metered>10</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="14">
+			<abie:Metered>16</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="15">
+			<abie:Metered>17</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="16">
+			<abie:Metered>19</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="17">
+			<abie:Metered>12</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="18">
+			<abie:Metered>11</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="19">
+			<abie:Metered>10</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="20">
+			<abie:Metered>10</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="21">
+			<abie:Metered>24</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="22">
+			<abie:Metered>20</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="23">
+			<abie:Metered>14</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="24">
+			<abie:Metered>13</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Production-->
+		<abie:Identification>196d08b8-1ad7-4e90-9391-d2043592d5ff</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:16+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2015-05-03T00:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>In</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939822</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>10000.456</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E006" ValidationCode="V002">10005</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E006">10034</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>10212</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:Metered>10194.345</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="6">
+			<abie:Metered>10687</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="7">
+			<abie:Metered>11011</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="8">
+			<abie:Metered>11589</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="9">
+			<abie:Metered>12116</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="10">
+			<abie:Metered>13339</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="11">
+			<abie:Metered>16623</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="12">
+			<abie:Metered>16330</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="13">
+			<abie:Metered>15160</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="14">
+			<abie:Metered>16123</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="15">
+			<abie:Metered>16712</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="16">
+			<abie:Metered>15629</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="17">
+			<abie:Metered>15632</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="18">
+			<abie:Metered>14211</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="19">
+			<abie:Metered>13320</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="20">
+			<abie:Metered>13120</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="21">
+			<abie:Metered>12412</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="22">
+			<abie:Metered>11420</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="23">
+			<abie:Metered>10614</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="24">
+			<abie:Metered>10513</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Consumption for Prosumer-->
+		<abie:Identification>eaacd78c-e338-4b91-93ce-5216a426e5f8</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:15+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2015-05-03T00:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939839</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>0.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E001" ValidationCode="V002">0.3</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E004">0.4</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:Metered>0.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="6">
+			<abie:Metered>0.7</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="7">
+			<abie:Metered>1.1</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="8">
+			<abie:Metered>1.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="9">
+			<abie:Metered>0.6</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="10">
+			<abie:Metered>0.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="11">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="12">
+			<abie:Metered>0.21</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="13">
+			<abie:Metered>0.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="14">
+			<abie:Metered>0.8</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="15">
+			<abie:Metered>1.7</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="16">
+			<abie:Metered>2.1</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="17">
+			<abie:Metered>2.4</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="18">
+			<abie:Metered>1.8</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="19">
+			<abie:Metered>1.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="20">
+			<abie:Metered>1.9</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="21">
+			<abie:Metered>2.1</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="22">
+			<abie:Metered>2.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="23">
+			<abie:Metered>1.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="24">
+			<abie:Metered>0.3</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Production for Prosumer-->
+		<abie:Identification>04650a1f-2335-442a-b813-a822f3742846</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:16+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2015-05-03T00:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>In</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939839</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E006" ValidationCode="V002">0.1</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E001">0.1</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>0.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:Metered>0.345</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="6">
+			<abie:Metered>0.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="7">
+			<abie:Metered>1.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="8">
+			<abie:Metered>1.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="9">
+			<abie:Metered>2.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="10">
+			<abie:Metered>2.1</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="11">
+			<abie:Metered>3.1</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="12">
+			<abie:Metered>3.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="13">
+			<abie:Metered>2.6</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="14">
+			<abie:Metered>2.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="15">
+			<abie:Metered>1.4</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="16">
+			<abie:Metered>0.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="17">
+			<abie:Metered>0</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="18">
+			<abie:Metered>0.5</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="19">
+			<abie:Metered>1.3</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="20">
+			<abie:Metered>1.2</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="21">
+			<abie:Metered>0</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="22">
+			<abie:Metered>1.05</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="23">
+			<abie:Metered>1</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="24">
+			<abie:Metered>0.9</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Exchange sent to neighboring grid area-->
+		<abie:Identification>1168ff14-f22a-4895-94b4-5d3d52977e7a</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:17+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2015-05-03T00:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939846</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>10000.456</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E006" ValidationCode="V002">10000</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E006">10034</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>10012</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:Metered>10014.345</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="6">
+			<abie:Metered>10077</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="7">
+			<abie:Metered>10011</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="8">
+			<abie:Metered>10015</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="9">
+			<abie:Metered>10016</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="10">
+			<abie:Metered>10019</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="11">
+			<abie:Metered>10023</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="12">
+			<abie:Metered>10010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="13">
+			<abie:Metered>10010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="14">
+			<abie:Metered>10016</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="15">
+			<abie:Metered>10017</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="16">
+			<abie:Metered>10019</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="17">
+			<abie:Metered>10012</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="18">
+			<abie:Metered>10011</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="19">
+			<abie:Metered>10010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="20">
+			<abie:Metered>10010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="21">
+			<abie:Metered>10024</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="22">
+			<abie:Metered>10020</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="23">
+			<abie:Metered>10014</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="24">
+			<abie:Metered>10013</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+	<rsm:PayloadEnergyTimeSeries>
+		<!--Exchange received from neighboring grid area-->
+		<abie:Identification>ea0fcca3-f28c-470f-a14b-c98810056719</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-03T04:34:17+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+			<abie:End>2015-05-03T00:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>In</abie:Direction>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939846</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Metered>20000.456</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Estimated Quality="56" EstimationCode="E006" ValidationCode="V002">20015</abie:Estimated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Temporary ValidationCode="V002" EstimationCode="E006">20034</abie:Temporary>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Metered>20012</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:Metered>20014.345</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="6">
+			<abie:Metered>20097</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="7">
+			<abie:Metered>20011</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="8">
+			<abie:Metered>20015</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="9">
+			<abie:Metered>20016</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="10">
+			<abie:Metered>20019</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="11">
+			<abie:Metered>20023</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="12">
+			<abie:Metered>20010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="13">
+			<abie:Metered>20010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="14">
+			<abie:Metered>20016</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="15">
+			<abie:Metered>20017</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="16">
+			<abie:Metered>20019</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="17">
+			<abie:Metered>20012</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="18">
+			<abie:Metered>20011</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="19">
+			<abie:Metered>20010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="20">
+			<abie:Metered>20010</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="21">
+			<abie:Metered>20024</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="22">
+			<abie:Metered>20020</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="23">
+			<abie:Metered>20014</abie:Metered>
+		</abie:Observation>
+		<abie:Observation Sequence="24">
+			<abie:Metered>20013</abie:Metered>
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+</rsm:CollectedData>

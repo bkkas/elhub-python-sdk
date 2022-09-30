@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:CollectedData  xmlns:rsm="urn:no:elhub:emif:metering:CollectedData:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:no:elhub:emif:metering:CollectedData:v2 ../bim/metering/CollectedData.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655440043</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E65</abie:DocumentType>
+		<abie:Creation>2015-05-02T11:07:23+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-311</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadEnergyTimeSeries>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655440001</abie:Identification>
+		<abie:RegistrationDateTime>2015-05-02T09:23:15+02:00</abie:RegistrationDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:Start>2015-05-02T00:00:00+02:00</abie:Start>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:ProfiledObservation>
+				<abie:MeterIndex MeterReadReasonCode="1">100</abie:MeterIndex>				
+		</abie:ProfiledObservation>
+	</rsm:PayloadEnergyTimeSeries>
+</rsm:CollectedData>

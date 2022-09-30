@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:NotifyCustomerInformation  xmlns:rsm="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2 ../bim/masterdata/NotifyCustomerInformation.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89c-12d3-a456-426655446543</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E10</abie:DocumentType>
+		<abie:Creation>2015-05-18T14:35:34+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-301</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDM</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMasterDataMPEvent>
+		<abie:SnapShotOccurrence>2015-05-18T14:35:12+02:00</abie:SnapShotOccurrence>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:ConsumerInvolvedCustomerParty>
+			<abie:Identification schemeAgencyIdentifier="82">973652456</abie:Identification>
+			<abie:Name>The Company ASA</abie:Name>
+			<abie:ExtendedStorageMeteringValues>true</abie:ExtendedStorageMeteringValues>
+		</abie:ConsumerInvolvedCustomerParty>
+		<abie:ConsumerInvolvedCustomerAddress>
+			<abie:AddressType>postaladr</abie:AddressType>
+			<abie:StreetName>Storgt.</abie:StreetName>
+			<abie:BuildingNumber>12</abie:BuildingNumber>
+			<abie:Postcode>7000</abie:Postcode>
+			<abie:CityName>TROMSØ</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:ConsumerInvolvedCustomerAddress>
+	</rsm:PayloadMasterDataMPEvent>
+</rsm:NotifyCustomerInformation>

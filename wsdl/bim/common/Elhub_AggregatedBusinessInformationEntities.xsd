@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:bdt="urn:no:elhub:emif:common:BusinessDataType:v2" elementFormDefault="qualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:common:BusinessDataType:v2" schemaLocation="Elhub_BusinessDataType.xsd"/>
+	<xsd:complexType name="Elhub_Acknowledgement">
+		<xsd:sequence>
+			<xsd:element name="StatusType" type="bdt:AcknowledgementStatusType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ResponseReasonType" type="bdt:Elhub_ResponseReasonCodeType" minOccurs="0" maxOccurs="999"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="OriginalPayloadReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_CollectedDataMeteringPointCharacteristicType">
+		<xsd:sequence>
+			<xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_CollectedDataType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RegistrationDateTime" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ObservationPeriodTimeSeriesPeriod" type="abie:Elhub_TimeSeriesPeriodType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPDetailMeasurementMeteringPointCharacteristic" type="abie:Elhub_CollectedDataMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:choice minOccurs="1" maxOccurs="1">
+				<xsd:element name="Observation" type="abie:QuantityMeteredCollect" minOccurs="1" maxOccurs="9999"/>
+				<xsd:element name="ProfiledObservation" type="abie:QuantityProfiledCollect" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeType" minOccurs="1" maxOccurs="1"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_Communication">
+		<xsd:sequence>
+			<xsd:element name="CommunicationChannel" type="bdt:CommunicationChannelType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="CompleteNumber" type="bdt:String100Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Description" type="bdt:String100Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ConfirmEndOfSupplyType">
+		<xsd:sequence>
+			<xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ConfirmStartOfSupplyType">
+		<xsd:sequence>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_CustomerPartyEndOfSupplyType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_CustomerPartyNotifyType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_CustomerPartyStartOfSupplyType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="NACE_DivisionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_CustomerPartyType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_DetailMeteringPointCharacteristicType">
+		<xsd:sequence>
+			<xsd:element name="MeteringPointType" type="bdt:Elhub_MeteringPointTypeCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointSubTypeConsumption" type="bdt:ConsumptionCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointSubTypeProduction" type="bdt:ProductionCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterReadingCharacteristics" type="bdt:Elhub_MeterReadingCharacteristicsType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="SettlementMethodType" type="bdt:Elhub_SettlementMethodCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="PhysicalStatusType" type="bdt:Elhub_PhysicalStatusCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ContractedConnectionCapacityValue" type="bdt:integer9" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="InstalledCapacity" type="bdt:integer9" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterReadingStartDate" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterReadingFrequencyDuration" type="bdt:integer4" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Description" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Priority" type="bdt:PriorityCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BlockedForSwitching" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterReadingOccurrence" type="bdt:MeterReadingOccurrenceType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EndUserIdentificationType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EndUserType">
+		<xsd:sequence>
+			<xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1" fixed="true"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EnergyContextType">
+		<xsd:sequence>
+			<xsd:element name="EnergyBusinessProcess" type="bdt:Elhub_BusinessProcessType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="EnergyBusinessProcessRole" type="bdt:Elhub_BusinessProcessRoleType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="EnergyIndustryClassification" type="bdt:Elhub_EnergyIndustryClassificationType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EnergyObservationNECSType">
+		<xsd:sequence>
+			<xsd:element name="GeneratedQuantity" type="bdt:long12" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EnergyPartyType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EnergyPartyIdentifierType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EstimatedAnnualVolumeDetailType">
+		<xsd:sequence>
+			<xsd:element name="Total" type="bdt:long12" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="CalculationMethod" type="bdt:CalculationMethod" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_EstimatedAnnualVolumeType">
+		<xsd:sequence>
+			<xsd:element name="Total" type="bdt:long12" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_HeaderType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="DocumentType" type="bdt:Elhub_DocumentNameCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Creation" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestPositiveAcknowledgement" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="PhysicalSenderEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="JuridicalSenderEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="JuridicalRecipientEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_InvoiceeAddressType">
+		<xsd:sequence>
+			<xsd:element name="AddressType" type="bdt:AddressTypeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="StreetName" type="bdt:String150Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="StreetCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BuildingNumber" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FloorIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="RoomIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Postcode" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="CityName" type="bdt:String50Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="CitySubDivisionName" type="bdt:String50Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MunicipalityCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="CountryCode" type="bdt:Elhub_CountryCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AddressFreeForm" type="bdt:String100Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="PostOfficeBox" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="CareOf" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="AttentionOf" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="OnBehalf" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_InvoiceePartyType">
+		<xsd:sequence>
+			<xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="GivenName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FamilyName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeasurementDefinitionType">
+		<xsd:sequence>
+			<xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Resolution" type="bdt:ChannelResolutionType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ExcludeFromSettlement" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeterFacilityType">
+		<xsd:sequence>
+			<xsd:element name="MeterIdentification" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="NumberOfDigits" type="bdt:integer2" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Constant" type="bdt:decimal125" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterLocation" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeteringGridAreaType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_MeteringGridAreaIdentifierType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeteringPointCharacteristicSimpleType">
+		<xsd:sequence>
+			<xsd:element name="MeteringPointType" type="bdt:Elhub_MeteringPointTypeCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeteringPointGeographicalCoordinateType">
+		<xsd:sequence>
+			<xsd:element name="Latitude" type="bdt:decimal85" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Longitude" type="bdt:decimal85" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeteringPointType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_MeteringPointIdentifierType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MeterSearchType">
+		<xsd:sequence>
+			<xsd:element name="MeterIdentification" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MPAddressCadastralType">
+		<xsd:sequence>
+			<xsd:element name="Gnr" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Bnr" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Snr" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Fnr" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MPAddressSearchType">
+		<xsd:sequence>
+			<xsd:element name="StreetName" type="bdt:String150Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BuildingNumber" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Postcode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MPAddressType">
+		<xsd:sequence>
+			<xsd:element name="StreetName" type="bdt:String150Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="StreetCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BuildingNumber" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FloorIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="RoomIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Postcode" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="CityName" type="bdt:String50Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="CitySubDivisionName" type="bdt:String50Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MunicipalityCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="CountryCode" type="bdt:Elhub_CountryCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AddressFreeForm" type="bdt:String100Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_MPCustomerSearchType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="PreviousEndUser" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_NACEConsType">
+		<xsd:sequence>
+			<xsd:element name="ConsumptionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="NACE_DivisionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_NotifyCustomerInformationType">
+		<xsd:sequence>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="SnapShotOccurrence" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyNotifyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="0" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_NotifyEndOfSupplyEventType">
+		<xsd:sequence>
+			<xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ReasonForTransaction" type="bdt:EndReasonType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyEndOfSupplyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_NotifyMeteringPointCharacteristicsEventType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPPositionMeteringPointGeographicalCoordinate" type="abie:Elhub_MeteringPointGeographicalCoordinateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyNotifyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MpDetailMeteringPointCharacteristic" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeDetailType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPTaxationProfile" type="abie:Elhub_TaxationProfileMeteringPointType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeasurementDefinition" type="abie:Elhub_MeasurementDefinitionType" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_NotifyStartOfSupplyEventType">
+		<xsd:sequence>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPPositionMeteringPointGeographicalCoordinate" type="abie:Elhub_MeteringPointGeographicalCoordinateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyStartOfSupplyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+			<xsd:element name="MPDetailMeteringPointCharacteristics" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeDetailType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPTaxationProfile" type="abie:Elhub_TaxationProfileMeteringPointType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeasurementDefinition" type="abie:Elhub_MeasurementDefinitionType" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_NotifyValidatedDataForBillingEnergyType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RegistrationDateTime" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="InsertDateTime" type="bdt:Elhub_dateTime9DecType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="RequestReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ObservationPeriodTimeSeriesPeriod" type="abie:Elhub_TimeSeriesPeriodType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MPDetailMeasurementMeteringPointCharacteristic" type="abie:Elhub_ValidatedDataMeteringPointCharacteristicType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BalanceResponsibleInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:choice minOccurs="1" maxOccurs="1">
+				<xsd:element name="Observation" type="abie:QuantityMeteredNotify" minOccurs="1" maxOccurs="9999"/>
+				<xsd:element name="ProfiledObservation" type="abie:QuantityProfiledNotify" minOccurs="1" maxOccurs="1"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ObservationPeriodPriceType">
+		<xsd:sequence>
+			<xsd:element name="BalanceVolume" type="bdt:decimal153Negative" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BalanceAmount" type="bdt:decimal122Negative" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+		<xsd:attribute name="Sequence" use="required" type="bdt:integer4"/>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_PeriodType">
+		<xsd:sequence>
+			<xsd:element name="Start" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="End" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_PollForData">
+		<xsd:sequence>
+			<xsd:element name="EnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="EnergyBusinessProcessRole" type="bdt:Elhub_BusinessProcessRoleType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_PriceVolumeCombinationFoReconciliationType">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Currency" type="bdt:Elhub_CurrencyCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ReconciliationDate" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ObservationPeriodTimeSeriesPeriod" type="abie:Elhub_TimeSeriesPeriodReconciliationType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MPDetailMeasurementMeteringPointCharacteristic" type="abie:Elhub_ReconciliationMeteringPointCharacteristicType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Observation" type="abie:Elhub_ObservationPeriodPriceType" minOccurs="1" maxOccurs="9999"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ProductCharacteristic">
+		<xsd:sequence>
+			<xsd:element name="Identification" type="bdt:Elhub_ProductIdentifierType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="UnitType" type="bdt:Elhub_UnitType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ReconciliationMeteringPointCharacteristicType">
+		<xsd:sequence>
+			<xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RejectEventSingleMPType">
+		<xsd:sequence>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ResponseReasonType" type="bdt:Elhub_ResponseReasonCodeType" minOccurs="1" maxOccurs="99"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RejectEventType">
+		<xsd:sequence>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ResponseReasonType" type="bdt:Elhub_ResponseReasonCodeType" minOccurs="1" maxOccurs="9999"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ReminderType">
+		<xsd:sequence>
+			<xsd:element name="Period" type="abie:Elhub_PeriodType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestCollectedDataType">
+		<xsd:sequence>
+			<xsd:element name="ReminderType" type="bdt:ReminderType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Reminder" type="abie:Elhub_ReminderType" minOccurs="1" maxOccurs="9999"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestDataFromElhubType">
+		<xsd:sequence>
+			<xsd:element name="QueryTypeCode" type="bdt:QueryCategoryCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="SnapShotOccurrence" type="bdt:Elhub_dateTime9DecType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Period" type="abie:Elhub_PeriodType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestEndOfSupplyType">
+		<xsd:sequence>
+			<xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ReasonForTransaction" type="bdt:EndReasonType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyEndOfSupplyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestStartOfSupplyType">
+		<xsd:sequence>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyStartOfSupplyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestToElhubType">
+		<xsd:sequence>
+			<xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Subject" type="bdt:String40Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="bdt:String300Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestToGridAccessProviderType">
+		<xsd:sequence>
+			<xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Subject" type="bdt:String40Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="RequestPublic" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="RequestPrivate" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestUpdateCustomerInformationType">
+		<xsd:sequence>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestUpdateMasterDataMeteringPointType">
+		<xsd:sequence>
+			<xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Identification" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPPositionMeteringPointGeographicalCoordinate" type="abie:Elhub_MeteringPointGeographicalCoordinateType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MpDetailMeteringPointCharacteristic" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeDetailType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPTaxationProfile" type="abie:Elhub_TaxationProfileMeteringPointType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeasurementDefinition" type="abie:Elhub_MeasurementDefinitionType" minOccurs="0" maxOccurs="99"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_RequestUpfrontMeteringPointCharacteristicsType">
+		<xsd:sequence>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_EndUserIdentificationType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressSearchType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterSearchType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ResponseFromElhubType">
+		<xsd:sequence>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Subject" type="bdt:String40Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Request" type="bdt:String300Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Feedback" type="bdt:String300Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ResponseFromGridAccessProviderType">
+		<xsd:sequence>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Subject" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="RequestPublic" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="RequestPrivate" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FeedbackPublic" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="FeedbackPrivate" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ResponseUpfrontMeteringPointCharacteristicsType">
+		<xsd:sequence>
+			<xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="SnapShotOccurrence" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="LastMeterReadingDate" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="DeliveryObligationDate" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="GridAccessProviderInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MpDetailMeteringPointCharacteristic" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MPTaxationProfile" type="abie:Elhub_NACEConsType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_TaxationProfileMeteringPointType">
+		<xsd:sequence>
+			<xsd:element name="VATCode" type="bdt:VATCode" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="EnovaFeeType" type="bdt:EnovaFeeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="EnovaFee" type="bdt:decimal52" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ElFee" type="bdt:decimal52" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ElCertificateShare" type="bdt:decimal52" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="ConsumptionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="NACE_DivisionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_TimeSeriesPeriodReconciliationType">
+		<xsd:sequence>
+			<xsd:element name="ResolutionDuration" type="bdt:DurationCodeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Start" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="End" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_TimeSeriesPeriodType">
+		<xsd:sequence>
+			<xsd:element name="ResolutionDuration" type="bdt:DurationCodeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="Start" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterReadingStart" type="bdt:decimal153" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="End" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="MeterReadingEnd" type="bdt:decimal153" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_UpdateThirdPartyAccessType">
+		<xsd:sequence>
+			<xsd:element name="UpdateIndicator" type="bdt:AddDeleteUpdate" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_EndUserType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="Elhub_ValidatedDataMeteringPointCharacteristicType">
+		<xsd:sequence>
+			<xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="QuantityMeteredCollect">
+		<xsd:choice>
+			<xsd:element name="Metered" type="bdt:MeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Estimated" type="bdt:EstimatedQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Temporary" type="bdt:TemporaryQuantityType" minOccurs="1" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attribute name="Sequence" use="required" type="bdt:integer4"/>
+	</xsd:complexType>
+	<xsd:complexType name="QuantityMeteredNotify">
+		<xsd:choice>
+			<xsd:element name="Metered" type="bdt:MeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Estimated" type="bdt:EstimatedQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Temporary" type="bdt:TemporaryQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Calculated" type="bdt:CalculatedQuantityType" minOccurs="1" maxOccurs="1"/>
+		</xsd:choice>
+		<xsd:attribute name="Sequence" use="required" type="bdt:integer4"/>
+	</xsd:complexType>
+	<xsd:complexType name="QuantityProfiledCollect">
+		<xsd:choice>
+			<xsd:element name="Metered" type="bdt:ProfiledMeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Stipulated" type="bdt:ProfiledStipulatedQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Withdrawn" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1" fixed="true"/>
+			<xsd:element name="MeterIndex" type="bdt:ProfiledMeterIndexType" minOccurs="1" maxOccurs="1"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="QuantityProfiledNotify">
+		<xsd:choice>
+			<xsd:element name="Metered" type="bdt:ProfiledMeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Estimated" type="bdt:ProfiledEstimatedQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Stipulated" type="bdt:ProfiledStipulatedQuantityType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="Withdrawn" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1" fixed="true"/>
+		</xsd:choice>
+	</xsd:complexType>
+</xsd:schema>

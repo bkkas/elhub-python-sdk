@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:PriceVolumeCombinationForReconciliation  xmlns:rsm="urn:no:elhub:emif:metering:PriceVolumeCombinationForReconciliation:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:metering:PriceVolumeCombinationForReconciliation:v2 ../bim/metering/PriceVolumeCombinationForReconciliation.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655789000</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E66</abie:DocumentType>
+		<abie:Creation>2015-06-25T14:32:15+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-503</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadEnergyTimeSeries>
+		<abie:Identification>654e4567-e87c-12d3-a456-426655789543</abie:Identification>
+		<abie:Currency listAgencyIdentifier="5">NOK</abie:Currency>
+		<abie:ReconciliationDate>2015-06-15T22:13:43+02:00</abie:ReconciliationDate>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT1H</abie:ResolutionDuration>
+			<abie:Start>2015-06-16T07:00:00+02:00</abie:Start>
+			<abie:End>2015-06-16T12:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>
+			<abie:BusinessType listAgencyIdentifier="89">RE01</abie:BusinessType>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringGridAreaUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:BalanceSupplierInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:BalanceSupplierInvolvedEnergyParty>
+		<abie:Observation Sequence="1">
+			<abie:BalanceVolume>10</abie:BalanceVolume>
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:BalanceVolume>8</abie:BalanceVolume>
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:BalanceVolume>19</abie:BalanceVolume>
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:BalanceVolume>14</abie:BalanceVolume>
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+		</abie:Observation>
+		<abie:Observation Sequence="5">
+			<abie:BalanceVolume>11</abie:BalanceVolume>
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+		</abie:Observation>
+	</rsm:PayloadEnergyTimeSeries>
+</rsm:PriceVolumeCombinationForReconciliation>

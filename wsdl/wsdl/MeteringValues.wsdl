@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="urn:no:elhub:emif:wsdl:meteringvalues:v2"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  targetNamespace="urn:no:elhub:emif:wsdl:meteringvalues:v2"
+                  xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
+
+    <wsdl:types>
+        <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:meteringvalues:v2"
+                    version="2.3">
+            <xsd:include schemaLocation="xsd/MeteringValues.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="CollectedDataRequest">
+        <wsdl:part element="tns:CollectedDataRequest" name="CollectedDataRequest">
+        </wsdl:part>
+    </wsdl:message>
+
+    <wsdl:message name="CollectedDataResponse">
+    </wsdl:message>
+
+    <wsdl:message name="AcknowledgeRequest">
+        <wsdl:part element="tns:AcknowledgeRequest" name="AcknowledgeRequest">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="AcknowledgeResponse">
+    </wsdl:message>
+
+	<wsdl:message name="ElhubSOAPFault">
+		<wsdl:part name="ElhubSOAPFault" element="cmn:ElhubSOAPFault"/>
+	</wsdl:message>
+
+    <wsdl:portType name="MeteringValues">
+        <wsdl:operation name="CollectedData">
+            <wsdl:input message="tns:CollectedDataRequest" name="CollectedDataRequest">
+            </wsdl:input>
+            <wsdl:output message="tns:CollectedDataResponse" name="CollectedDataResponse">
+            </wsdl:output>
+            <wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault" />
+        </wsdl:operation>
+        <wsdl:operation name="Acknowledge">
+            <wsdl:input message="tns:AcknowledgeRequest" name="AcknowledgeRequest">
+            </wsdl:input>
+            <wsdl:output message="tns:AcknowledgeResponse" name="AcknowledgeResponse">
+            </wsdl:output>
+            <wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault" />
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="MeteringValuesSoapBinding" type="tns:MeteringValues">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CollectedData">
+            <soap:operation soapAction="CollectedData"/>
+            <wsdl:input name="CollectedDataRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="CollectedDataResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ElhubSOAPFault">
+                <soap:fault name="ElhubSOAPFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="Acknowledge">
+            <soap:operation soapAction="Acknowledge"/>
+            <wsdl:input name="AcknowledgeRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="AcknowledgeResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="ElhubSOAPFault">
+                <soap:fault name="ElhubSOAPFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="MeteringValuesService">
+        <wsdl:port binding="tns:MeteringValuesSoapBinding" name="MeteringValues">
+            <soap:address location="http://localhost:1234/WebService/services/MeteringValues"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

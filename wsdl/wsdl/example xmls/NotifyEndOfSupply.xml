@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:NotifyEndOfSupply  xmlns:rsm="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:market:NotifyEndOfSupply:v2 ../bim/market/NotifyEndOfSupply.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+<rsm:Header>
+		<abie:Identification>123e4567-e89c-12d3-a456-426655440321</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="6">406</abie:DocumentType>
+		<abie:Creation>2015-04-30T01:12:24+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-201</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMPEvent>
+		<abie:EndOfOccurrence>2015-04-30T00:00:00+02:00</abie:EndOfOccurrence>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:BalanceSupplierInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:BalanceSupplierInvolvedEnergyParty>
+		<abie:ConsumerInvolvedCustomerParty>
+			<abie:Identification schemeAgencyIdentifier="Z01">01018035871</abie:Identification>
+			<abie:GivenName>Ola</abie:GivenName>
+			<abie:FamilyName>Nordmann</abie:FamilyName>	
+			<abie:Communication>
+				<abie:CommunicationChannel>Mobile</abie:CommunicationChannel>
+				<abie:CompleteNumber>944 56 123</abie:CompleteNumber>
+			</abie:Communication>	
+		</abie:ConsumerInvolvedCustomerParty>		
+		<abie:ConsumerInvolvedCustomerAddress>
+				<abie:AddressType>postaladr</abie:AddressType>
+				<abie:StreetName>Kirkegt.</abie:StreetName>
+				<abie:BuildingNumber>45</abie:BuildingNumber>
+				<abie:Postcode>7010</abie:Postcode>
+				<abie:CityName>Trondheim</abie:CityName>
+				<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:ConsumerInvolvedCustomerAddress>
+	</rsm:PayloadMPEvent>
+</rsm:NotifyEndOfSupply>
