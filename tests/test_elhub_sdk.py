@@ -1,38 +1,42 @@
-#!/usr/bin/env python
-"""Tests for `elhub_sdk` package."""
+"""
+Tests for `elhub_sdk` package.
+"""
+
 import datetime
+from pprint import pprint
 
-import pytest
+from elhub_sdk.consumption import request_consumption, poll_consumption
+from elhub_sdk.settings import THIRD_PARTY_GSN
+import logging
+logger = logging.getLogger(__name__)
 
-from elhub_sdk.client import APIClient
-from elhub_sdk.consumption import request_consumption
 
-
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
+def test_request_consumption():
     """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+    Requesting consumption for a meter
+    Returns:
 
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
-    del response
-
-
-def test_consumption_query():
-    meter_identificator = "707057500010503271"
-    VOLTE_3RD_PARTY_GSN = "7080004168879"
+    """
+    meter_identificator = "707057500057411768"
     start = datetime.datetime.now() - datetime.timedelta(days=30)
     end = start+datetime.timedelta(days=1)
 
     response = request_consumption(
         meter_identificator,
-        third_party_gsn = VOLTE_3RD_PARTY_GSN,
+        third_party_gsn = THIRD_PARTY_GSN,
         start=start,
         end=end)
+
+    assert response == None
+
+
+def test_poll_consumption():
+    """
+    Pooling data from Elhub
+    Returns:
+
+    """
+    response = poll_consumption(THIRD_PARTY_GSN)
+    assert response
+
+

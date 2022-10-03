@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:no:elhub:emif:wsdl:meteringvalues:v2" xmlns:ns1="urn:no:elhub:emif:metering:CollectedData:v2" xmlns:ns3="urn:no:elhub:emif:wsdl:common:v2" xmlns:ns6="urn:no:elhub:emif:Acknowledgement:v2" targetNamespace="urn:no:elhub:emif:wsdl:meteringvalues:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:metering:CollectedData:v2" schemaLocation="../../bim/metering/CollectedData.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:Acknowledgement:v2" schemaLocation="../../bim/Acknowledgement.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:wsdl:common:v2" schemaLocation="common.xsd"/>
+	<xsd:element name="CollectedDataRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="CollectedData" type="ns1:CollectedData"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="AcknowledgeRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns6:Acknowledgement"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

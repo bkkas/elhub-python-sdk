@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="urn:no:elhub:emif:wsdl:query:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2" targetNamespace="urn:no:elhub:emif:wsdl:query:v2">
+	<wsdl:types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:query:v2" version="2.3">
+			<xsd:include schemaLocation="xsd/Query.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="RequestUpfrontMeteringPointCharacteristicsRequest">
+		<wsdl:part name="RequestUpfrontMeteringPointCharacteristicsRequest" element="tns:RequestUpfrontMeteringPointCharacteristicsRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestUpfrontMeteringPointCharacteristicsResponse">
+		<wsdl:part name="RequestUpfrontMeteringPointCharacteristicsResponse" element="tns:RequestUpfrontMeteringPointCharacteristicsResponse">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestDataFromElhubRequest">
+		<wsdl:part name="RequestDataFromElhubRequest" element="tns:RequestDataFromElhubRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestDataFromElhubResponse">
+	</wsdl:message>
+	<wsdl:message name="ResponseFromGridAccessProviderRequest">
+		<wsdl:part name="ResponseFromGridAccessProviderRequest" element="tns:ResponseFromGridAccessProviderRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="ResponseFromGridAccessProviderResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestToGridAccessProviderRequest">
+		<wsdl:part name="RequestToGridAccessProviderRequest" element="tns:RequestToGridAccessProviderRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestToGridAccessProviderResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestToElhubRequest">
+		<wsdl:part name="RequestToElhubRequest" element="tns:RequestToElhubRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestToElhubResponse">
+	</wsdl:message>
+
+
+	<wsdl:message name="ElhubSOAPFault">
+		<wsdl:part name="ElhubSOAPFault" element="cmn:ElhubSOAPFault"/>
+	</wsdl:message>
+	<wsdl:portType name="Query">
+		<wsdl:operation name="RequestUpfrontMeteringPointCharacteristics">
+			<wsdl:input name="RequestUpfrontMeteringPointCharacteristicsRequest" message="tns:RequestUpfrontMeteringPointCharacteristicsRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestUpfrontMeteringPointCharacteristicsResponse" message="tns:RequestUpfrontMeteringPointCharacteristicsResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestDataFromElhub">
+			<wsdl:input name="RequestDataFromElhubRequest" message="tns:RequestDataFromElhubRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestDataFromElhubResponse" message="tns:RequestDataFromElhubResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToGridAccessProvider">
+			<wsdl:input name="RequestToGridAccessProviderRequest" message="tns:RequestToGridAccessProviderRequest">
+			</wsdl:input>
+			<wsdl:output name="RequestToGridAccessProviderResponse" message="tns:RequestToGridAccessProviderResponse">
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="ResponseFromGridAccessProvider">
+			<wsdl:input name="ResponseFromGridAccessProviderRequest" message="tns:ResponseFromGridAccessProviderRequest">
+            </wsdl:input>
+			<wsdl:output name="ResponseFromGridAccessProviderResponse" message="tns:ResponseFromGridAccessProviderResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToElhub">
+			<wsdl:input name="RequestToElhubRequest" message="tns:RequestToElhubRequest">
+			</wsdl:input>
+			<wsdl:output name="RequestToElhubResponse" message="tns:RequestToElhubResponse">
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="QuerySoapBinding" type="tns:Query">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="RequestUpfrontMeteringPointCharacteristics">
+			<soap:operation soapAction="RequestUpfrontMeteringPointCharacteristics"/>
+			<wsdl:input name="RequestUpfrontMeteringPointCharacteristicsRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="RequestUpfrontMeteringPointCharacteristicsResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestDataFromElhub">
+			<soap:operation soapAction="RequestDataFromElhub"/>
+			<wsdl:input name="RequestDataFromElhubRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="RequestDataFromElhubResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToGridAccessProvider">
+			<soap:operation soapAction="RequestToGridAccessProvider"/>
+			<wsdl:input name="RequestToGridAccessProviderRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="RequestToGridAccessProviderResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ResponseFromGridAccessProvider">
+			<soap:operation soapAction="ResponseFromGridAccessProvider"/>
+			<wsdl:input name="ResponseFromGridAccessProviderRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ResponseFromGridAccessProviderResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToElhub">
+			<soap:operation soapAction="RequestToElhub"/>
+			<wsdl:input name="RequestToElhubRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="RequestToElhubResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="QueryService">
+		<wsdl:port name="Query" binding="tns:QuerySoapBinding">
+			<soap:address location="http://localhost:8084/WebService/services/Query"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

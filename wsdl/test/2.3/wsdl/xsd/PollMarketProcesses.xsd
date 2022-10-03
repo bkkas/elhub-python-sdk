@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:ns1="urn:no:elhub:emif:market:RequestStartOfSupply:v2" xmlns:ns2="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" xmlns:ns3="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" xmlns:ns6="urn:no:elhub:emif:market:RejectStartOfSupply:v2" xmlns:ns7="urn:no:elhub:emif:market:RejectEndOfSupply:v2" xmlns:ns8="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" xmlns:ns13="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" xmlns:ns15="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" xmlns:ns16="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" xmlns:ns19="urn:no:elhub:emif:query:ResponseFromElhub:v2" xmlns:ns24="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:ns25="urn:no:elhub:emif:common:BusinessDataType:v2" xmlns:ns26="urn:no:elhub:emif:Acknowledgement:v2" xmlns:ns4="urn:no:elhub:emif:wsdl:common:v2" xmlns:ns27="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" xmlns:ns28="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" xmlns:ns29="urn:no:elhub:emif:PollForData:v2" xmlns:ns30="urn:no:elhub:emif:market:RequestEndOfSupply:v2" xmlns:ns31="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:ns32="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" xmlns:ns5="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" targetNamespace="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:market:RequestStartOfSupply:v2" schemaLocation="../../bim/market/RequestStartOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:RequestEndOfSupply:v2" schemaLocation="../../bim/market/RequestEndOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" schemaLocation="../../bim/masterdata/RequestUpdateMasterDataMeteringPoint.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" schemaLocation="../../bim/masterdata/RequestUpdateCustomerInformation.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" schemaLocation="../../bim/market/NotifyStartOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" schemaLocation="../../bim/market/NotifyEndOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:RejectStartOfSupply:v2" schemaLocation="../../bim/market/RejectStartOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:RejectEndOfSupply:v2" schemaLocation="../../bim/market/RejectEndOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" schemaLocation="../../bim/market/ConfirmStartOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" schemaLocation="../../bim/market/ConfirmEndOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" schemaLocation="../../bim/masterdata/NotifyMeteringPointCharacteristics.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" schemaLocation="../../bim/masterdata/NotifyCustomerInformation.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" schemaLocation="../../bim/query/RequestToGridAccessProvider.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" schemaLocation="../../bim/query/ResponseFromGridAccessProvider.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" schemaLocation="../../bim/query/ResponseUpfrontMeteringPointCharacteristics.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:ResponseFromElhub:v2" schemaLocation="../../bim/query/ResponseFromElhub.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:wsdl:common:v2" schemaLocation="common.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:common:BusinessDataType:v2" schemaLocation="../../bim/common/Elhub_BusinessDataType.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:Acknowledgement:v2" schemaLocation="../../bim/Acknowledgement.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:PollForData:v2" schemaLocation="../../bim/PollForData.xsd"/>
+	<xsd:element name="PollForDataRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns29:PollForData"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="PollForDataResponse" nillable="true">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Identification" type="ns25:UUIDType"/>
+				<xsd:element name="ResultDataSet" type="tns:ResultDataSetType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ResultDataSetType">
+		<xsd:choice maxOccurs="unbounded">
+			<xsd:element ref="ns1:RequestStartOfSupply"/>
+			<xsd:element ref="ns30:RequestEndOfSupply"/>
+			<xsd:element ref="ns31:RequestUpdateMasterDataMeteringPoint"/>
+			<xsd:element ref="ns32:RequestUpdateCustomerInformation"/>
+			<xsd:element ref="ns27:ConfirmStartOfSupply"/>
+			<xsd:element ref="ns6:RejectStartOfSupply"/>
+			<xsd:element ref="ns2:NotifyStartOfSupply"/>
+			<xsd:element ref="ns28:ConfirmEndOfSupply"/>
+			<xsd:element ref="ns7:RejectEndOfSupply"/>
+			<xsd:element ref="ns3:NotifyEndOfSupply"/>
+			<xsd:element ref="ns8:NotifyMeteringPointCharacteristics"/>
+			<xsd:element ref="ns15:RequestToGridAccessProvider"/>
+			<xsd:element ref="ns16:ResponseFromGridAccessProvider"/>
+			<xsd:element ref="ns13:NotifyCustomerInformation"/>
+			<xsd:element ref="ns19:ResponseFromElhub"/>
+			<xsd:element ref="ns26:Acknowledgement"/>
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:element name="AcknowledgePollRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns26:Acknowledgement"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

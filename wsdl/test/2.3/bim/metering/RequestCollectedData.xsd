@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="urn:no:elhub:emif:metering:RequestCollectedData:v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:metering:RequestCollectedData:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" elementFormDefault="qualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+	<xsd:element name="RequestCollectedData" type="rsm:RequestCollectedData"/>
+	<xsd:complexType name="RequestCollectedData">
+		<xsd:sequence>
+			<xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="PayloadMeasuredDataRequest" type="Elhub_RequestCollectedDataType" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

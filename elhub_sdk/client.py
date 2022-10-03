@@ -1,13 +1,17 @@
 """
 ElHub API client
 """
+from typing import Tuple
+
 from zeep import Client, Settings
 
 from datetime import datetime, timedelta
+
+from zeep.plugins import HistoryPlugin
 from zeep.wsse.signature import BinarySignature
 from zeep.wsse import utils
 
-from elhub_sdk.settings import KEY_FILE, CERT_FILE
+from elhub_sdk.settings import KEY_FILE, CERT_FILE, SECURE
 
 
 class APIClient():
@@ -15,18 +19,26 @@ class APIClient():
     Main ElHub API client class
     """
 
+
     @staticmethod
-    def get_zeep_client(wsdl)->Client:
-        client_settings = Settings()
+    def get_zeep_client(wsdl)->Tuple[Client, HistoryPlugin]:
+        history = HistoryPlugin()
+
+        client_settings = Settings(strict=False)
+        binary_signature = None
+        if SECURE:
+            binary_signature = BinarySignatureTimestamp(
+                    key_file=KEY_FILE,
+                    certfile=CERT_FILE,
+            )
+
         client = Client(
             wsdl=wsdl,
-            wsse=BinarySignatureTimestamp(
-                key_file=KEY_FILE,
-                certfile=CERT_FILE,
-            ),
+            plugins=[history],
+            wsse=binary_signature,
             settings=client_settings
         )
-        return client
+        return client, history
 
 
 class BinarySignatureTimestamp(BinarySignature):

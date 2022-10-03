@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="urn:no:elhub:emif:wsdl:query:v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns16="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" xmlns:ns17="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2" xmlns:ns18="urn:no:elhub:emif:query:RequestDataFromElhub:v2" xmlns:ns21="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" xmlns:ns22="urn:no:elhub:emif:Acknowledgement:v2" xmlns:ns29="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" xmlns:ns30="urn:no:elhub:emif:query:RequestToElhub:v2" xmlns:ns1="urn:no:elhub:emif:wsdl:common:v2" targetNamespace="urn:no:elhub:emif:wsdl:query:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2" schemaLocation="../../bim/query/RequestUpfrontMeteringPointCharacteristics.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:RequestDataFromElhub:v2" schemaLocation="../../bim/query/RequestDataFromElhub.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" schemaLocation="../../bim/query/ResponseUpfrontMeteringPointCharacteristics.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" schemaLocation="../../bim/query/RequestToGridAccessProvider.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" schemaLocation="../../bim/query/ResponseFromGridAccessProvider.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:query:RequestToElhub:v2" schemaLocation="../../bim/query/RequestToElhub.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:wsdl:common:v2" schemaLocation="common.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:Acknowledgement:v2" schemaLocation="../../bim/Acknowledgement.xsd"/>
+	<xsd:element name="RequestUpfrontMeteringPointCharacteristicsRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns17:RequestUpfrontMeteringPointCharacteristics"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestUpfrontMeteringPointCharacteristicsResponse">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="ns21:ResponseUpfrontMeteringPointCharacteristics"/>
+				<xsd:element ref="ns22:Acknowledgement"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestDataFromElhubRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns18:RequestDataFromElhub"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestToGridAccessProviderRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns29:RequestToGridAccessProvider" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="ResponseFromGridAccessProviderRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns16:ResponseFromGridAccessProvider"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestToElhubRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns30:RequestToElhub" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
