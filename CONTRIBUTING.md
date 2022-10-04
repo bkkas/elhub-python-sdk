@@ -102,7 +102,7 @@ Before you submit a pull request, check that it meets these guidelines:
 ## Tips
 
 ```
-$ poetry run pytest tests/test_elhub_python_sdk.py
+$ poetry run pytest tests/test_elhub_sdk.py
 ```
 
 To run a subset of tests.

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:NotifyStartOfSupply  xmlns:rsm="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:market:NotifyStartOfSupply:v2 ../bim/market/NotifyStartOfSupply.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89c-12d3-a456-426655444320</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="6">414</abie:DocumentType>
+		<abie:Creation>2015-05-13T04:05:00+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-102</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDM</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMPEvent>
+		<abie:StartOfOccurrence>2015-05-13T00:00:00+02:00</abie:StartOfOccurrence>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+			<abie:MeteringGridAreaUsedDomainLocation>
+		<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:BalanceSupplierInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">2222222222229</abie:Identification>
+		</abie:BalanceSupplierInvolvedEnergyParty>
+		<abie:ConsumerInvolvedCustomerParty>
+			<abie:Identification schemeAgencyIdentifier="82">987123456</abie:Identification>
+			<abie:Name>The Company ASA</abie:Name>
+			<abie:ExtendedStorageMeteringValues>true</abie:ExtendedStorageMeteringValues>
+			<abie:Communication>
+				<abie:CommunicationChannel>Email</abie:CommunicationChannel>
+				<abie:CompleteNumber>ole.olsen@company.no</abie:CompleteNumber>
+			</abie:Communication>
+		</abie:ConsumerInvolvedCustomerParty>
+		<abie:ConsumerInvolvedCustomerAddress>
+			<abie:AddressType>postaladr</abie:AddressType>
+			<abie:StreetName>Storgt.</abie:StreetName>
+			<abie:BuildingNumber>12</abie:BuildingNumber>
+			<abie:Postcode>5001</abie:Postcode>
+			<abie:CityName>BERGEN</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:ConsumerInvolvedCustomerAddress>
+		<abie:ConsumerInvolvedCustomerAddress>
+			<abie:AddressType>invoiceadr</abie:AddressType>
+			<abie:Postcode>5001</abie:Postcode>
+			<abie:CityName>BERGEN</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+			<abie:PostOfficeBox>Postboks 1239, Sentrum</abie:PostOfficeBox>
+		</abie:ConsumerInvolvedCustomerAddress>
+		<abie:MPDetailMeteringPointCharacteristics>
+			<abie:MeteringPointType listAgencyIdentifier="260">E17</abie:MeteringPointType>
+			<abie:MeteringPointSubTypeConsumption listAgencyIdentifier="89">A04</abie:MeteringPointSubTypeConsumption>
+			<abie:MeterReadingCharacteristics listAgencyIdentifier="260">E13</abie:MeterReadingCharacteristics>
+			<abie:SettlementMethodType listAgencyIdentifier="260">E02</abie:SettlementMethodType>
+			<abie:PhysicalStatusType listAgencyIdentifier="260">E22</abie:PhysicalStatusType>
+			<abie:ContractedConnectionCapacityValue>27000</abie:ContractedConnectionCapacityValue>
+			<abie:MeterReadingStartDate>2014-01-03T00:00:00+01:00</abie:MeterReadingStartDate>
+			<abie:MeterReadingFrequencyDuration>12</abie:MeterReadingFrequencyDuration>
+			<abie:Description>Freetext</abie:Description>
+			<abie:BlockedForSwitching>false</abie:BlockedForSwitching>
+			<abie:MeterReadingOccurrence>PT60M</abie:MeterReadingOccurrence>
+		</abie:MPDetailMeteringPointCharacteristics>
+		<abie:AnnualPeriodEstimatedMetrics>
+			<abie:Total>27000</abie:Total>
+			<abie:CalculationMethod>Manual</abie:CalculationMethod>
+		</abie:AnnualPeriodEstimatedMetrics>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>000875642</abie:MeterIdentification>
+			<abie:NumberOfDigits>6</abie:NumberOfDigits>
+		</abie:MeteringInstallationMeterFacility>
+		<abie:MPTaxationProfile>
+			<abie:VATCode>S</abie:VATCode>
+			<abie:ElFee>100</abie:ElFee>
+		</abie:MPTaxationProfile>
+	</rsm:PayloadMPEvent>
+</rsm:NotifyStartOfSupply>

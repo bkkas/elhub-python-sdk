@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:NotifyMeteringPointCharacteristics xmlns:rsm="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2 ../bim/masterdata/NotifyMeteringPointCharacteristics.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426675643591</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="6">21</abie:DocumentType>
+		<abie:Creation>2015-06-11T09:30:47+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-303</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMasterdataMPEvent>
+		<abie:OriginalBusinessDocumentReference>123e4567-e89b-12d3-a456-426677863591</abie:OriginalBusinessDocumentReference>
+		<abie:StartOfOccurrence>2015-06-11T00:00:00+02:00</abie:StartOfOccurrence>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:MPAddressMeteringPointAddress>
+			<abie:StreetName>Kirkegt.</abie:StreetName>
+			<abie:BuildingNumber>45</abie:BuildingNumber>
+			<abie:Postcode>7010</abie:Postcode>
+			<abie:CityName>Trondheim</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:MPAddressMeteringPointAddress>
+		<abie:MPPositionMeteringPointGeographicalCoordinate>
+			<abie:Latitude>61.87654</abie:Latitude>
+			<abie:Longitude>11.98763</abie:Longitude>
+		</abie:MPPositionMeteringPointGeographicalCoordinate>
+		<abie:MPAddressCadastral>
+			<abie:Gnr>0547</abie:Gnr>
+			<abie:Bnr>132</abie:Bnr>
+			<abie:Snr>1</abie:Snr>
+			<abie:Fnr>1</abie:Fnr>
+		</abie:MPAddressCadastral>
+		<abie:BalanceSupplierInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:BalanceSupplierInvolvedEnergyParty>
+		<abie:ConsumerInvolvedCustomerParty>
+			<abie:Identification schemeAgencyIdentifier="Z01">01018035871</abie:Identification>
+			<abie:GivenName>Ola</abie:GivenName>
+			<abie:FamilyName>Nordmann</abie:FamilyName>
+			<abie:ExtendedStorageMeteringValues>false</abie:ExtendedStorageMeteringValues>
+			<abie:Communication>
+				<abie:CommunicationChannel>Email</abie:CommunicationChannel>
+				<abie:CompleteNumber>ola.nordmann@norge.no</abie:CompleteNumber>
+				<abie:Description>Vaktmester</abie:Description>
+			</abie:Communication>
+		</abie:ConsumerInvolvedCustomerParty>
+		<abie:MeteringGridAreaUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:MpDetailMeteringPointCharacteristic>
+			<abie:MeteringPointType listAgencyIdentifier="260">E17</abie:MeteringPointType>
+			<abie:MeteringPointSubTypeConsumption listAgencyIdentifier="89">A04</abie:MeteringPointSubTypeConsumption>
+			<abie:MeterReadingCharacteristics listAgencyIdentifier="260">E13</abie:MeterReadingCharacteristics>
+			<abie:SettlementMethodType listAgencyIdentifier="260">E02</abie:SettlementMethodType>
+			<abie:PhysicalStatusType listAgencyIdentifier="260">E22</abie:PhysicalStatusType>
+			<abie:ContractedConnectionCapacityValue>27000</abie:ContractedConnectionCapacityValue>
+			<abie:MeterReadingStartDate>2014-01-03T00:00:00+01:00</abie:MeterReadingStartDate>
+			<abie:MeterReadingFrequencyDuration>12</abie:MeterReadingFrequencyDuration>
+			<abie:Description>Freetext</abie:Description>
+			<abie:Priority>P</abie:Priority>
+			<abie:BlockedForSwitching>false</abie:BlockedForSwitching>
+			<abie:MeterReadingOccurrence>PT15M</abie:MeterReadingOccurrence>
+		</abie:MpDetailMeteringPointCharacteristic>
+		<abie:AnnualPeriodEstimatedMetrics>
+			<abie:Total>27000</abie:Total>
+			<abie:CalculationMethod>Automatic</abie:CalculationMethod>
+		</abie:AnnualPeriodEstimatedMetrics>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>0087345763</abie:MeterIdentification>
+			<abie:NumberOfDigits>7</abie:NumberOfDigits>
+			<abie:Constant>1</abie:Constant>
+			<abie:MeterLocation>In the cellar</abie:MeterLocation>
+		</abie:MeteringInstallationMeterFacility>
+		<abie:MPTaxationProfile>
+			<abie:VATCode>S</abie:VATCode>
+			<abie:EnovaFeeType>ConsumptionDependent</abie:EnovaFeeType>
+			<abie:EnovaFee>50</abie:EnovaFee>
+			<abie:ElFee>75</abie:ElFee>
+			<abie:ElCertificateShare>80</abie:ElCertificateShare>
+			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
+			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
+		</abie:MPTaxationProfile>
+		<abie:MeasurementDefinition>
+			<abie:ProductIncludedProductCharacteristics>
+				<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+				<abie:UnitType>kWh</abie:UnitType>
+			</abie:ProductIncludedProductCharacteristics>
+			<abie:Direction>Out</abie:Direction>
+			<abie:Resolution>PT15M</abie:Resolution>
+			<abie:ExcludeFromSettlement>false</abie:ExcludeFromSettlement>
+		</abie:MeasurementDefinition>
+	</rsm:PayloadMasterdataMPEvent>
+</rsm:NotifyMeteringPointCharacteristics>

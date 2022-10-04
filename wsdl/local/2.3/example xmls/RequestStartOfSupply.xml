@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:RequestStartOfSupply  xmlns:rsm="urn:no:elhub:emif:market:RequestStartOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:market:RequestStartOfSupply:v2 ../bim/market/RequestStartOfSupply.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655440000</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="6">392</abie:DocumentType>
+		<abie:Creation>2015-04-28T09:30:47+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-101</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMPEvent>
+		<abie:StartOfOccurrence>2015-04-30T00:00:00+02:00</abie:StartOfOccurrence>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500012345678</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:BalanceSupplierInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:BalanceSupplierInvolvedEnergyParty>
+		<abie:ConsumerInvolvedCustomerParty>
+			<abie:Identification schemeAgencyIdentifier="82">907876213</abie:Identification>
+			<abie:Name>The Company ASA</abie:Name>
+			<abie:ExtendedStorageMeteringValues>true</abie:ExtendedStorageMeteringValues>
+		</abie:ConsumerInvolvedCustomerParty>
+		<abie:ConsumerInvolvedCustomerAddress>
+			<abie:AddressType>postaladr</abie:AddressType>
+			<abie:StreetName>Storgt.</abie:StreetName>
+			<abie:BuildingNumber>10</abie:BuildingNumber>
+			<abie:Postcode>0302</abie:Postcode>
+			<abie:CityName>OSLO</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:ConsumerInvolvedCustomerAddress>
+	</rsm:PayloadMPEvent>
+</rsm:RequestStartOfSupply>

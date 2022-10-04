@@ -1,0 +1,3146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project abortOnError="false" activeEnvironment="Default" id="6e86b5ff-a269-42f0-add6-79aa2f9c91dc" name="Elhub-PollMarketProcesses - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface anonymous="optional" bindingName="{urn:no:elhub:emif:wsdl:polling:marketprocesses:v2}MarketProcessesPollingSoapBinding" definition="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMarketProcesses%20-%20WS-Security.wsdl" id="7e0160f8-4080-4292-9e6c-3e54fd7399d2" name="MarketProcessesPollingSoapBinding" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xsi:type="con:WsdlInterface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+
+    <con:definitionCache type="TEXT" rootPart="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMarketProcesses%20-%20WS-Security.wsdl"><con:part><con:url>file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMarketProcesses%20-%20WS-Security.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:tns="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
+  <wsp1_2:Policy ns1:Id="wss10_x509_certificates_sign_encrypt" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp1_2:ExactlyOne>
+      <wsp1_2:All>
+        <ns2:AsymmetricBinding xmlns:ns2="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp1_2:Policy>
+            <wsp1_2:ExactlyOne>
+              <wsp1_2:All>
+                <ns2:AlgorithmSuite>
+                  <wsp1_2:Policy>
+                    <wsp1_2:ExactlyOne>
+                      <wsp1_2:All>
+                        <ns2:Basic256/>
+                      </wsp1_2:All>
+                    </wsp1_2:ExactlyOne>
+                  </wsp1_2:Policy>
+                </ns2:AlgorithmSuite>
+                <ns2:IncludeTimestamp/>
+                <ns2:InitiatorToken>
+                  <wsp1_2:Policy>
+                    <wsp1_2:ExactlyOne>
+                      <wsp1_2:All>
+                        <ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                          <wsp1_2:Policy>
+                            <wsp1_2:ExactlyOne>
+                              <wsp1_2:All>
+                                <ns2:WssX509V3Token10/>
+                              </wsp1_2:All>
+                            </wsp1_2:ExactlyOne>
+                          </wsp1_2:Policy>
+                        </ns2:X509Token>
+                      </wsp1_2:All>
+                    </wsp1_2:ExactlyOne>
+                  </wsp1_2:Policy>
+                </ns2:InitiatorToken>
+                <ns2:Layout>
+                  <wsp1_2:Policy>
+                    <wsp1_2:ExactlyOne>
+                      <wsp1_2:All>
+                        <ns2:Strict/>
+                      </wsp1_2:All>
+                    </wsp1_2:ExactlyOne>
+                  </wsp1_2:Policy>
+                </ns2:Layout>
+                <ns2:OnlySignEntireHeadersAndBody/>
+                <ns2:RecipientToken>
+                  <wsp1_2:Policy>
+                    <wsp1_2:ExactlyOne>
+                      <wsp1_2:All>
+                        <ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+                          <wsp1_2:Policy>
+                            <wsp1_2:ExactlyOne>
+                              <wsp1_2:All>
+                                <ns2:WssX509V3Token10/>
+                              </wsp1_2:All>
+                            </wsp1_2:ExactlyOne>
+                          </wsp1_2:Policy>
+                        </ns2:X509Token>
+                      </wsp1_2:All>
+                    </wsp1_2:ExactlyOne>
+                  </wsp1_2:Policy>
+                </ns2:RecipientToken>
+              </wsp1_2:All>
+            </wsp1_2:ExactlyOne>
+          </wsp1_2:Policy>
+        </ns2:AsymmetricBinding>
+        <ns3:Wss10 xmlns:ns3="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp1_2:Policy>
+            <wsp1_2:ExactlyOne>
+              <wsp1_2:All>
+                <ns3:MustSupportRefKeyIdentifier/>
+              </wsp1_2:All>
+            </wsp1_2:ExactlyOne>
+          </wsp1_2:Policy>
+        </ns3:Wss10>
+      </wsp1_2:All>
+    </wsp1_2:ExactlyOne>
+  </wsp1_2:Policy>
+  <wsp1_2:Policy ns1:Id="sign_body" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp1_2:ExactlyOne>
+      <wsp1_2:All>
+        <ns2:SignedParts xmlns:ns2="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <ns2:Body/>
+        </ns2:SignedParts>
+      </wsp1_2:All>
+    </wsp1_2:ExactlyOne>
+  </wsp1_2:Policy>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" version="2.3" xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:include schemaLocation="xsd/PollMarketProcesses.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="PollForDataRequest">
+    <wsdl:part element="tns:PollForDataRequest" name="PollForDataRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="PollForDataResponse">
+    <wsdl:part element="tns:PollForDataResponse" name="PollForDataResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgePollRequest">
+    <wsdl:part element="tns:AcknowledgePollRequest" name="AcknowledgePollRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AcknowledgePollResponse"></wsdl:message>
+  <wsdl:message name="ElhubSOAPFault">
+    <wsdl:part name="ElhubSOAPFault" element="cmn:ElhubSOAPFault"/>
+  </wsdl:message>
+  <wsdl:portType name="MarketProcessesPolling">
+    <wsdl:operation name="PollForData">
+      <wsdl:input message="tns:PollForDataRequest" name="PollForDataRequest"></wsdl:input>
+      <wsdl:output message="tns:PollForDataResponse" name="PollForDataResponse"></wsdl:output>
+      <wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgePoll">
+      <wsdl:input message="tns:AcknowledgePollRequest" name="AcknowledgePollRequest"></wsdl:input>
+      <wsdl:output message="tns:AcknowledgePollResponse" name="AcknowledgePollResponse"></wsdl:output>
+      <wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MarketProcessesPollingSoapBinding" type="tns:MarketProcessesPolling">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <PolicyReference URI="#wss10_x509_certificates_sign_encrypt" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsdl:operation name="PollForData">
+      <soap:operation soapAction="PollForData"/>
+      <wsdl:input name="PollForDataRequest">
+        <soap:body use="literal"/>
+        <PolicyReference URI="#sign_body" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      </wsdl:input>
+      <wsdl:output name="PollForDataResponse">
+        <soap:body use="literal"/>
+        <PolicyReference URI="#sign_body" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      </wsdl:output>
+      <wsdl:fault name="ElhubSOAPFault">
+        <soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgePoll">
+      <soap:operation soapAction="AcknowledgePoll"/>
+      <wsdl:input name="AcknowledgePollRequest">
+        <soap:body use="literal"/>
+        <PolicyReference URI="#sign_body" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      </wsdl:input>
+      <wsdl:output name="AcknowledgePollResponse">
+        <soap:body use="literal"/>
+        <PolicyReference URI="#sign_body" xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      </wsdl:output>
+      <wsdl:fault name="ElhubSOAPFault">
+        <soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarketProcessesPollingService">
+    <wsdl:port binding="tns:MarketProcessesPollingSoapBinding" name="MarketProcessesPolling">
+      <soap:address location="http://localhost:1234/WebService/services/PollMarketProcesses"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\wsdl\xsd\PollMarketProcesses.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:ns1="urn:no:elhub:emif:market:RequestStartOfSupply:v2" xmlns:ns2="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" xmlns:ns3="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" xmlns:ns6="urn:no:elhub:emif:market:RejectStartOfSupply:v2" xmlns:ns7="urn:no:elhub:emif:market:RejectEndOfSupply:v2" xmlns:ns8="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" xmlns:ns13="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" xmlns:ns15="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" xmlns:ns16="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" xmlns:ns19="urn:no:elhub:emif:query:ResponseFromElhub:v2" xmlns:ns24="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:ns25="urn:no:elhub:emif:common:BusinessDataType:v2" xmlns:ns26="urn:no:elhub:emif:Acknowledgement:v2" xmlns:ns4="urn:no:elhub:emif:wsdl:common:v2" xmlns:ns27="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" xmlns:ns28="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" xmlns:ns29="urn:no:elhub:emif:PollForData:v2" xmlns:ns30="urn:no:elhub:emif:market:RequestEndOfSupply:v2" xmlns:ns31="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:ns32="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" xmlns:ns5="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2">
+  <xsd:import namespace="urn:no:elhub:emif:market:RequestStartOfSupply:v2" schemaLocation="../../bim/market/RequestStartOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:RequestEndOfSupply:v2" schemaLocation="../../bim/market/RequestEndOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" schemaLocation="../../bim/masterdata/RequestUpdateMasterDataMeteringPoint.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" schemaLocation="../../bim/masterdata/RequestUpdateCustomerInformation.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" schemaLocation="../../bim/market/NotifyStartOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" schemaLocation="../../bim/market/NotifyEndOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:RejectStartOfSupply:v2" schemaLocation="../../bim/market/RejectStartOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:RejectEndOfSupply:v2" schemaLocation="../../bim/market/RejectEndOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" schemaLocation="../../bim/market/ConfirmStartOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" schemaLocation="../../bim/market/ConfirmEndOfSupply.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" schemaLocation="../../bim/masterdata/NotifyMeteringPointCharacteristics.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" schemaLocation="../../bim/masterdata/NotifyCustomerInformation.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" schemaLocation="../../bim/query/RequestToGridAccessProvider.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" schemaLocation="../../bim/query/ResponseFromGridAccessProvider.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" schemaLocation="../../bim/query/ResponseUpfrontMeteringPointCharacteristics.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:query:ResponseFromElhub:v2" schemaLocation="../../bim/query/ResponseFromElhub.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:wsdl:common:v2" schemaLocation="common.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:common:BusinessDataType:v2" schemaLocation="../../bim/common/Elhub_BusinessDataType.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:Acknowledgement:v2" schemaLocation="../../bim/Acknowledgement.xsd"/>
+  <xsd:import namespace="urn:no:elhub:emif:PollForData:v2" schemaLocation="../../bim/PollForData.xsd"/>
+  <xsd:element name="PollForDataRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ns29:PollForData"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PollForDataResponse" nillable="true">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Identification" type="ns25:UUIDType"/>
+        <xsd:element name="ResultDataSet" type="tns:ResultDataSetType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="ResultDataSetType">
+    <xsd:choice maxOccurs="unbounded">
+      <xsd:element ref="ns1:RequestStartOfSupply"/>
+      <xsd:element ref="ns30:RequestEndOfSupply"/>
+      <xsd:element ref="ns31:RequestUpdateMasterDataMeteringPoint"/>
+      <xsd:element ref="ns32:RequestUpdateCustomerInformation"/>
+      <xsd:element ref="ns27:ConfirmStartOfSupply"/>
+      <xsd:element ref="ns6:RejectStartOfSupply"/>
+      <xsd:element ref="ns2:NotifyStartOfSupply"/>
+      <xsd:element ref="ns28:ConfirmEndOfSupply"/>
+      <xsd:element ref="ns7:RejectEndOfSupply"/>
+      <xsd:element ref="ns3:NotifyEndOfSupply"/>
+      <xsd:element ref="ns8:NotifyMeteringPointCharacteristics"/>
+      <xsd:element ref="ns15:RequestToGridAccessProvider"/>
+      <xsd:element ref="ns16:ResponseFromGridAccessProvider"/>
+      <xsd:element ref="ns13:NotifyCustomerInformation"/>
+      <xsd:element ref="ns19:ResponseFromElhub"/>
+      <xsd:element ref="ns26:Acknowledgement"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:element name="AcknowledgePollRequest">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ns26:Acknowledgement"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\RequestStartOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:RequestStartOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:RequestStartOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RequestStartOfSupply" type="rsm:RequestStartOfSupply"/>
+  <xsd:complexType name="RequestStartOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMPEvent" type="Elhub_RequestStartOfSupplyType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\common\Elhub_AggregatedBusinessInformationEntities.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:bdt="urn:no:elhub:emif:common:BusinessDataType:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:BusinessDataType:v2" schemaLocation="Elhub_BusinessDataType.xsd"/>
+  <xsd:complexType name="Elhub_Acknowledgement">
+    <xsd:sequence>
+      <xsd:element name="StatusType" type="bdt:AcknowledgementStatusType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ResponseReasonType" type="bdt:Elhub_ResponseReasonCodeType" minOccurs="0" maxOccurs="999"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="OriginalPayloadReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CollectedDataMeteringPointCharacteristicType">
+    <xsd:sequence>
+      <xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CollectedDataType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RegistrationDateTime" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ObservationPeriodTimeSeriesPeriod" type="abie:Elhub_TimeSeriesPeriodType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPDetailMeasurementMeteringPointCharacteristic" type="abie:Elhub_CollectedDataMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="Observation" type="abie:QuantityMeteredCollect" minOccurs="1" maxOccurs="9999"/>
+        <xsd:element name="ProfiledObservation" type="abie:QuantityProfiledCollect" minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeType" minOccurs="1" maxOccurs="1"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_Communication">
+    <xsd:sequence>
+      <xsd:element name="CommunicationChannel" type="bdt:CommunicationChannelType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CompleteNumber" type="bdt:String100Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Description" type="bdt:String100Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ConfirmEndOfSupplyType">
+    <xsd:sequence>
+      <xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ConfirmStartOfSupplyType">
+    <xsd:sequence>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CustomerPartyEndOfSupplyType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CustomerPartyNotifyType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CustomerPartyStartOfSupplyType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="NACE_DivisionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CustomerPartyType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Communication" type="abie:Elhub_Communication" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_DetailMeteringPointCharacteristicType">
+    <xsd:sequence>
+      <xsd:element name="MeteringPointType" type="bdt:Elhub_MeteringPointTypeCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointSubTypeConsumption" type="bdt:ConsumptionCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointSubTypeProduction" type="bdt:ProductionCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterReadingCharacteristics" type="bdt:Elhub_MeterReadingCharacteristicsType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="SettlementMethodType" type="bdt:Elhub_SettlementMethodCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PhysicalStatusType" type="bdt:Elhub_PhysicalStatusCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ContractedConnectionCapacityValue" type="bdt:integer9" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="InstalledCapacity" type="bdt:integer9" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterReadingStartDate" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterReadingFrequencyDuration" type="bdt:integer4" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Description" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Priority" type="bdt:PriorityCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BlockedForSwitching" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterReadingOccurrence" type="bdt:MeterReadingOccurrenceType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EndUserIdentificationType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EndUserType">
+    <xsd:sequence>
+      <xsd:element name="ExtendedStorageMeteringValues" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1" fixed="true"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EnergyContextType">
+    <xsd:sequence>
+      <xsd:element name="EnergyBusinessProcess" type="bdt:Elhub_BusinessProcessType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="EnergyBusinessProcessRole" type="bdt:Elhub_BusinessProcessRoleType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="EnergyIndustryClassification" type="bdt:Elhub_EnergyIndustryClassificationType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EnergyObservationNECSType">
+    <xsd:sequence>
+      <xsd:element name="GeneratedQuantity" type="bdt:long12" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EnergyPartyType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EnergyPartyIdentifierType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EstimatedAnnualVolumeDetailType">
+    <xsd:sequence>
+      <xsd:element name="Total" type="bdt:long12" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CalculationMethod" type="bdt:CalculationMethod" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EstimatedAnnualVolumeType">
+    <xsd:sequence>
+      <xsd:element name="Total" type="bdt:long12" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_HeaderType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="DocumentType" type="bdt:Elhub_DocumentNameCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Creation" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RequestPositiveAcknowledgement" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PhysicalSenderEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="JuridicalSenderEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="JuridicalRecipientEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_InvoiceeAddressType">
+    <xsd:sequence>
+      <xsd:element name="AddressType" type="bdt:AddressTypeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="StreetName" type="bdt:String150Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="StreetCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BuildingNumber" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FloorIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RoomIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Postcode" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CityName" type="bdt:String50Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CitySubDivisionName" type="bdt:String50Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MunicipalityCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CountryCode" type="bdt:Elhub_CountryCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="AddressFreeForm" type="bdt:String100Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PostOfficeBox" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CareOf" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AttentionOf" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="OnBehalf" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_InvoiceePartyType">
+    <xsd:sequence>
+      <xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GivenName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FamilyName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeasurementDefinitionType">
+    <xsd:sequence>
+      <xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Resolution" type="bdt:ChannelResolutionType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ExcludeFromSettlement" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeterFacilityType">
+    <xsd:sequence>
+      <xsd:element name="MeterIdentification" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="NumberOfDigits" type="bdt:integer2" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Constant" type="bdt:decimal125" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterLocation" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringGridAreaType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_MeteringGridAreaIdentifierType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringPointCharacteristicSimpleType">
+    <xsd:sequence>
+      <xsd:element name="MeteringPointType" type="bdt:Elhub_MeteringPointTypeCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringPointGeographicalCoordinateType">
+    <xsd:sequence>
+      <xsd:element name="Latitude" type="bdt:decimal85" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Longitude" type="bdt:decimal85" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringPointType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_MeteringPointIdentifierType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeterSearchType">
+    <xsd:sequence>
+      <xsd:element name="MeterIdentification" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MPAddressCadastralType">
+    <xsd:sequence>
+      <xsd:element name="Gnr" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Bnr" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Snr" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Fnr" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MPAddressSearchType">
+    <xsd:sequence>
+      <xsd:element name="StreetName" type="bdt:String150Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BuildingNumber" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Postcode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MPAddressType">
+    <xsd:sequence>
+      <xsd:element name="StreetName" type="bdt:String150Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="StreetCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BuildingNumber" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FloorIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RoomIdentification" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Postcode" type="bdt:String10Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CityName" type="bdt:String50Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="CitySubDivisionName" type="bdt:String50Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MunicipalityCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="CountryCode" type="bdt:Elhub_CountryCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="AddressFreeForm" type="bdt:String100Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MPCustomerSearchType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_EndUserIdentifierType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Name" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="GivenName" type="bdt:String80Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FamilyName" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="PreviousEndUser" type="bdt:Elhub_boolean" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_NACEConsType">
+    <xsd:sequence>
+      <xsd:element name="ConsumptionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="NACE_DivisionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_NotifyCustomerInformationType">
+    <xsd:sequence>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="SnapShotOccurrence" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyNotifyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="0" maxOccurs="2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_NotifyEndOfSupplyEventType">
+    <xsd:sequence>
+      <xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ReasonForTransaction" type="bdt:EndReasonType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyEndOfSupplyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_NotifyMeteringPointCharacteristicsEventType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPPositionMeteringPointGeographicalCoordinate" type="abie:Elhub_MeteringPointGeographicalCoordinateType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyNotifyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MpDetailMeteringPointCharacteristic" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeDetailType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPTaxationProfile" type="abie:Elhub_TaxationProfileMeteringPointType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeasurementDefinition" type="abie:Elhub_MeasurementDefinitionType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_NotifyStartOfSupplyEventType">
+    <xsd:sequence>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPPositionMeteringPointGeographicalCoordinate" type="abie:Elhub_MeteringPointGeographicalCoordinateType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyStartOfSupplyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+      <xsd:element name="MPDetailMeteringPointCharacteristics" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeDetailType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPTaxationProfile" type="abie:Elhub_TaxationProfileMeteringPointType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeasurementDefinition" type="abie:Elhub_MeasurementDefinitionType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_NotifyValidatedDataForBillingEnergyType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RegistrationDateTime" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="InsertDateTime" type="bdt:Elhub_dateTime9DecType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RequestReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ObservationPeriodTimeSeriesPeriod" type="abie:Elhub_TimeSeriesPeriodType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MPDetailMeasurementMeteringPointCharacteristic" type="abie:Elhub_ValidatedDataMeteringPointCharacteristicType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BalanceResponsibleInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:choice minOccurs="1" maxOccurs="1">
+        <xsd:element name="Observation" type="abie:QuantityMeteredNotify" minOccurs="1" maxOccurs="9999"/>
+        <xsd:element name="ProfiledObservation" type="abie:QuantityProfiledNotify" minOccurs="1" maxOccurs="1"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ObservationPeriodPriceType">
+    <xsd:sequence>
+      <xsd:element name="BalanceVolume" type="bdt:decimal153Negative" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BalanceAmount" type="bdt:decimal122Negative" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+    <xsd:attribute name="Sequence" use="required" type="bdt:integer4"/>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_PeriodType">
+    <xsd:sequence>
+      <xsd:element name="Start" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="End" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_PollForData">
+    <xsd:sequence>
+      <xsd:element name="EnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="EnergyBusinessProcessRole" type="bdt:Elhub_BusinessProcessRoleType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_PriceVolumeCombinationFoReconciliationType">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Currency" type="bdt:Elhub_CurrencyCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ReconciliationDate" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RequestReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ObservationPeriodTimeSeriesPeriod" type="abie:Elhub_TimeSeriesPeriodReconciliationType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProductIncludedProductCharacteristics" type="abie:Elhub_ProductCharacteristic" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MPDetailMeasurementMeteringPointCharacteristic" type="abie:Elhub_ReconciliationMeteringPointCharacteristicType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Observation" type="abie:Elhub_ObservationPeriodPriceType" minOccurs="1" maxOccurs="9999"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ProductCharacteristic">
+    <xsd:sequence>
+      <xsd:element name="Identification" type="bdt:Elhub_ProductIdentifierType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="UnitType" type="bdt:Elhub_UnitType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ReconciliationMeteringPointCharacteristicType">
+    <xsd:sequence>
+      <xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RejectEventSingleMPType">
+    <xsd:sequence>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ResponseReasonType" type="bdt:Elhub_ResponseReasonCodeType" minOccurs="1" maxOccurs="99"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RejectEventType">
+    <xsd:sequence>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ResponseReasonType" type="bdt:Elhub_ResponseReasonCodeType" minOccurs="1" maxOccurs="9999"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ReminderType">
+    <xsd:sequence>
+      <xsd:element name="Period" type="abie:Elhub_PeriodType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestCollectedDataType">
+    <xsd:sequence>
+      <xsd:element name="ReminderType" type="bdt:ReminderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Reminder" type="abie:Elhub_ReminderType" minOccurs="1" maxOccurs="9999"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestDataFromElhubType">
+    <xsd:sequence>
+      <xsd:element name="QueryTypeCode" type="bdt:QueryCategoryCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="SnapShotOccurrence" type="bdt:Elhub_dateTime9DecType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Period" type="abie:Elhub_PeriodType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestEndOfSupplyType">
+    <xsd:sequence>
+      <xsd:element name="EndOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ReasonForTransaction" type="bdt:EndReasonType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyEndOfSupplyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestStartOfSupplyType">
+    <xsd:sequence>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BalanceSupplierInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyStartOfSupplyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestToElhubType">
+    <xsd:sequence>
+      <xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Subject" type="bdt:String40Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Request" type="bdt:String300Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestToGridAccessProviderType">
+    <xsd:sequence>
+      <xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Subject" type="bdt:String40Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="RequestPublic" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RequestPrivate" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestUpdateCustomerInformationType">
+    <xsd:sequence>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_CustomerPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerAddress" type="abie:Elhub_InvoiceeAddressType" minOccurs="1" maxOccurs="2"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestUpdateMasterDataMeteringPointType">
+    <xsd:sequence>
+      <xsd:element name="StartOfOccurrence" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Identification" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPPositionMeteringPointGeographicalCoordinate" type="abie:Elhub_MeteringPointGeographicalCoordinateType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MpDetailMeteringPointCharacteristic" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeDetailType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPTaxationProfile" type="abie:Elhub_TaxationProfileMeteringPointType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeasurementDefinition" type="abie:Elhub_MeasurementDefinitionType" minOccurs="0" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_RequestUpfrontMeteringPointCharacteristicsType">
+    <xsd:sequence>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_EndUserIdentificationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressSearchType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterSearchType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ResponseFromElhubType">
+    <xsd:sequence>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Subject" type="bdt:String40Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Request" type="bdt:String300Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Feedback" type="bdt:String300Type" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ResponseFromGridAccessProviderType">
+    <xsd:sequence>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="QueryCategory" type="bdt:String18Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Subject" type="bdt:String40Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RequestPublic" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="RequestPrivate" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FeedbackPublic" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="FeedbackPrivate" type="bdt:String300Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ResponseUpfrontMeteringPointCharacteristicsType">
+    <xsd:sequence>
+      <xsd:element name="OriginalBusinessDocumentReference" type="bdt:UUIDType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="SnapShotOccurrence" type="bdt:Elhub_dateTime9DecType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="LastMeterReadingDate" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DeliveryObligationDate" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="GridAccessProviderInvolvedEnergyParty" type="abie:Elhub_EnergyPartyType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MPAddressMeteringPointAddress" type="abie:Elhub_MPAddressType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPAddressCadastral" type="abie:Elhub_MPAddressCadastralType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeteringGridAreaUsedDomainLocation" type="abie:Elhub_MeteringGridAreaType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MpDetailMeteringPointCharacteristic" type="abie:Elhub_DetailMeteringPointCharacteristicType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringInstallationMeterFacility" type="abie:Elhub_MeterFacilityType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="AnnualPeriodEstimatedMetrics" type="abie:Elhub_EstimatedAnnualVolumeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MPTaxationProfile" type="abie:Elhub_NACEConsType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_TaxationProfileMeteringPointType">
+    <xsd:sequence>
+      <xsd:element name="VATCode" type="bdt:VATCode" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="EnovaFeeType" type="bdt:EnovaFeeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="EnovaFee" type="bdt:decimal52" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ElFee" type="bdt:decimal52" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ElCertificateShare" type="bdt:decimal52" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="ConsumptionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="NACE_DivisionCode" type="bdt:String10Type" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_TimeSeriesPeriodReconciliationType">
+    <xsd:sequence>
+      <xsd:element name="ResolutionDuration" type="bdt:DurationCodeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Start" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="End" type="bdt:Elhub_dateTimeType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_TimeSeriesPeriodType">
+    <xsd:sequence>
+      <xsd:element name="ResolutionDuration" type="bdt:DurationCodeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="Start" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterReadingStart" type="bdt:decimal153" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="End" type="bdt:Elhub_dateTimeType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="MeterReadingEnd" type="bdt:decimal153" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_UpdateThirdPartyAccessType">
+    <xsd:sequence>
+      <xsd:element name="UpdateIndicator" type="bdt:AddDeleteUpdate" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="MeteringPointUsedDomainLocation" type="abie:Elhub_MeteringPointType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ConsumerInvolvedCustomerParty" type="abie:Elhub_EndUserType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ValidatedDataMeteringPointCharacteristicType">
+    <xsd:sequence>
+      <xsd:element name="Direction" type="bdt:DirectionType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="BusinessType" type="bdt:Elhub_BusinessTypeType" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="QuantityMeteredCollect">
+    <xsd:choice>
+      <xsd:element name="Metered" type="bdt:MeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Estimated" type="bdt:EstimatedQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Temporary" type="bdt:TemporaryQuantityType" minOccurs="1" maxOccurs="1"/>
+    </xsd:choice>
+    <xsd:attribute name="Sequence" use="required" type="bdt:integer4"/>
+  </xsd:complexType>
+  <xsd:complexType name="QuantityMeteredNotify">
+    <xsd:choice>
+      <xsd:element name="Metered" type="bdt:MeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Estimated" type="bdt:EstimatedQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Temporary" type="bdt:TemporaryQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Calculated" type="bdt:CalculatedQuantityType" minOccurs="1" maxOccurs="1"/>
+    </xsd:choice>
+    <xsd:attribute name="Sequence" use="required" type="bdt:integer4"/>
+  </xsd:complexType>
+  <xsd:complexType name="QuantityProfiledCollect">
+    <xsd:choice>
+      <xsd:element name="Metered" type="bdt:ProfiledMeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Stipulated" type="bdt:ProfiledStipulatedQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Withdrawn" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1" fixed="true"/>
+      <xsd:element name="MeterIndex" type="bdt:ProfiledMeterIndexType" minOccurs="1" maxOccurs="1"/>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="QuantityProfiledNotify">
+    <xsd:choice>
+      <xsd:element name="Metered" type="bdt:ProfiledMeteredQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Estimated" type="bdt:ProfiledEstimatedQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Stipulated" type="bdt:ProfiledStipulatedQuantityType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Withdrawn" type="bdt:Elhub_boolean" minOccurs="1" maxOccurs="1" fixed="true"/>
+    </xsd:choice>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\common\Elhub_BusinessDataType.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:common:BusinessDataType:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bdt="urn:no:elhub:emif:common:BusinessDataType:v2">
+  <xsd:simpleType name="AcknowledgementStatus">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="39"/>
+      <xsd:enumeration value="41"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AddDeleteUpdate">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Add"/>
+      <xsd:enumeration value="Delete"/>
+      <xsd:enumeration value="Update"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AddressTypeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="invoiceadr"/>
+      <xsd:enumeration value="postaladr"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BRSIdentification">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="BRS-NO-101"/>
+      <xsd:enumeration value="BRS-NO-102"/>
+      <xsd:enumeration value="BRS-NO-103"/>
+      <xsd:enumeration value="BRS-NO-104"/>
+      <xsd:enumeration value="BRS-NO-111"/>
+      <xsd:enumeration value="BRS-NO-121"/>
+      <xsd:enumeration value="BRS-NO-122"/>
+      <xsd:enumeration value="BRS-NO-123"/>
+      <xsd:enumeration value="BRS-NO-131"/>
+      <xsd:enumeration value="BRS-NO-132"/>
+      <xsd:enumeration value="BRS-NO-133"/>
+      <xsd:enumeration value="BRS-NO-201"/>
+      <xsd:enumeration value="BRS-NO-202"/>
+      <xsd:enumeration value="BRS-NO-211"/>
+      <xsd:enumeration value="BRS-NO-212"/>
+      <xsd:enumeration value="BRS-NO-213"/>
+      <xsd:enumeration value="BRS-NO-214"/>
+      <xsd:enumeration value="BRS-NO-221"/>
+      <xsd:enumeration value="BRS-NO-222"/>
+      <xsd:enumeration value="BRS-NO-223"/>
+      <xsd:enumeration value="BRS-NO-224"/>
+      <xsd:enumeration value="BRS-NO-301"/>
+      <xsd:enumeration value="BRS-NO-302"/>
+      <xsd:enumeration value="BRS-NO-303"/>
+      <xsd:enumeration value="BRS-NO-305"/>
+      <xsd:enumeration value="BRS-NO-306"/>
+      <xsd:enumeration value="BRS-NO-311"/>
+      <xsd:enumeration value="BRS-NO-312"/>
+      <xsd:enumeration value="BRS-NO-313"/>
+      <xsd:enumeration value="BRS-NO-314"/>
+      <xsd:enumeration value="BRS-NO-315"/>
+      <xsd:enumeration value="BRS-NO-317"/>
+      <xsd:enumeration value="BRS-NO-318"/>
+      <xsd:enumeration value="BRS-NO-321"/>
+      <xsd:enumeration value="BRS-NO-322"/>
+      <xsd:enumeration value="BRS-NO-324"/>
+      <xsd:enumeration value="BRS-NO-332"/>
+      <xsd:enumeration value="BRS-NO-391"/>
+      <xsd:enumeration value="BRS-NO-402"/>
+      <xsd:enumeration value="BRS-NO-501"/>
+      <xsd:enumeration value="BRS-NO-502"/>
+      <xsd:enumeration value="BRS-NO-503"/>
+      <xsd:enumeration value="BRS-NO-511"/>
+      <xsd:enumeration value="BRS-NO-512"/>
+      <xsd:enumeration value="BRS-NO-601"/>
+      <xsd:enumeration value="BRS-NO-602"/>
+      <xsd:enumeration value="BRS-NO-611"/>
+      <xsd:enumeration value="BRS-NO-622"/>
+      <xsd:enumeration value="BRS-NO-623"/>
+      <xsd:enumeration value="POLL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BusinessTypeCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="HP01"/>
+      <xsd:enumeration value="HP02"/>
+      <xsd:enumeration value="HP03"/>
+      <xsd:enumeration value="HP04"/>
+      <xsd:enumeration value="LS01"/>
+      <xsd:enumeration value="LS02"/>
+      <xsd:enumeration value="LS03"/>
+      <xsd:enumeration value="LS04"/>
+      <xsd:enumeration value="LS05"/>
+      <xsd:enumeration value="LS06"/>
+      <xsd:enumeration value="LS07"/>
+      <xsd:enumeration value="LS08"/>
+      <xsd:enumeration value="MP01"/>
+      <xsd:enumeration value="MP02"/>
+      <xsd:enumeration value="RE01"/>
+      <xsd:enumeration value="RE02"/>
+      <xsd:enumeration value="RE03"/>
+      <xsd:enumeration value="RE04"/>
+      <xsd:enumeration value="SE02"/>
+      <xsd:enumeration value="SE04"/>
+      <xsd:enumeration value="SE05"/>
+      <xsd:enumeration value="SE06"/>
+      <xsd:enumeration value="SE07"/>
+      <xsd:enumeration value="SE08"/>
+      <xsd:enumeration value="SE09"/>
+      <xsd:enumeration value="SE10"/>
+      <xsd:enumeration value="SE11"/>
+      <xsd:enumeration value="SE12"/>
+      <xsd:enumeration value="SE13"/>
+      <xsd:enumeration value="SE14"/>
+      <xsd:enumeration value="SE15"/>
+      <xsd:enumeration value="SE16"/>
+      <xsd:enumeration value="SE17"/>
+      <xsd:enumeration value="SE18"/>
+      <xsd:enumeration value="SE19"/>
+      <xsd:enumeration value="SE20"/>
+      <xsd:enumeration value="SE21"/>
+      <xsd:enumeration value="SE22"/>
+      <xsd:enumeration value="SE23"/>
+      <xsd:enumeration value="SE24"/>
+      <xsd:enumeration value="SE25"/>
+      <xsd:enumeration value="SE26"/>
+      <xsd:enumeration value="SE27"/>
+      <xsd:enumeration value="SE28"/>
+      <xsd:enumeration value="SE29"/>
+      <xsd:enumeration value="SE30"/>
+      <xsd:enumeration value="SE31"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CalculationMethod">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Automatic"/>
+      <xsd:enumeration value="Manual"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ChannelResolutionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="N"/>
+      <xsd:enumeration value="PT15M"/>
+      <xsd:enumeration value="PT1H"/>
+      <xsd:enumeration value="PT5M"/>
+      <xsd:enumeration value="PT60M"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CommunicationChannelType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Email"/>
+      <xsd:enumeration value="Mobile"/>
+      <xsd:enumeration value="Phone"/>
+      <xsd:enumeration value="Telefax"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ConsumptionCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A04"/>
+      <xsd:enumeration value="A07"/>
+      <xsd:enumeration value="A15"/>
+      <xsd:enumeration value="B27"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CountryCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AD"/>
+      <xsd:enumeration value="AE"/>
+      <xsd:enumeration value="AF"/>
+      <xsd:enumeration value="AG"/>
+      <xsd:enumeration value="AI"/>
+      <xsd:enumeration value="AL"/>
+      <xsd:enumeration value="AM"/>
+      <xsd:enumeration value="AO"/>
+      <xsd:enumeration value="AQ"/>
+      <xsd:enumeration value="AR"/>
+      <xsd:enumeration value="AS"/>
+      <xsd:enumeration value="AT"/>
+      <xsd:enumeration value="AU"/>
+      <xsd:enumeration value="AW"/>
+      <xsd:enumeration value="AX"/>
+      <xsd:enumeration value="AZ"/>
+      <xsd:enumeration value="BA"/>
+      <xsd:enumeration value="BB"/>
+      <xsd:enumeration value="BD"/>
+      <xsd:enumeration value="BE"/>
+      <xsd:enumeration value="BF"/>
+      <xsd:enumeration value="BG"/>
+      <xsd:enumeration value="BH"/>
+      <xsd:enumeration value="BI"/>
+      <xsd:enumeration value="BJ"/>
+      <xsd:enumeration value="BL"/>
+      <xsd:enumeration value="BM"/>
+      <xsd:enumeration value="BN"/>
+      <xsd:enumeration value="BO"/>
+      <xsd:enumeration value="BQ"/>
+      <xsd:enumeration value="BR"/>
+      <xsd:enumeration value="BS"/>
+      <xsd:enumeration value="BT"/>
+      <xsd:enumeration value="BV"/>
+      <xsd:enumeration value="BW"/>
+      <xsd:enumeration value="BY"/>
+      <xsd:enumeration value="BZ"/>
+      <xsd:enumeration value="CA"/>
+      <xsd:enumeration value="CC"/>
+      <xsd:enumeration value="CD"/>
+      <xsd:enumeration value="CF"/>
+      <xsd:enumeration value="CG"/>
+      <xsd:enumeration value="CH"/>
+      <xsd:enumeration value="CI"/>
+      <xsd:enumeration value="CK"/>
+      <xsd:enumeration value="CL"/>
+      <xsd:enumeration value="CM"/>
+      <xsd:enumeration value="CN"/>
+      <xsd:enumeration value="CO"/>
+      <xsd:enumeration value="CR"/>
+      <xsd:enumeration value="CU"/>
+      <xsd:enumeration value="CV"/>
+      <xsd:enumeration value="CW"/>
+      <xsd:enumeration value="CX"/>
+      <xsd:enumeration value="CY"/>
+      <xsd:enumeration value="CZ"/>
+      <xsd:enumeration value="DE"/>
+      <xsd:enumeration value="DJ"/>
+      <xsd:enumeration value="DK"/>
+      <xsd:enumeration value="DM"/>
+      <xsd:enumeration value="DO"/>
+      <xsd:enumeration value="DZ"/>
+      <xsd:enumeration value="EC"/>
+      <xsd:enumeration value="EE"/>
+      <xsd:enumeration value="EG"/>
+      <xsd:enumeration value="EH"/>
+      <xsd:enumeration value="ER"/>
+      <xsd:enumeration value="ES"/>
+      <xsd:enumeration value="ET"/>
+      <xsd:enumeration value="FI"/>
+      <xsd:enumeration value="FJ"/>
+      <xsd:enumeration value="FK"/>
+      <xsd:enumeration value="FM"/>
+      <xsd:enumeration value="FO"/>
+      <xsd:enumeration value="FR"/>
+      <xsd:enumeration value="GA"/>
+      <xsd:enumeration value="GB"/>
+      <xsd:enumeration value="GD"/>
+      <xsd:enumeration value="GE"/>
+      <xsd:enumeration value="GF"/>
+      <xsd:enumeration value="GG"/>
+      <xsd:enumeration value="GH"/>
+      <xsd:enumeration value="GI"/>
+      <xsd:enumeration value="GL"/>
+      <xsd:enumeration value="GM"/>
+      <xsd:enumeration value="GN"/>
+      <xsd:enumeration value="GP"/>
+      <xsd:enumeration value="GQ"/>
+      <xsd:enumeration value="GR"/>
+      <xsd:enumeration value="GS"/>
+      <xsd:enumeration value="GT"/>
+      <xsd:enumeration value="GU"/>
+      <xsd:enumeration value="GW"/>
+      <xsd:enumeration value="GY"/>
+      <xsd:enumeration value="HK"/>
+      <xsd:enumeration value="HM"/>
+      <xsd:enumeration value="HN"/>
+      <xsd:enumeration value="HR"/>
+      <xsd:enumeration value="HT"/>
+      <xsd:enumeration value="HU"/>
+      <xsd:enumeration value="ID"/>
+      <xsd:enumeration value="IE"/>
+      <xsd:enumeration value="IL"/>
+      <xsd:enumeration value="IM"/>
+      <xsd:enumeration value="IN"/>
+      <xsd:enumeration value="IO"/>
+      <xsd:enumeration value="IQ"/>
+      <xsd:enumeration value="IR"/>
+      <xsd:enumeration value="IS"/>
+      <xsd:enumeration value="IT"/>
+      <xsd:enumeration value="JE"/>
+      <xsd:enumeration value="JM"/>
+      <xsd:enumeration value="JO"/>
+      <xsd:enumeration value="JP"/>
+      <xsd:enumeration value="KE"/>
+      <xsd:enumeration value="KG"/>
+      <xsd:enumeration value="KH"/>
+      <xsd:enumeration value="KI"/>
+      <xsd:enumeration value="KM"/>
+      <xsd:enumeration value="KN"/>
+      <xsd:enumeration value="KP"/>
+      <xsd:enumeration value="KR"/>
+      <xsd:enumeration value="KW"/>
+      <xsd:enumeration value="KY"/>
+      <xsd:enumeration value="KZ"/>
+      <xsd:enumeration value="LA"/>
+      <xsd:enumeration value="LB"/>
+      <xsd:enumeration value="LC"/>
+      <xsd:enumeration value="LI"/>
+      <xsd:enumeration value="LK"/>
+      <xsd:enumeration value="LR"/>
+      <xsd:enumeration value="LS"/>
+      <xsd:enumeration value="LT"/>
+      <xsd:enumeration value="LU"/>
+      <xsd:enumeration value="LV"/>
+      <xsd:enumeration value="LY"/>
+      <xsd:enumeration value="MA"/>
+      <xsd:enumeration value="MC"/>
+      <xsd:enumeration value="MD"/>
+      <xsd:enumeration value="ME"/>
+      <xsd:enumeration value="MF"/>
+      <xsd:enumeration value="MG"/>
+      <xsd:enumeration value="MH"/>
+      <xsd:enumeration value="MK"/>
+      <xsd:enumeration value="ML"/>
+      <xsd:enumeration value="MM"/>
+      <xsd:enumeration value="MN"/>
+      <xsd:enumeration value="MO"/>
+      <xsd:enumeration value="MP"/>
+      <xsd:enumeration value="MQ"/>
+      <xsd:enumeration value="MR"/>
+      <xsd:enumeration value="MS"/>
+      <xsd:enumeration value="MT"/>
+      <xsd:enumeration value="MU"/>
+      <xsd:enumeration value="MV"/>
+      <xsd:enumeration value="MW"/>
+      <xsd:enumeration value="MX"/>
+      <xsd:enumeration value="MY"/>
+      <xsd:enumeration value="MZ"/>
+      <xsd:enumeration value="NA"/>
+      <xsd:enumeration value="NC"/>
+      <xsd:enumeration value="NE"/>
+      <xsd:enumeration value="NF"/>
+      <xsd:enumeration value="NG"/>
+      <xsd:enumeration value="NI"/>
+      <xsd:enumeration value="NL"/>
+      <xsd:enumeration value="NO"/>
+      <xsd:enumeration value="NP"/>
+      <xsd:enumeration value="NR"/>
+      <xsd:enumeration value="NU"/>
+      <xsd:enumeration value="NZ"/>
+      <xsd:enumeration value="OM"/>
+      <xsd:enumeration value="PA"/>
+      <xsd:enumeration value="PE"/>
+      <xsd:enumeration value="PF"/>
+      <xsd:enumeration value="PG"/>
+      <xsd:enumeration value="PH"/>
+      <xsd:enumeration value="PK"/>
+      <xsd:enumeration value="PL"/>
+      <xsd:enumeration value="PM"/>
+      <xsd:enumeration value="PN"/>
+      <xsd:enumeration value="PR"/>
+      <xsd:enumeration value="PS"/>
+      <xsd:enumeration value="PT"/>
+      <xsd:enumeration value="PW"/>
+      <xsd:enumeration value="PY"/>
+      <xsd:enumeration value="QA"/>
+      <xsd:enumeration value="RE"/>
+      <xsd:enumeration value="RO"/>
+      <xsd:enumeration value="RS"/>
+      <xsd:enumeration value="RU"/>
+      <xsd:enumeration value="RW"/>
+      <xsd:enumeration value="SA"/>
+      <xsd:enumeration value="SB"/>
+      <xsd:enumeration value="SC"/>
+      <xsd:enumeration value="SD"/>
+      <xsd:enumeration value="SE"/>
+      <xsd:enumeration value="SG"/>
+      <xsd:enumeration value="SH"/>
+      <xsd:enumeration value="SI"/>
+      <xsd:enumeration value="SJ"/>
+      <xsd:enumeration value="SK"/>
+      <xsd:enumeration value="SL"/>
+      <xsd:enumeration value="SM"/>
+      <xsd:enumeration value="SN"/>
+      <xsd:enumeration value="SO"/>
+      <xsd:enumeration value="SR"/>
+      <xsd:enumeration value="SS"/>
+      <xsd:enumeration value="ST"/>
+      <xsd:enumeration value="SV"/>
+      <xsd:enumeration value="SX"/>
+      <xsd:enumeration value="SY"/>
+      <xsd:enumeration value="SZ"/>
+      <xsd:enumeration value="TC"/>
+      <xsd:enumeration value="TD"/>
+      <xsd:enumeration value="TF"/>
+      <xsd:enumeration value="TG"/>
+      <xsd:enumeration value="TH"/>
+      <xsd:enumeration value="TJ"/>
+      <xsd:enumeration value="TK"/>
+      <xsd:enumeration value="TL"/>
+      <xsd:enumeration value="TM"/>
+      <xsd:enumeration value="TN"/>
+      <xsd:enumeration value="TO"/>
+      <xsd:enumeration value="TR"/>
+      <xsd:enumeration value="TT"/>
+      <xsd:enumeration value="TV"/>
+      <xsd:enumeration value="TW"/>
+      <xsd:enumeration value="TZ"/>
+      <xsd:enumeration value="UA"/>
+      <xsd:enumeration value="UG"/>
+      <xsd:enumeration value="UM"/>
+      <xsd:enumeration value="US"/>
+      <xsd:enumeration value="UY"/>
+      <xsd:enumeration value="UZ"/>
+      <xsd:enumeration value="VA"/>
+      <xsd:enumeration value="VC"/>
+      <xsd:enumeration value="VE"/>
+      <xsd:enumeration value="VG"/>
+      <xsd:enumeration value="VI"/>
+      <xsd:enumeration value="VN"/>
+      <xsd:enumeration value="VU"/>
+      <xsd:enumeration value="WF"/>
+      <xsd:enumeration value="WS"/>
+      <xsd:enumeration value="YE"/>
+      <xsd:enumeration value="YT"/>
+      <xsd:enumeration value="ZA"/>
+      <xsd:enumeration value="ZM"/>
+      <xsd:enumeration value="ZW"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CurrencyCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="DKK"/>
+      <xsd:enumeration value="EUR"/>
+      <xsd:enumeration value="NOK"/>
+      <xsd:enumeration value="SEK"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal122">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2"/>
+      <xsd:maxExclusive value="10000000000"/>
+      <xsd:minInclusive value="0"/>
+      <xsd:totalDigits value="12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal122Negative">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2"/>
+      <xsd:maxExclusive value="10000000000"/>
+      <xsd:minExclusive value="-10000000000"/>
+      <xsd:totalDigits value="12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal125">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="5"/>
+      <xsd:maxExclusive value="10000000"/>
+      <xsd:minInclusive value="0"/>
+      <xsd:totalDigits value="12"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal153">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="3"/>
+      <xsd:maxExclusive value="1000000000000"/>
+      <xsd:minInclusive value="0"/>
+      <xsd:totalDigits value="15"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal153Negative">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="3"/>
+      <xsd:maxExclusive value="1000000000000"/>
+      <xsd:minExclusive value="-1000000000000"/>
+      <xsd:totalDigits value="15"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal52">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="2"/>
+      <xsd:maxInclusive value="100"/>
+      <xsd:minInclusive value="0"/>
+      <xsd:totalDigits value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="decimal85">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:fractionDigits value="5"/>
+      <xsd:maxExclusive value="1000"/>
+      <xsd:minInclusive value="0"/>
+      <xsd:totalDigits value="8"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DirectionType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="In"/>
+      <xsd:enumeration value="Out"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="DurationCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="P1D"/>
+      <xsd:enumeration value="P1M"/>
+      <xsd:enumeration value="P1Y"/>
+      <xsd:enumeration value="PT5M"/>
+      <xsd:enumeration value="PT15M"/>
+      <xsd:enumeration value="PT1H"/>
+      <xsd:enumeration value="PT30M"/>
+      <xsd:enumeration value="PT60M"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_boolean">
+    <xsd:restriction base="xsd:boolean">
+      <xsd:pattern value="true|false"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_BusinessProcessRole">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AG"/>
+      <xsd:enumeration value="BSL"/>
+      <xsd:enumeration value="DDE"/>
+      <xsd:enumeration value="DDK"/>
+      <xsd:enumeration value="DDM"/>
+      <xsd:enumeration value="DDQ"/>
+      <xsd:enumeration value="DDZ"/>
+      <xsd:enumeration value="DDX"/>
+      <xsd:enumeration value="MDR"/>
+      <xsd:enumeration value="PQ"/>
+      <xsd:enumeration value="QRY"/>
+      <xsd:enumeration value="SLR"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_dateTime9DecType">
+    <xsd:restriction base="xsd:dateTime">
+      <xsd:pattern value="[1-9][0-9]{3}-.+T[^.]+(|\.[0-9]{0,9})(Z|[+\-].+)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_dateTimeType">
+    <xsd:restriction base="xsd:dateTime">
+      <xsd:pattern value="[1-9][0-9]{3}-.+T[^.]+(|\.[0-9]{0,3})(Z|[+\-].+)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_DocumentType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="21"/>
+      <xsd:enumeration value="392"/>
+      <xsd:enumeration value="406"/>
+      <xsd:enumeration value="414"/>
+      <xsd:enumeration value="432"/>
+      <xsd:enumeration value="E02"/>
+      <xsd:enumeration value="E07"/>
+      <xsd:enumeration value="E10"/>
+      <xsd:enumeration value="E13"/>
+      <xsd:enumeration value="E30"/>
+      <xsd:enumeration value="E31"/>
+      <xsd:enumeration value="E39"/>
+      <xsd:enumeration value="E58"/>
+      <xsd:enumeration value="E65"/>
+      <xsd:enumeration value="E66"/>
+      <xsd:enumeration value="E67"/>
+      <xsd:enumeration value="ERR"/>
+      <xsd:enumeration value="294"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_EnergyIndustryClassificationType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="23"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_MeteringPointTypeCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="E17"/>
+      <xsd:enumeration value="E18"/>
+      <xsd:enumeration value="E19"/>
+      <xsd:enumeration value="E20"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_PhysicalStatusCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="E22"/>
+      <xsd:enumeration value="E23"/>
+      <xsd:enumeration value="E31"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_ProductIdentifierCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="8716867000030"/>
+      <xsd:enumeration value="8716867000047"/>
+      <xsd:enumeration value="8716867000139"/>
+      <xsd:enumeration value="8716867000146"/>
+      <xsd:enumeration value="4700000000201"/>
+      <xsd:enumeration value="4700000000101"/>
+      <xsd:enumeration value="4700000000301"/>
+      <xsd:enumeration value="4700000000302"/>
+      <xsd:enumeration value="4700000000303"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_ResponseReasonCode">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="E09"/>
+      <xsd:enumeration value="EH001"/>
+      <xsd:enumeration value="EH002"/>
+      <xsd:enumeration value="EH003"/>
+      <xsd:enumeration value="EH004"/>
+      <xsd:enumeration value="EH005"/>
+      <xsd:enumeration value="EH006"/>
+      <xsd:enumeration value="EH007"/>
+      <xsd:enumeration value="EH008"/>
+      <xsd:enumeration value="EH009"/>
+      <xsd:enumeration value="EH010"/>
+      <xsd:enumeration value="EH011"/>
+      <xsd:enumeration value="EH012"/>
+      <xsd:enumeration value="EH013"/>
+      <xsd:enumeration value="EH014"/>
+      <xsd:enumeration value="EH015"/>
+      <xsd:enumeration value="EH016"/>
+      <xsd:enumeration value="EH017"/>
+      <xsd:enumeration value="EH018"/>
+      <xsd:enumeration value="EH019"/>
+      <xsd:enumeration value="EH020"/>
+      <xsd:enumeration value="EH021"/>
+      <xsd:enumeration value="EH022"/>
+      <xsd:enumeration value="EH023"/>
+      <xsd:enumeration value="EH024"/>
+      <xsd:enumeration value="EH025"/>
+      <xsd:enumeration value="EH026"/>
+      <xsd:enumeration value="EH027"/>
+      <xsd:enumeration value="EH028"/>
+      <xsd:enumeration value="EH029"/>
+      <xsd:enumeration value="EH030"/>
+      <xsd:enumeration value="EH031"/>
+      <xsd:enumeration value="EH032"/>
+      <xsd:enumeration value="EH033"/>
+      <xsd:enumeration value="EH034"/>
+      <xsd:enumeration value="EH035"/>
+      <xsd:enumeration value="EH036"/>
+      <xsd:enumeration value="EH037"/>
+      <xsd:enumeration value="EH038"/>
+      <xsd:enumeration value="EH039"/>
+      <xsd:enumeration value="EH040"/>
+      <xsd:enumeration value="E10"/>
+      <xsd:enumeration value="E11"/>
+      <xsd:enumeration value="E12"/>
+      <xsd:enumeration value="E13"/>
+      <xsd:enumeration value="E14"/>
+      <xsd:enumeration value="E15"/>
+      <xsd:enumeration value="E16"/>
+      <xsd:enumeration value="E17"/>
+      <xsd:enumeration value="E18"/>
+      <xsd:enumeration value="E19"/>
+      <xsd:enumeration value="E22"/>
+      <xsd:enumeration value="E29"/>
+      <xsd:enumeration value="E36"/>
+      <xsd:enumeration value="E37"/>
+      <xsd:enumeration value="E47"/>
+      <xsd:enumeration value="E49"/>
+      <xsd:enumeration value="E50"/>
+      <xsd:enumeration value="E51"/>
+      <xsd:enumeration value="E52"/>
+      <xsd:enumeration value="E54"/>
+      <xsd:enumeration value="E55"/>
+      <xsd:enumeration value="E59"/>
+      <xsd:enumeration value="E61"/>
+      <xsd:enumeration value="E62"/>
+      <xsd:enumeration value="E72"/>
+      <xsd:enumeration value="E73"/>
+      <xsd:enumeration value="E86"/>
+      <xsd:enumeration value="E87"/>
+      <xsd:enumeration value="E97"/>
+      <xsd:enumeration value="E98"/>
+      <xsd:enumeration value="E81"/>
+      <xsd:enumeration value="E90"/>
+      <xsd:enumeration value="E91"/>
+      <xsd:enumeration value="E0H"/>
+      <xsd:enumeration value="E0I"/>
+      <xsd:enumeration value="E0J"/>
+      <xsd:enumeration value="E0K"/>
+      <xsd:enumeration value="E0L"/>
+      <xsd:enumeration value="E0M"/>
+      <xsd:enumeration value="EH041"/>
+      <xsd:enumeration value="EH042"/>
+      <xsd:enumeration value="EH043"/>
+      <xsd:enumeration value="EH044"/>
+      <xsd:enumeration value="EH045"/>
+      <xsd:enumeration value="EH046"/>
+      <xsd:enumeration value="EH047"/>
+      <xsd:enumeration value="EH048"/>
+      <xsd:enumeration value="EH049"/>
+      <xsd:enumeration value="EH050"/>
+      <xsd:enumeration value="EH051"/>
+      <xsd:enumeration value="EH052"/>
+      <xsd:enumeration value="EH053"/>
+      <xsd:enumeration value="EH054"/>
+      <xsd:enumeration value="EH055"/>
+      <xsd:enumeration value="EH056"/>
+      <xsd:enumeration value="EH057"/>
+      <xsd:enumeration value="EH058"/>
+      <xsd:enumeration value="EH059"/>
+      <xsd:enumeration value="EH060"/>
+      <xsd:enumeration value="EH061"/>
+      <xsd:enumeration value="EH062"/>
+      <xsd:enumeration value="EH063"/>
+      <xsd:enumeration value="EH064"/>
+      <xsd:enumeration value="EH065"/>
+      <xsd:enumeration value="EH066"/>
+      <xsd:enumeration value="EH067"/>
+      <xsd:enumeration value="EH068"/>
+      <xsd:enumeration value="EH069"/>
+      <xsd:enumeration value="EH070"/>
+      <xsd:enumeration value="EH071"/>
+      <xsd:enumeration value="EH072"/>
+      <xsd:enumeration value="EH073"/>
+      <xsd:enumeration value="EH074"/>
+      <xsd:enumeration value="EH075"/>
+      <xsd:enumeration value="EH076"/>
+      <xsd:enumeration value="EH077"/>
+      <xsd:enumeration value="EH078"/>
+      <xsd:enumeration value="EH079"/>
+      <xsd:enumeration value="EH080"/>
+      <xsd:enumeration value="EH081"/>
+      <xsd:enumeration value="EH082"/>
+      <xsd:enumeration value="EH083"/>
+      <xsd:enumeration value="EH084"/>
+      <xsd:enumeration value="EH085"/>
+      <xsd:enumeration value="EH086"/>
+      <xsd:enumeration value="EH087"/>
+      <xsd:enumeration value="EH088"/>
+      <xsd:enumeration value="EH089"/>
+      <xsd:enumeration value="EH090"/>
+      <xsd:enumeration value="EH091"/>
+      <xsd:enumeration value="EH092"/>
+      <xsd:enumeration value="EH093"/>
+      <xsd:enumeration value="EH094"/>
+      <xsd:enumeration value="EH095"/>
+      <xsd:enumeration value="EH096"/>
+      <xsd:enumeration value="EH097"/>
+      <xsd:enumeration value="EH098"/>
+      <xsd:enumeration value="EH099"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_schemeAgencyIdentifierType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="82"/>
+      <xsd:enumeration value="Z01"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_SettlementMethodCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="E01"/>
+      <xsd:enumeration value="E02"/>
+      <xsd:enumeration value="Z01"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Elhub_UnitType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="kWh"/>
+      <xsd:enumeration value="kvarh"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EndReasonType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Z41"/>
+      <xsd:enumeration value="Z42"/>
+      <xsd:enumeration value="Z44"/>
+      <xsd:enumeration value="Z45"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EnovaFeeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ConsumptionDependent"/>
+      <xsd:enumeration value="Fixed"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EstimatedQualityCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="56"/>
+      <xsd:enumeration value="81"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EstimationCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="E001"/>
+      <xsd:enumeration value="E002"/>
+      <xsd:enumeration value="E003"/>
+      <xsd:enumeration value="E004"/>
+      <xsd:enumeration value="E005"/>
+      <xsd:enumeration value="E006"/>
+      <xsd:enumeration value="E007"/>
+      <xsd:enumeration value="E008"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="integer2">
+    <xsd:restriction base="xsd:int">
+      <xsd:maxInclusive value="99"/>
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="integer4">
+    <xsd:restriction base="xsd:int">
+      <xsd:maxInclusive value="9999"/>
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="integer5">
+    <xsd:restriction base="xsd:int">
+      <xsd:maxInclusive value="99999"/>
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="integer9">
+    <xsd:restriction base="xsd:int">
+      <xsd:maxInclusive value="999999999"/>
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="260"/>
+      <xsd:enumeration value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType260">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="260"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType5">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType6">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType89">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="89"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType89_260">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="260"/>
+      <xsd:enumeration value="89"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="listAgencyIdentifierType89_6">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="6"/>
+      <xsd:enumeration value="89"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="long12">
+    <xsd:restriction base="xsd:long">
+      <xsd:maxInclusive value="999999999999"/>
+      <xsd:minInclusive value="0"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MeteringPointType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{18}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MeterReadingCharacteristicsCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="E13"/>
+      <xsd:enumeration value="E14"/>
+      <xsd:enumeration value="E16"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MeterReadingOccurrenceType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="PT15M"/>
+      <xsd:enumeration value="PT1H"/>
+      <xsd:enumeration value="PT5M"/>
+      <xsd:enumeration value="PT60M"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="MeterReadReasonCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1"/>
+      <xsd:enumeration value="4"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PriorityCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="B"/>
+      <xsd:enumeration value="C"/>
+      <xsd:enumeration value="D"/>
+      <xsd:enumeration value="P"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ProductionCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="B14"/>
+      <xsd:enumeration value="B16"/>
+      <xsd:enumeration value="B20"/>
+      <xsd:enumeration value="Z04"/>
+      <xsd:enumeration value="Z05"/>
+      <xsd:enumeration value="Z06"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="QueryCategoryCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="MVRV"/>
+      <xsd:enumeration value="MVTS"/>
+      <xsd:enumeration value="MVVT"/>
+      <xsd:enumeration value="MDCU"/>
+      <xsd:enumeration value="MDMP"/>
+      <xsd:enumeration value="STLM"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ReminderType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EAC"/>
+      <xsd:enumeration value="IV"/>
+      <xsd:enumeration value="MI"/>
+      <xsd:enumeration value="PV"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="schemeAgencyIdentifierEICType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="305"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="schemeAgencyIdentifierGS1ElhubType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="89"/>
+      <xsd:enumeration value="9"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="schemeAgencyIdentifierGS1Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="9"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String100Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="100"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String10Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="10"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String11Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="11"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String13Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="13"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String150Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="150"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String16Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="16"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String18Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="18"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String300Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="300"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String40Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="40"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String50Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="50"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="String80Type">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="80"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="UUIDType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"/>
+      <xsd:length value="36"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ValidationCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="V001"/>
+      <xsd:enumeration value="V002"/>
+      <xsd:enumeration value="V003"/>
+      <xsd:enumeration value="V004"/>
+      <xsd:enumeration value="V011"/>
+      <xsd:enumeration value="V012"/>
+      <xsd:enumeration value="V013"/>
+      <xsd:enumeration value="V014"/>
+      <xsd:enumeration value="V999"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ValuesIndicatorType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="B"/>
+      <xsd:enumeration value="I"/>
+      <xsd:enumeration value="V"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VATCode">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="E"/>
+      <xsd:enumeration value="S"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="AcknowledgementStatusType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:AcknowledgementStatus">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType6"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="CalculatedQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153Negative">
+        <xsd:attribute name="ImbalanceSettlement" use="optional" fixed="true" type="xsd:boolean"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ConsumptionCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:ConsumptionCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_BusinessProcessRoleType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_BusinessProcessRole">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89_6"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_BusinessProcessType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:BRSIdentification">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_BusinessTypeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:BusinessTypeCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CountryCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:CountryCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType5"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_CurrencyCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:CurrencyCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType5"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_DocumentNameCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_DocumentType">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EndUserIdentifierType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:String11Type">
+        <xsd:attribute name="schemeAgencyIdentifier" use="required" type="bdt:Elhub_schemeAgencyIdentifierType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_EnergyPartyIdentifierType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:String13Type">
+        <xsd:attribute name="schemeAgencyIdentifier" use="required" type="bdt:schemeAgencyIdentifierGS1Type"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringGridAreaIdentifierType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:String16Type">
+        <xsd:attribute name="schemeAgencyIdentifier" use="required" type="bdt:schemeAgencyIdentifierEICType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringPointIdentifierType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:MeteringPointType">
+        <xsd:attribute name="schemeAgencyIdentifier" use="required" type="bdt:schemeAgencyIdentifierGS1Type"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeteringPointTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_MeteringPointTypeCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType260"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_MeterReadingCharacteristicsType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:MeterReadingCharacteristicsCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType260"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_PhysicalStatusCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_PhysicalStatusCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType260"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ProductIdentifierType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_ProductIdentifierCode">
+        <xsd:attribute name="schemeAgencyIdentifier" use="required" type="bdt:schemeAgencyIdentifierGS1ElhubType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_ResponseReasonCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_ResponseReasonCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89_260"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Elhub_SettlementMethodCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:Elhub_SettlementMethodCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89_260"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EstimatedQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153">
+        <xsd:attribute name="Quality" use="required" type="bdt:EstimatedQualityCodeType"/>
+        <xsd:attribute name="ValidationCode" use="required" type="bdt:ValidationCodeType"/>
+        <xsd:attribute name="EstimationCode" use="required" type="bdt:EstimationCodeType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="MeteredQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProductionCodeType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:ProductionCode">
+        <xsd:attribute name="listAgencyIdentifier" use="required" type="bdt:listAgencyIdentifierType89"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProfiledEstimatedQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153Negative"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProfiledMeteredQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153Negative">
+        <xsd:attribute name="MeterReadReasonCode" use="required" type="bdt:MeterReadReasonCodeType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProfiledMeterIndexType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153">
+        <xsd:attribute name="MeterReadReasonCode" use="required" type="bdt:MeterReadReasonCodeType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ProfiledStipulatedQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153Negative">
+        <xsd:attribute name="MeterReadReasonCode" use="required" type="bdt:MeterReadReasonCodeType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TemporaryQuantityType">
+    <xsd:simpleContent>
+      <xsd:extension base="bdt:decimal153">
+        <xsd:attribute name="ValidationCode" use="required" type="bdt:ValidationCodeType"/>
+        <xsd:attribute name="EstimationCode" use="optional" type="bdt:EstimationCodeType"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\RequestEndOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:RequestEndOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:RequestEndOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RequestEndOfSupply" type="rsm:RequestEndOfSupply"/>
+  <xsd:complexType name="RequestEndOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMPEvent" type="Elhub_RequestEndOfSupplyType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\masterdata\RequestUpdateMasterDataMeteringPoint.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RequestUpdateMasterDataMeteringPoint" type="rsm:RequestUpdateMasterDataMeteringPoint">
+    <xsd:unique name="uniquePayloadMasterDataMPEventIdentification">
+      <xsd:selector xpath="rsm:PayloadMasterDataMPEvent"/>
+      <xsd:field xpath="abie:Identification"/>
+    </xsd:unique>
+  </xsd:element>
+  <xsd:complexType name="RequestUpdateMasterDataMeteringPoint">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMasterDataMPEvent" type="Elhub_RequestUpdateMasterDataMeteringPointType" minOccurs="1" maxOccurs="9999"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\masterdata\RequestUpdateCustomerInformation.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RequestUpdateCustomerInformation" type="rsm:RequestUpdateCustomerInformation"/>
+  <xsd:complexType name="RequestUpdateCustomerInformation">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMasterDataMPEvent" type="Elhub_RequestUpdateCustomerInformationType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\NotifyStartOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="NotifyStartOfSupply" type="rsm:NotifyStartOfSupply"/>
+  <xsd:complexType name="NotifyStartOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMPEvent" type="Elhub_NotifyStartOfSupplyEventType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\NotifyEndOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="NotifyEndOfSupply" type="rsm:NotifyEndOfSupply"/>
+  <xsd:complexType name="NotifyEndOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMPEvent" type="Elhub_NotifyEndOfSupplyEventType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\RejectStartOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:RejectStartOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:RejectStartOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RejectStartOfSupply" type="rsm:RejectStartOfSupply"/>
+  <xsd:complexType name="RejectStartOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_RejectEventSingleMPType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\RejectEndOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:RejectEndOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:RejectEndOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RejectEndOfSupply" type="rsm:RejectEndOfSupply"/>
+  <xsd:complexType name="RejectEndOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_RejectEventSingleMPType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\ConfirmStartOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="ConfirmStartOfSupply" type="rsm:ConfirmStartOfSupply"/>
+  <xsd:complexType name="ConfirmStartOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_ConfirmStartOfSupplyType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\market\ConfirmEndOfSupply.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="ConfirmEndOfSupply" type="rsm:ConfirmEndOfSupply"/>
+  <xsd:complexType name="ConfirmEndOfSupply">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_ConfirmEndOfSupplyType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\masterdata\NotifyMeteringPointCharacteristics.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="NotifyMeteringPointCharacteristics" type="rsm:NotifyMeteringPointCharacteristics"/>
+  <xsd:complexType name="NotifyMeteringPointCharacteristics">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMasterdataMPEvent" type="Elhub_NotifyMeteringPointCharacteristicsEventType" minOccurs="1" maxOccurs="9999"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\masterdata\NotifyCustomerInformation.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="NotifyCustomerInformation" type="rsm:NotifyCustomerInformation"/>
+  <xsd:complexType name="NotifyCustomerInformation">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMasterDataMPEvent" type="Elhub_NotifyCustomerInformationType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\query\RequestToGridAccessProvider.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="RequestToGridAccessProvider" type="rsm:RequestToGridAccessProvider"/>
+  <xsd:complexType name="RequestToGridAccessProvider">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMPEvent" type="Elhub_RequestToGridAccessProviderType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\query\ResponseFromGridAccessProvider.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="ResponseFromGridAccessProvider" type="rsm:ResponseFromGridAccessProvider"/>
+  <xsd:complexType name="ResponseFromGridAccessProvider">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_ResponseFromGridAccessProviderType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\query\ResponseUpfrontMeteringPointCharacteristics.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="ResponseUpfrontMeteringPointCharacteristics" type="rsm:ResponseUpfrontMeteringPointCharacteristics"/>
+  <xsd:complexType name="ResponseUpfrontMeteringPointCharacteristics">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadMasterDataMPEvent" type="Elhub_ResponseUpfrontMeteringPointCharacteristicsType" minOccurs="1" maxOccurs="99"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\query\ResponseFromElhub.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:query:ResponseFromElhub:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:query:ResponseFromElhub:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="ResponseFromElhub" type="rsm:ResponseFromElhub"/>
+  <xsd:complexType name="ResponseFromElhub">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_ResponseFromElhubType" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\wsdl\xsd\common.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:wsdl:common:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:no:elhub:emif:wsdl:common:v2">
+  <xsd:element name="ElhubSOAPFault" type="tns:ElhubSOAPFaultType"/>
+  <xsd:complexType name="ElhubSOAPFaultType">
+    <xsd:sequence>
+      <xsd:element name="CodeGroup" type="tns:CodeGroupType"/>
+      <xsd:element name="Description">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="100"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="ExceptionDateTime">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:dateTime">
+            <xsd:pattern value=".+T.+(Z|[+-].+)"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="FaultText" minOccurs="0">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="1000"/>
+            <xsd:minLength value="1"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="CodeGroupType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="XSD"/>
+      <xsd:enumeration value="Compression"/>
+      <xsd:enumeration value="Security"/>
+      <xsd:enumeration value="System"/>
+      <xsd:enumeration value="UUID"/>
+      <xsd:enumeration value="Size"/>
+      <xsd:enumeration value="Date"/>
+      <xsd:enumeration value="Other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\Acknowledgement.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:Acknowledgement:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:Acknowledgement:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="Acknowledgement" type="rsm:Acknowledgement"/>
+  <xsd:complexType name="Acknowledgement">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="PayloadResponseEvent" type="Elhub_Acknowledgement" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:\C:\ELHUB\market_wsdl\elhub_wsdl\2.3\bim\PollForData.xsd</con:url><con:content><![CDATA[<xsd:schema targetNamespace="urn:no:elhub:emif:PollForData:v2" elementFormDefault="qualified" version="2.3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:PollForData:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+  <xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
+  <xsd:element name="PollForData" type="rsm:PollForData"/>
+  <xsd:complexType name="PollForData">
+    <xsd:sequence>
+      <xsd:element name="Header" type="Elhub_HeaderType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="ProcessEnergyContext" type="Elhub_EnergyContextType" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="Payload" type="Elhub_PollForData" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints>
+      <con:endpoint>http://localhost:1234/WebService/services/PollMarketProcesses</con:endpoint>
+      <con:endpoint>http://localhost:8082/WebService/services/PollMarketProcesses</con:endpoint>
+      <con:endpoint>http://localhost:8092/WebService/services/PollMarketProcesses</con:endpoint>
+    </con:endpoints>
+    <con:operation action="AcknowledgePoll" anonymous="optional" bindingOperationName="AcknowledgePoll" id="d0aeda0c-3f10-48bf-b66e-f73d60ac425e" inputName="AcknowledgePollRequest" isOneWay="false" name="AcknowledgePoll" outputName="AcknowledgePollResponse" receivesAttachments="false" sendsAttachments="false" type="Request-Response">
+      <con:settings/>
+      <con:call id="67d2dd41-e67f-4006-be7b-04ab84b4cc9a" name="ValidRequest">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8082/WebService/services/PollMarketProcesses</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:Acknowledgement:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <urn:AcknowledgePollRequest>\r
+         <urn1:Acknowledgement>\r
+            <urn1:Header>\r
+               <urn2:Identification>${=java.util.UUID.randomUUID().toString()}</urn2:Identification>\r
+               <urn2:DocumentType listAgencyIdentifier="6">21</urn2:DocumentType>\r
+               <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>\r
+               <urn2:PhysicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:PhysicalSenderEnergyParty>
+               <urn2:JuridicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:JuridicalSenderEnergyParty>
+               <urn2:JuridicalRecipientEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+               </urn2:JuridicalRecipientEnergyParty>
+            </urn1:Header>\r
+            <urn1:ProcessEnergyContext>\r
+               <urn2:EnergyBusinessProcess listAgencyIdentifier="89">POLL</urn2:EnergyBusinessProcess>\r
+               <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>\r
+               <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>\r
+            </urn1:ProcessEnergyContext>\r
+            <urn1:PayloadResponseEvent>\r
+               <urn2:StatusType listAgencyIdentifier="6">39</urn2:StatusType>\r
+               <urn2:OriginalBusinessDocumentReference>${=java.util.UUID.randomUUID().toString()}</urn2:OriginalBusinessDocumentReference>\r
+            </urn1:PayloadResponseEvent>\r
+         </urn1:Acknowledgement>\r
+      </urn:AcknowledgePollRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+      <con:call id="45b756f7-32ef-4f51-b650-9535fa6f24ba" name="XSDValidationErrorRequest">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8082/WebService/services/PollMarketProcesses</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:Acknowledgement:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:AcknowledgePollRequest>
+         <urn1:Acknowledgement>
+            <urn1:Header>
+               <urn2:Identification>1234</urn2:Identification>
+               <urn2:DocumentType listAgencyIdentifier="6">21</urn2:DocumentType>
+               <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+               <urn2:PhysicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:PhysicalSenderEnergyParty>
+               <urn2:JuridicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:JuridicalSenderEnergyParty>
+               <urn2:JuridicalRecipientEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+               </urn2:JuridicalRecipientEnergyParty>
+            </urn1:Header>
+            <urn1:ProcessEnergyContext>
+               <urn2:EnergyBusinessProcess listAgencyIdentifier="89">POLL</urn2:EnergyBusinessProcess>
+               <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+               <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+            </urn1:ProcessEnergyContext>
+            <urn1:PayloadResponseEvent>
+               <urn2:StatusType listAgencyIdentifier="6">39</urn2:StatusType>
+               <urn2:OriginalBusinessDocumentReference>${=java.util.UUID.randomUUID().toString()}</urn2:OriginalBusinessDocumentReference>
+            </urn1:PayloadResponseEvent>
+         </urn1:Acknowledgement>
+      </urn:AcknowledgePollRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+      <con:call id="9fb38455-6dbb-43a3-8c1c-8c422daf032e" name="ValidRequest-System/SecurityFault">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>iso-8859-1</con:encoding>
+        <con:endpoint>http://localhost:8092/WebService/services/PollMarketProcesses</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:Acknowledgement:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:AcknowledgePollRequest>
+         <urn1:Acknowledgement>
+            <urn1:Header>
+               <urn2:Identification>${=java.util.UUID.randomUUID().toString()}</urn2:Identification>
+               <urn2:DocumentType listAgencyIdentifier="6">21</urn2:DocumentType>
+               <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+               <urn2:PhysicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:PhysicalSenderEnergyParty>
+               <urn2:JuridicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:JuridicalSenderEnergyParty>
+               <urn2:JuridicalRecipientEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+               </urn2:JuridicalRecipientEnergyParty>
+            </urn1:Header>
+            <urn1:ProcessEnergyContext>
+               <urn2:EnergyBusinessProcess listAgencyIdentifier="89">POLL</urn2:EnergyBusinessProcess>
+               <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+               <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+            </urn1:ProcessEnergyContext>
+            <urn1:PayloadResponseEvent>
+               <urn2:StatusType listAgencyIdentifier="6">39</urn2:StatusType>
+               <urn2:OriginalBusinessDocumentReference>${=java.util.UUID.randomUUID().toString()}</urn2:OriginalBusinessDocumentReference>
+            </urn1:PayloadResponseEvent>
+         </urn1:Acknowledgement>
+      </urn:AcknowledgePollRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation action="PollForData" anonymous="optional" bindingOperationName="PollForData" id="d0869972-f964-4b1a-91bf-ed666e22e6e4" inputName="PollForDataRequest" isOneWay="false" name="PollForData" outputName="PollForDataResponse" receivesAttachments="false" sendsAttachments="false" type="Request-Response">
+      <con:settings/>
+      <con:call id="88552aa0-f0c6-4915-a203-608ac2983bcb" name="ValidRequest">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="WsdlSettings@pretty-print-response-xml">true</con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8082/WebService/services/PollMarketProcesses</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:PollForData:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:PollForDataRequest>
+         <urn1:PollForData>
+            <urn1:Header>
+               <urn2:Identification>${=java.util.UUID.randomUUID().toString()}</urn2:Identification>
+               <urn2:DocumentType listAgencyIdentifier="6">21</urn2:DocumentType>
+               <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+               <urn2:PhysicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:PhysicalSenderEnergyParty>
+               <urn2:JuridicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:JuridicalSenderEnergyParty>
+               <urn2:JuridicalRecipientEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+               </urn2:JuridicalRecipientEnergyParty>
+            </urn1:Header>
+            <urn1:ProcessEnergyContext>
+               <urn2:EnergyBusinessProcess listAgencyIdentifier="89">POLL</urn2:EnergyBusinessProcess>
+               <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+               <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+            </urn1:ProcessEnergyContext>
+            <urn1:Payload>
+            </urn1:Payload>
+         </urn1:PollForData>
+      </urn:PollForDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+      <con:call id="087db654-bc27-4c26-a347-5865ee429adc" name="XSDValidationErrorRequest">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://localhost:8082/WebService/services/PollMarketProcesses</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:PollForData:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:PollForDataRequest>
+         <urn1:PollForData>
+            <urn1:Header>
+               <urn2:Identification>1234</urn2:Identification>
+               <urn2:DocumentType listAgencyIdentifier="6">21</urn2:DocumentType>
+               <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+               <urn2:PhysicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:PhysicalSenderEnergyParty>
+               <urn2:JuridicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:JuridicalSenderEnergyParty>
+               <urn2:JuridicalRecipientEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+               </urn2:JuridicalRecipientEnergyParty>
+            </urn1:Header>
+            <urn1:ProcessEnergyContext>
+               <urn2:EnergyBusinessProcess listAgencyIdentifier="89">POLL</urn2:EnergyBusinessProcess>
+               <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+               <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+            </urn1:ProcessEnergyContext>
+            <urn1:Payload>
+            </urn1:Payload>
+         </urn1:PollForData>
+      </urn:PollForDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+      <con:call id="fe11e0a1-24e8-4b96-975a-28c349100174" name="ValidRequest-System/SecurityFault">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>iso-8859-1</con:encoding>
+        <con:endpoint>http://localhost:8092/WebService/services/PollMarketProcesses</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:PollForData:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:PollForDataRequest>
+         <urn1:PollForData>
+            <urn1:Header>
+               <urn2:Identification>${=java.util.UUID.randomUUID().toString()}</urn2:Identification>
+               <urn2:DocumentType listAgencyIdentifier="6">21</urn2:DocumentType>
+               <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+               <urn2:PhysicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:PhysicalSenderEnergyParty>
+               <urn2:JuridicalSenderEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+               </urn2:JuridicalSenderEnergyParty>
+               <urn2:JuridicalRecipientEnergyParty>
+                  <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+               </urn2:JuridicalRecipientEnergyParty>
+            </urn1:Header>
+            <urn1:ProcessEnergyContext>
+               <urn2:EnergyBusinessProcess listAgencyIdentifier="89">POLL</urn2:EnergyBusinessProcess>
+               <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+               <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+            </urn1:ProcessEnergyContext>
+            <urn1:Payload>
+            </urn1:Payload>
+         </urn1:PollForData>
+      </urn:PollForDataRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:mockService bindToHostOnly="false" docroot="" host="oracle12c-PC" id="e82f3da1-f653-4787-8c29-e4a72d10c312" incomingWss="Incoming" name="MockService" path="/" port="8082">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:mockOperation id="7ee82c05-6d82-4cd3-819e-be314ed6b037" interface="MarketProcessesPollingSoapBinding" name="AcknowledgePoll" operation="AcknowledgePoll">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockService
+import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
+import com.eviware.soapui.model.testsuite.AssertionError
+import org.apache.xmlbeans.impl.soap.SOAPBody
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import com.eviware.soapui.support.types.*
+
+   WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext();
+   WsdlValidator validator = new WsdlValidator(wsdlContext);
+   String soapAction = mockRequest.getSoapAction();
+
+   log.info(context.getMockService().toString() + "::" +soapAction);
+   WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction);
+
+   StringToStringsMap headers = mockRequest.getRequestHeaders();
+   String contentType = headers.get("Content-Type");
+   if (contentType == null || !contentType.toLowerCase().contains("utf-8")) {
+     context.setProperty("contentType", contentType);
+     return "EncodingError";
+   }
+
+   WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation);
+
+   AssertionError[] errors = validator.assertRequest(messageExchange, false);
+
+   if (errors.size() > 0) {
+    String errorString = Arrays.toString(errors.collect());
+    int stringLength = errorString.length() > 1000 ? 1000 : errorString.length();
+    context.setProperty("errors", errorString.substring(0,stringLength));
+    return "ValidationError";
+   }
+   else {
+     return "OKResponse";
+   }</con:dispatchPath>
+      <con:response encoding="UTF-8" httpResponseStatus="200" id="39e101a1-68bb-4953-a334-5f912d9a8944" name="OKResponse" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent>&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"> &lt;soapenv:Header/> &lt;soapenv:Body/> &lt;/soapenv:Envelope></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="ade0ac6b-ddaf-45a9-80f7-68a8fc5fdc5c" name="ValidationError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>XSD validation error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>XSD</urn:CodeGroup>
+          <urn:Description>XSD validation error</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>${errors}</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="ade0ac6b-ddaf-45a9-80f7-68a8fc5fdc5c" name="EncodingError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Invalid Encoding</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>Other</urn:CodeGroup>
+          <urn:Description>Invalid encoding</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>Message must be utf-8 encoded. Specified encoding: ${contentType} is invalid</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+    <con:mockOperation id="49cc6b4e-aadf-463a-9013-1d260eb16086" interface="MarketProcessesPollingSoapBinding" name="PollForData" operation="PollForData">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockService
+import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
+import com.eviware.soapui.model.testsuite.AssertionError
+import org.apache.xmlbeans.impl.soap.SOAPBody
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import com.eviware.soapui.support.types.*
+
+   WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext();
+   WsdlValidator validator = new WsdlValidator(wsdlContext);
+   String soapAction = mockRequest.getSoapAction();
+
+   log.info(context.getMockService().toString() + "::" +soapAction);
+   WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction);
+
+   StringToStringsMap headers = mockRequest.getRequestHeaders();
+   String contentType = headers.get("Content-Type");
+   if (contentType == null || !contentType.toLowerCase().contains("utf-8")) {
+     context.setProperty("contentType", contentType);
+     return "EncodingError";
+   }
+
+   WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation);
+
+   AssertionError[] errors = validator.assertRequest(messageExchange, false);
+
+   if (errors.size() > 0) {
+    String errorString = Arrays.toString(errors.collect());
+    int stringLength = errorString.length() > 1000 ? 1000 : errorString.length();
+    context.setProperty("errors", errorString.substring(0,stringLength));
+    return "ValidationError";
+   }
+   else {
+   	double randomNbr = Math.random();
+    if (randomNbr &lt;= 0.5) {
+     return "OKResponse";
+    }
+    else {
+     return "NoData";
+    }
+   }</con:dispatchPath>
+      <con:response encoding="UTF-8" httpResponseStatus="200" id="01692ea3-df66-49e8-8e36-b2e8d9b34248" name="OKResponse" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:urn4="urn:no:elhub:emif:market:RequestStartOfSupply:v2" xmlns:urn6="urn:no:elhub:emif:market:NotifyStartOfSupply:v2" xmlns:urn5="urn:no:elhub:emif:market:RejectStartOfSupply:v2" xmlns:urn8="urn:no:elhub:emif:market:NotifyEndOfSupply:v2" xmlns:urn7="urn:no:elhub:emif:market:RejectEndOfSupply:v2" xmlns:urn13="urn:no:elhub:emif:query:ResponseFromElhub:v2" xmlns:urn9="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" xmlns:urn12="urn:no:elhub:emif:masterdata:NotifyCustomerInformation:v2" xmlns:urn11="urn:no:elhub:emif:query:ResponseFromGridAccessProvider:v2" xmlns:urn10="urn:no:elhub:emif:query:RequestToGridAccessProvider:v2" xmlns:urn14="urn:no:elhub:emif:Acknowledgement:v2" xmlns:urn15="urn:no:elhub:emif:market:ConfirmStartOfSupply:v2" xmlns:urn16="urn:no:elhub:emif:market:ConfirmEndOfSupply:v2" xmlns:urn17="urn:no:elhub:emif:market:RequestEndOfSupply:v2" xmlns:urn18="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:urn19="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:PollForDataResponse>
+         <urn:Identification>${=java.util.UUID.randomUUID().toString()}</urn:Identification>
+         <urn:ResultDataSet>
+            <urn5:RejectStartOfSupply>
+               <urn5:Header>
+                  <urn2:Identification>${=java.util.UUID.randomUUID().toString()}</urn2:Identification>
+                  <urn2:DocumentType listAgencyIdentifier="6">392</urn2:DocumentType>
+                  <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+                  <urn2:PhysicalSenderEnergyParty>
+                     <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+                  </urn2:PhysicalSenderEnergyParty>
+                  <urn2:JuridicalSenderEnergyParty>
+                     <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+                  </urn2:JuridicalSenderEnergyParty>
+                  <urn2:JuridicalRecipientEnergyParty>
+                     <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+                  </urn2:JuridicalRecipientEnergyParty>
+               </urn5:Header>
+               <urn5:ProcessEnergyContext>
+                  <urn2:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-101</urn2:EnergyBusinessProcess>
+                  <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+                  <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+               </urn5:ProcessEnergyContext>
+               <urn5:PayloadResponseEvent>
+                  <urn2:OriginalBusinessDocumentReference>${=java.util.UUID.randomUUID().toString()}</urn2:OriginalBusinessDocumentReference>
+                  <urn2:ResponseReasonType listAgencyIdentifier="260">E09</urn2:ResponseReasonType>
+                  <urn2:MeteringPointUsedDomainLocation>
+                     <urn2:Identification schemeAgencyIdentifier="9">707057500022939815</urn2:Identification>
+                  </urn2:MeteringPointUsedDomainLocation>
+               </urn5:PayloadResponseEvent>
+            </urn5:RejectStartOfSupply>
+            <urn14:Acknowledgement>
+               <urn14:Header>
+                  <urn2:Identification>${=java.util.UUID.randomUUID().toString()}</urn2:Identification>
+                  <urn2:DocumentType listAgencyIdentifier="6">392</urn2:DocumentType>
+                  <urn2:Creation>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn2:Creation>
+                  <urn2:PhysicalSenderEnergyParty>
+                     <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+                  </urn2:PhysicalSenderEnergyParty>
+                  <urn2:JuridicalSenderEnergyParty>
+                     <urn2:Identification schemeAgencyIdentifier="9">1234567890123</urn2:Identification>
+                  </urn2:JuridicalSenderEnergyParty>
+                  <urn2:JuridicalRecipientEnergyParty>
+                     <urn2:Identification schemeAgencyIdentifier="9">9876543210123</urn2:Identification>
+                  </urn2:JuridicalRecipientEnergyParty>
+               </urn14:Header>
+               <urn14:ProcessEnergyContext>
+                  <urn2:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-102</urn2:EnergyBusinessProcess>
+                  <urn2:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</urn2:EnergyBusinessProcessRole>
+                  <urn2:EnergyIndustryClassification>23</urn2:EnergyIndustryClassification>
+               </urn14:ProcessEnergyContext>
+               <urn14:PayloadResponseEvent>
+                  <urn2:StatusType listAgencyIdentifier="6">41</urn2:StatusType>
+                  <urn2:ResponseReasonType listAgencyIdentifier="260">E09</urn2:ResponseReasonType>
+                  <urn2:OriginalBusinessDocumentReference>${=java.util.UUID.randomUUID().toString()}</urn2:OriginalBusinessDocumentReference>
+               </urn14:PayloadResponseEvent>
+            </urn14:Acknowledgement>
+         </urn:ResultDataSet>
+      </urn:PollForDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="6be3a26b-761b-4b96-a2a9-24df3b5f0956" name="ValidationError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>XSD validation error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>XSD</urn:CodeGroup>
+          <urn:Description>XSD validation error</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>${errors}</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="200" id="a52d403d-f0ec-4e92-8f90-17394aaf887f" name="NoData" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:PollForDataResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="6be3a26b-761b-4b96-a2a9-24df3b5f0956" name="EncodingError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Invalid Encoding</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>Other</urn:CodeGroup>
+          <urn:Description>Invalid encoding</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>Message must be utf-8 encoded. Specified encoding: ${contentType} is invalid</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+  </con:mockService>
+  <con:mockService bindToHostOnly="false" docroot="" host="oracle12c-PC" id="27000ed0-2484-4568-912f-453f38b63b92" incomingWss="Incoming" name="ElhubSoapFaultMockService" path="/" port="8092">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting>
+    </con:settings>
+    <con:properties/>
+    <con:mockOperation id="b1d06ff5-b32c-4ee1-8e82-6c5684ae78f9" interface="MarketProcessesPollingSoapBinding" name="AcknowledgePoll" operation="AcknowledgePoll">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockService
+import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
+import com.eviware.soapui.model.testsuite.AssertionError
+import org.apache.xmlbeans.impl.soap.SOAPBody
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import com.eviware.soapui.support.types.*
+
+   WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext();
+   WsdlValidator validator = new WsdlValidator(wsdlContext);
+   String soapAction = mockRequest.getSoapAction();
+
+   log.info(context.getMockService().toString() + "::" +soapAction);
+   WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction);
+
+   StringToStringsMap headers = mockRequest.getRequestHeaders();
+   String contentType = headers.get("Content-Type");
+   if (contentType == null || !contentType.toLowerCase().contains("utf-8")) {
+     context.setProperty("contentType", contentType);
+     return "EncodingError";
+   }
+
+   WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation);
+
+   AssertionError[] errors = validator.assertRequest(messageExchange, false);
+
+   if (errors.size() > 0) {
+    String errorString = Arrays.toString(errors.collect());
+    int stringLength = errorString.length() > 1000 ? 1000 : errorString.length();
+    context.setProperty("errors", errorString.substring(0,stringLength));
+    return "ValidationError";
+   }
+   else {
+    double randomNbr = Math.random();
+    if (randomNbr &lt;= 0.5) {
+     return "SecurityError";
+    }
+    else {
+     return "SystemError";
+    }
+   }</con:dispatchPath>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="ffbba7c0-0705-44fa-ae02-01f0c2e8d01f" name="ValidationError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>XSD validation error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>XSD</urn:CodeGroup>
+          <urn:Description>XSD validation error</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>${errors}</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="fd9eab2a-abcf-4bf0-91cb-cdaf6b60f29f" name="SecurityError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Security error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>Security</urn:CodeGroup>
+          <urn:Description>Authorization failed</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="483d3f1f-9ecb-4df2-918c-80faa09691db" name="SystemError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Server</faultcode>
+      <faultstring>System error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>System</urn:CodeGroup>
+          <urn:Description>System error</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="ffbba7c0-0705-44fa-ae02-01f0c2e8d01f" name="EncodingError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Invalid Encoding</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>Other</urn:CodeGroup>
+          <urn:Description>Invalid encoding</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>Message must be utf-8 encoded. Specified encoding: ${contentType} is invalid</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="AcknowledgePoll" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+    <con:mockOperation id="07e2b4e7-fad0-4d74-992a-ea049deb453c" interface="MarketProcessesPollingSoapBinding" name="PollForData" operation="PollForData">
+      <con:settings/>
+      <con:defaultResponse>Response 1</con:defaultResponse>
+      <con:dispatchStyle>SCRIPT</con:dispatchStyle>
+      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockService
+import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
+import com.eviware.soapui.model.testsuite.AssertionError
+import org.apache.xmlbeans.impl.soap.SOAPBody
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import com.eviware.soapui.support.types.*
+
+   WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext();
+   WsdlValidator validator = new WsdlValidator(wsdlContext);
+   String soapAction = mockRequest.getSoapAction();
+
+   log.info(context.getMockService().toString() + "::" +soapAction);
+   WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction);
+
+   StringToStringsMap headers = mockRequest.getRequestHeaders();
+   String contentType = headers.get("Content-Type");
+   if (contentType == null || !contentType.toLowerCase().contains("utf-8")) {
+     context.setProperty("contentType", contentType);
+     return "EncodingError";
+   }
+
+   WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation);
+
+   AssertionError[] errors = validator.assertRequest(messageExchange, false);
+
+   if (errors.size() > 0) {
+    String errorString = Arrays.toString(errors.collect());
+    int stringLength = errorString.length() > 1000 ? 1000 : errorString.length();
+    context.setProperty("errors", errorString.substring(0,stringLength));
+    return "ValidationError";
+   }
+   else {
+    double randomNbr = Math.random();
+    if (randomNbr &lt;= 0.5) {
+     return "SecurityError";
+    }
+    else {
+     return "SystemError";
+    }
+   }</con:dispatchPath>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="40ed8a4d-d8ab-48e2-8f28-7985ace428f8" name="ValidationError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>XSD validation error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>XSD</urn:CodeGroup>
+          <urn:Description>XSD validation error</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>${errors}</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="08835e55-e10a-4887-a948-64b98aa1ad07" name="SecurityError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Security error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>Security</urn:CodeGroup>
+          <urn:Description>Authorization failed</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="fc166774-6d9d-4666-844a-f8de7ef56731" name="SystemError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Server</faultcode>
+      <faultstring>System error</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>System</urn:CodeGroup>
+          <urn:Description>System error</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:response encoding="UTF-8" httpResponseStatus="500" id="40ed8a4d-d8ab-48e2-8f28-7985ace428f8" name="EncodingError" outgoingWss="SignBody">
+        <con:settings/>
+        <con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:common:v2">
+  <soapenv:Body>
+    <soapenv:Fault>
+      <faultcode>soapenv:Client</faultcode>
+      <faultstring>Invalid Encoding</faultstring>
+      <detail>
+        <urn:ElhubSOAPFault>
+          <urn:CodeGroup>Other</urn:CodeGroup>
+          <urn:Description>Invalid encoding</urn:Description>
+          <urn:ExceptionDateTime>${=javax.xml.datatype.DatatypeFactory.newInstance().newXMLGregorianCalendar(GregorianCalendar.getInstance())}</urn:ExceptionDateTime>
+           <urn:FaultText>Message must be utf-8 encoded. Specified encoding: ${contentType} is invalid</urn:FaultText>
+        </urn:ElhubSOAPFault>
+      </detail>
+    </soapenv:Fault>
+  </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent>
+        <con:wsaConfig action="PollForData" mustUnderstand="NONE" version="200508"/>
+      </con:response>
+      <con:dispatchConfig/>
+    </con:mockOperation>
+  </con:mockService>
+  <con:endpointStrategy xsi:type="con:DefaultEndpointStrategy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:endpoint incomingWss="Incoming" mode="COMPLEMENT" outgoingWss="SignBody">http://localhost:8082/WebService/services/PollMarketProcesses</con:endpoint>
+    <con:endpoint incomingWss="Incoming" mode="COMPLEMENT" outgoingWss="SignBody">http://localhost:8092/WebService/services/PollMarketProcesses</con:endpoint>
+  </con:endpointStrategy>
+  <con:properties/>
+  <con:wssContainer>
+    <con:crypto>
+      <con:source>${projectDir}/keystore.jks</con:source>
+      <con:password>test</con:password>
+      <con:type>KEYSTORE</con:type>
+    </con:crypto>
+    <con:crypto>
+      <con:source>${projectDir}/truststore.jks</con:source>
+      <con:password>test</con:password>
+      <con:type>TRUSTSTORE</con:type>
+    </con:crypto>
+    <con:incoming>
+      <con:name>Incoming</con:name>
+      <con:decryptCrypto>keystore.jks</con:decryptCrypto>
+      <con:signatureCrypto>keystore.jks</con:signatureCrypto>
+      <con:decryptPassword>test</con:decryptPassword>
+    </con:incoming>
+    <con:outgoing>
+      <con:name>SignBody</con:name>
+      <con:entry type="Timestamp">
+        <con:configuration>
+          <timeToLive>60</timeToLive>
+          <strictTimestamp>true</strictTimestamp>
+        </con:configuration>
+      </con:entry>
+      <con:entry password="test" type="Signature" username="elhub test">
+        <con:configuration>
+          <crypto>keystore.jks</crypto>
+          <keyIdentifierType>1</keyIdentifierType>
+          <signatureAlgorithm/>
+          <signatureCanonicalization/>
+          <useSingleCert>true</useSingleCert>
+          <digestAlgorithm/>
+          <customTokenValueType/>
+          <customTokenId/>
+          <signaturePart>&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="id" value=""/>
+  &lt;con:entry key="name" value="Timestamp"/>
+  &lt;con:entry key="namespace" value="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"/>
+&lt;/xml-fragment></signaturePart>
+          <signaturePart>&lt;xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  &lt;con:entry key="id" value=""/>
+  &lt;con:entry key="name" value="Body"/>
+  &lt;con:entry key="namespace" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+&lt;/xml-fragment></signaturePart>
+        </con:configuration>
+      </con:entry>
+    </con:outgoing>
+  </con:wssContainer>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>

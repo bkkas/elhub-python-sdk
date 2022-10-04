@@ -1,1 +1,1 @@
-::: elhub_python_sdk
+::: elhub_sdk

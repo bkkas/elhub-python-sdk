@@ -18,7 +18,7 @@ classifiers=[
     'Programming Language :: Python :: 3.10',
 ]
 packages = [
-    { include = "elhub_python_sdk" },
+    { include = "elhub_sdk" },
     { include = "tests", format = "sdist" },
 ]
 
@@ -44,6 +44,9 @@ mkdocs-material-extensions  = "^1.0.3"
 mkdocs-autorefs = "^0.4.1"
 pre-commit = "^2.20.0"
 mkdocs-include-markdown-plugin  = "^3.8.1"
+zeep = {extras = ["xmlsec"], version = "^4.1.0"}
+python-dotenv = "^0.21.0"
+
 
 [tool.poetry.extras]
 test = [
@@ -101,3 +104,9 @@ skip_gitignore = true
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-m 'not integrationtest'"
+markers = [
+    "integrationtest"
+    ]

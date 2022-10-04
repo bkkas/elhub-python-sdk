@@ -1,4 +1,4 @@
-sources = elhub_python_sdk
+sources = elhub_sdk
 
 .PHONY: test format lint unittest coverage pre-commit clean
 test: format lint unittest

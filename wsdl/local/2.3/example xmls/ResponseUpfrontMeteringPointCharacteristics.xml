@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:ResponseUpfrontMeteringPointCharacteristics  xmlns:rsm="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2 ../bim/query/ResponseUpfrontMeteringPointCharacteristics.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655445871</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E07</abie:DocumentType>
+		<abie:Creation>2015-04-30T13:56:18+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-611</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMasterDataMPEvent>
+		<abie:OriginalBusinessDocumentReference>123e4567-e89b-12d3-a456-426655445910</abie:OriginalBusinessDocumentReference>
+		<abie:SnapShotOccurrence>2014-06-16T13:54:51+02:00</abie:SnapShotOccurrence>
+		<abie:LastMeterReadingDate>2015-04-30T00:00:00+02:00</abie:LastMeterReadingDate>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:GridAccessProviderInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9473827165321</abie:Identification>
+		</abie:GridAccessProviderInvolvedEnergyParty>
+		<abie:MPAddressMeteringPointAddress>
+			<abie:StreetName>Storgateringen</abie:StreetName>
+			<abie:BuildingNumber>45</abie:BuildingNumber>
+			<abie:Postcode>5000</abie:Postcode>
+			<abie:CityName>BERGEN</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:MPAddressMeteringPointAddress>
+		<abie:MPAddressCadastral>
+			<abie:Gnr>0547</abie:Gnr>
+			<abie:Bnr>132</abie:Bnr>
+		</abie:MPAddressCadastral>
+		<abie:MeteringGridAreaUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:MpDetailMeteringPointCharacteristic>
+			<abie:MeteringPointType listAgencyIdentifier="260">E17</abie:MeteringPointType>
+			<abie:MeteringPointSubTypeConsumption listAgencyIdentifier="89">A04</abie:MeteringPointSubTypeConsumption>
+			<abie:MeterReadingCharacteristics listAgencyIdentifier="260">E13</abie:MeterReadingCharacteristics>
+			<abie:SettlementMethodType listAgencyIdentifier="260">E01</abie:SettlementMethodType>
+			<abie:PhysicalStatusType listAgencyIdentifier="260">E22</abie:PhysicalStatusType>
+			<abie:ContractedConnectionCapacityValue>27000</abie:ContractedConnectionCapacityValue>
+			<abie:MeterReadingFrequencyDuration>12</abie:MeterReadingFrequencyDuration>
+			<abie:Description>Freetext</abie:Description>
+			<abie:BlockedForSwitching>false</abie:BlockedForSwitching>
+			<abie:MeterReadingOccurrence>PT60M</abie:MeterReadingOccurrence>
+		</abie:MpDetailMeteringPointCharacteristic>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>0087345763</abie:MeterIdentification>
+			<abie:NumberOfDigits>7</abie:NumberOfDigits>
+			<abie:Constant>1</abie:Constant>
+			<abie:MeterLocation>In the cellar</abie:MeterLocation>
+		</abie:MeteringInstallationMeterFacility>
+		<abie:AnnualPeriodEstimatedMetrics>
+			<abie:Total>27000</abie:Total>
+		</abie:AnnualPeriodEstimatedMetrics>
+		<abie:MPTaxationProfile>
+			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
+			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
+		</abie:MPTaxationProfile>
+	</rsm:PayloadMasterDataMPEvent>
+	<rsm:PayloadMasterDataMPEvent>
+		<abie:OriginalBusinessDocumentReference>123e4567-e89b-12d3-a456-426655445910</abie:OriginalBusinessDocumentReference>
+		<abie:SnapShotOccurrence>2015-04-30T13:56:18+02:00</abie:SnapShotOccurrence>
+		<abie:LastMeterReadingDate>2014-11-17T00:00:00+01:00</abie:LastMeterReadingDate>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022654323</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:GridAccessProviderInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9473827165321</abie:Identification>
+		</abie:GridAccessProviderInvolvedEnergyParty>
+		<abie:MPAddressMeteringPointAddress>
+			<abie:StreetName>Torgalmenningen</abie:StreetName>
+			<abie:BuildingNumber>12</abie:BuildingNumber>
+			<abie:Postcode>5000</abie:Postcode>
+			<abie:CityName>BERGEN</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:MPAddressMeteringPointAddress>
+		<abie:MPAddressCadastral>
+			<abie:Gnr>0412</abie:Gnr>
+			<abie:Bnr>567</abie:Bnr>
+			<abie:Snr>2</abie:Snr>
+		</abie:MPAddressCadastral>
+		<abie:MeteringGridAreaUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:MpDetailMeteringPointCharacteristic>
+			<abie:MeteringPointType listAgencyIdentifier="260">E17</abie:MeteringPointType>
+			<abie:MeteringPointSubTypeConsumption listAgencyIdentifier="89">A04</abie:MeteringPointSubTypeConsumption>
+			<abie:MeterReadingCharacteristics listAgencyIdentifier="260">E14</abie:MeterReadingCharacteristics>
+			<abie:SettlementMethodType listAgencyIdentifier="260">E01</abie:SettlementMethodType>
+			<abie:PhysicalStatusType listAgencyIdentifier="260">E22</abie:PhysicalStatusType>
+			<abie:MeterReadingStartDate>2014-06-12T00:00:00+02:00</abie:MeterReadingStartDate>
+			<abie:MeterReadingFrequencyDuration>12</abie:MeterReadingFrequencyDuration>
+			<abie:Description>Freetext</abie:Description>
+		</abie:MpDetailMeteringPointCharacteristic>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>005645321</abie:MeterIdentification>
+			<abie:NumberOfDigits>5</abie:NumberOfDigits>
+			<abie:Constant>1</abie:Constant>
+			<abie:MeterLocation>På loftet</abie:MeterLocation>
+		</abie:MeteringInstallationMeterFacility>
+		<abie:AnnualPeriodEstimatedMetrics>
+			<abie:Total>21500</abie:Total>
+		</abie:AnnualPeriodEstimatedMetrics>
+		<abie:MPTaxationProfile>
+			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
+			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
+		</abie:MPTaxationProfile>
+	</rsm:PayloadMasterDataMPEvent>
+	<rsm:PayloadMasterDataMPEvent>
+		<abie:OriginalBusinessDocumentReference>123e4567-e89b-12d3-a456-426655445910</abie:OriginalBusinessDocumentReference>
+		<abie:SnapShotOccurrence>2014-06-16T13:54:53+02:00</abie:SnapShotOccurrence>
+		<abie:LastMeterReadingDate>2014-11-17T00:00:00+01:00</abie:LastMeterReadingDate>
+		<abie:DeliveryObligationDate>2014-11-15T00:00:00+01:00</abie:DeliveryObligationDate>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022655467</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:GridAccessProviderInvolvedEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9473827165321</abie:Identification>
+		</abie:GridAccessProviderInvolvedEnergyParty>
+		<abie:MPAddressMeteringPointAddress>
+			<abie:StreetName>Kirkeveien</abie:StreetName>
+				<abie:BuildingNumber>12</abie:BuildingNumber>
+				<abie:FloorIdentification>3. etasje</abie:FloorIdentification>
+				<abie:RoomIdentification>H343</abie:RoomIdentification>
+				<abie:Postcode>0343</abie:Postcode>
+				<abie:CityName>OSLO</abie:CityName>
+				<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+				<abie:AddressFreeForm>Fritekst ang. adresse</abie:AddressFreeForm>
+		</abie:MPAddressMeteringPointAddress>
+		<abie:MPAddressCadastral>
+			<abie:Gnr>0632</abie:Gnr>
+			<abie:Bnr>956</abie:Bnr>
+			<abie:Snr>7</abie:Snr>
+		</abie:MPAddressCadastral>
+		<abie:MeteringGridAreaUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:MpDetailMeteringPointCharacteristic>
+			<abie:MeteringPointType listAgencyIdentifier="260">E17</abie:MeteringPointType>
+			<abie:MeteringPointSubTypeConsumption listAgencyIdentifier="89">A04</abie:MeteringPointSubTypeConsumption>
+			<abie:MeterReadingCharacteristics listAgencyIdentifier="260">E14</abie:MeterReadingCharacteristics>
+			<abie:SettlementMethodType listAgencyIdentifier="260">E01</abie:SettlementMethodType>
+			<abie:PhysicalStatusType listAgencyIdentifier="260">E22</abie:PhysicalStatusType>
+			<abie:MeterReadingStartDate>2014-08-31T00:00:00+02:00</abie:MeterReadingStartDate>
+			<abie:MeterReadingFrequencyDuration>12</abie:MeterReadingFrequencyDuration>
+			<abie:Description>Freetext</abie:Description>
+		</abie:MpDetailMeteringPointCharacteristic>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>00769822</abie:MeterIdentification>
+			<abie:NumberOfDigits>6</abie:NumberOfDigits>
+			<abie:Constant>1</abie:Constant>
+			<abie:MeterLocation>Teknisk rom</abie:MeterLocation>
+		</abie:MeteringInstallationMeterFacility>
+		<abie:AnnualPeriodEstimatedMetrics>
+			<abie:Total>34000</abie:Total>
+		</abie:AnnualPeriodEstimatedMetrics>
+		<abie:MPTaxationProfile>
+			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
+			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
+		</abie:MPTaxationProfile>
+	</rsm:PayloadMasterDataMPEvent>
+</rsm:ResponseUpfrontMeteringPointCharacteristics>

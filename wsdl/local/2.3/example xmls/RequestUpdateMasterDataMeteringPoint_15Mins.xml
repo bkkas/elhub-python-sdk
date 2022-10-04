@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:RequestUpdateMasterDataMeteringPoint xmlns:rsm="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2 ../bim/masterdata/RequestUpdateMasterDataMeteringPoint.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426656756520</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E58</abie:DocumentType>
+		<abie:Creation>2015-06-11T09:30:47+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-302</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDM</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadMasterDataMPEvent>
+		<abie:StartOfOccurrence>2015-06-12T00:00:00+02:00</abie:StartOfOccurrence>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:MeteringGridAreaUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="305">EIC-Y12345678901</abie:Identification>
+		</abie:MeteringGridAreaUsedDomainLocation>
+		<abie:MPAddressMeteringPointAddress>
+			<abie:StreetName>Kirkegt.</abie:StreetName>
+			<abie:BuildingNumber>45</abie:BuildingNumber>
+			<abie:Postcode>7010</abie:Postcode>
+			<abie:CityName>Trondheim</abie:CityName>
+			<abie:CountryCode listAgencyIdentifier="5">NO</abie:CountryCode>
+		</abie:MPAddressMeteringPointAddress>
+		<abie:MPPositionMeteringPointGeographicalCoordinate>
+			<abie:Latitude>61.87654</abie:Latitude>
+			<abie:Longitude>11.98763</abie:Longitude>
+		</abie:MPPositionMeteringPointGeographicalCoordinate>
+		<abie:MPAddressCadastral>
+			<abie:Gnr>0547</abie:Gnr>
+			<abie:Bnr>132</abie:Bnr>
+		</abie:MPAddressCadastral>
+		<abie:MpDetailMeteringPointCharacteristic>
+			<abie:MeteringPointType listAgencyIdentifier="260">E17</abie:MeteringPointType>
+			<abie:MeteringPointSubTypeConsumption listAgencyIdentifier="89">A04</abie:MeteringPointSubTypeConsumption>
+			<abie:MeterReadingCharacteristics listAgencyIdentifier="260">E14</abie:MeterReadingCharacteristics>
+			<abie:SettlementMethodType listAgencyIdentifier="260">E02</abie:SettlementMethodType>
+			<abie:ContractedConnectionCapacityValue>27000</abie:ContractedConnectionCapacityValue>
+			<abie:MeterReadingStartDate>2015-01-04T00:00:00+01:00</abie:MeterReadingStartDate>
+			<abie:MeterReadingFrequencyDuration>12</abie:MeterReadingFrequencyDuration>
+			<abie:Description>Freetext</abie:Description>
+			<abie:Priority>A</abie:Priority>
+			<abie:BlockedForSwitching>false</abie:BlockedForSwitching>
+			<abie:MeterReadingOccurrence>PT15M</abie:MeterReadingOccurrence>
+		</abie:MpDetailMeteringPointCharacteristic>
+		<abie:AnnualPeriodEstimatedMetrics>
+			<abie:Total>27600</abie:Total>
+			<abie:CalculationMethod>Automatic</abie:CalculationMethod>
+		</abie:AnnualPeriodEstimatedMetrics>
+		<abie:MeteringInstallationMeterFacility>
+			<abie:MeterIdentification>0087345763</abie:MeterIdentification>
+			<abie:NumberOfDigits>7</abie:NumberOfDigits>
+			<abie:Constant>1</abie:Constant>
+			<abie:MeterLocation>In the cellar</abie:MeterLocation>
+		</abie:MeteringInstallationMeterFacility>
+		<abie:MPTaxationProfile>
+			<abie:VATCode>S</abie:VATCode>
+			<abie:EnovaFeeType>ConsumptionDependent</abie:EnovaFeeType>
+			<abie:EnovaFee>50</abie:EnovaFee>
+			<abie:ElFee>75</abie:ElFee>
+			<abie:ElCertificateShare>80</abie:ElCertificateShare>
+			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
+			<abie:NACE_DivisionCode>xx</abie:NACE_DivisionCode>
+		</abie:MPTaxationProfile>
+		<abie:MeasurementDefinition>
+			<abie:ProductIncludedProductCharacteristics>
+				<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+				<abie:UnitType>kWh</abie:UnitType>
+			</abie:ProductIncludedProductCharacteristics>
+			<abie:Direction>Out</abie:Direction>
+			<abie:Resolution>PT15M</abie:Resolution>
+		</abie:MeasurementDefinition>
+	</rsm:PayloadMasterDataMPEvent>
+</rsm:RequestUpdateMasterDataMeteringPoint>

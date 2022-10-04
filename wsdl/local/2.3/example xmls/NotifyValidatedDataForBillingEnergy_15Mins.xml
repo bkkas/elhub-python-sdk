@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:NotifyValidatedDataForBillingEnergy  xmlns:rsm="urn:no:elhub:emif:metering:NotifyValidatedDataForBillingEnergy:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:metering:NotifyValidatedDataForBillingEnergy:v2 ../bim/metering/NotifyValidatedDataForBillingEnergy.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
+	<rsm:Header>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655786520</abie:Identification>
+		<abie:DocumentType listAgencyIdentifier="260">E66</abie:DocumentType>
+		<abie:Creation>2015-06-16T15:12:17+02:00</abie:Creation>
+		<abie:PhysicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:PhysicalSenderEnergyParty>
+		<abie:JuridicalSenderEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
+		</abie:JuridicalSenderEnergyParty>
+		<abie:JuridicalRecipientEnergyParty>
+			<abie:Identification schemeAgencyIdentifier="9">1234567890123</abie:Identification>
+		</abie:JuridicalRecipientEnergyParty>
+	</rsm:Header>
+	<rsm:ProcessEnergyContext>
+		<abie:EnergyBusinessProcess listAgencyIdentifier="89">BRS-NO-324</abie:EnergyBusinessProcess>
+		<abie:EnergyBusinessProcessRole listAgencyIdentifier="6">DDQ</abie:EnergyBusinessProcessRole>
+		<abie:EnergyIndustryClassification>23</abie:EnergyIndustryClassification>
+	</rsm:ProcessEnergyContext>
+	<rsm:PayloadEnergyTimeSeries>
+		<abie:Identification>123e4567-e89b-12d3-a456-426655432100</abie:Identification>
+		<abie:RegistrationDateTime>2015-06-16T04:34:12+02:00</abie:RegistrationDateTime>
+		<abie:InsertDateTime>2015-06-16T06:34:12+02:00</abie:InsertDateTime>
+		<abie:ObservationPeriodTimeSeriesPeriod>
+			<abie:ResolutionDuration>PT15M</abie:ResolutionDuration>
+			<abie:Start>2020-06-16T00:00:00+02:00</abie:Start>
+			<abie:End>2020-06-16T01:00:00+02:00</abie:End>
+		</abie:ObservationPeriodTimeSeriesPeriod>
+		<abie:ProductIncludedProductCharacteristics>
+			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
+			<abie:UnitType>kWh</abie:UnitType>
+		</abie:ProductIncludedProductCharacteristics>
+		<abie:MPDetailMeasurementMeteringPointCharacteristic>
+			<abie:Direction>Out</abie:Direction>
+			<abie:BusinessType listAgencyIdentifier="89">LS03</abie:BusinessType>
+		</abie:MPDetailMeasurementMeteringPointCharacteristic>
+		<abie:MeteringPointUsedDomainLocation>
+			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
+		</abie:MeteringPointUsedDomainLocation>
+		<abie:Observation Sequence="1">
+			<abie:Calculated ImbalanceSettlement="true">1.784</abie:Calculated>
+		</abie:Observation>
+		<abie:Observation Sequence="2">
+			<abie:Calculated ImbalanceSettlement="true">1.427</abie:Calculated>
+		</abie:Observation>
+		<abie:Observation Sequence="3">
+			<abie:Calculated ImbalanceSettlement="true">1.07</abie:Calculated>
+		</abie:Observation>
+		<abie:Observation Sequence="4">
+			<abie:Calculated ImbalanceSettlement="true">0.714</abie:Calculated>
+		</abie:Observation>
+
+	</rsm:PayloadEnergyTimeSeries>
+</rsm:NotifyValidatedDataForBillingEnergy>
