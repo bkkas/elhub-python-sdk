@@ -8,9 +8,12 @@ import logging
 
 from elhub_sdk.client import APIClient
 from elhub_sdk.consumption import poll_consumption, request_consumption
-from elhub_sdk.settings import THIRD_PARTY_GSN, WSDL_FILES_CONFIG
+from elhub_sdk.settings import WSDL_FILES_CONFIG
 
 logger = logging.getLogger(__name__)
+
+# Third party GSN
+THIRD_PARTY_GSN = "123456789"
 
 
 def test_request_consumption():

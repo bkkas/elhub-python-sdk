@@ -29,10 +29,6 @@ logging.config.dictConfig(
 KEY_FILE = getenv("ELHUB_KEY_FILE")
 CERT_FILE = getenv("ELHUB_CERT_FILE")
 
-# Third party GSN
-THIRD_PARTY_GSN = getenv("THIRD_PARTY_GSN", "123456789")
-
-
 # ENVIRONMENT DEPENDING CONSTANTS
 WSDL_FILES_CONFIG = {
     # This is meant to be used against SoapUI Mock services or ElHub environment
