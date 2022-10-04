@@ -29,6 +29,8 @@ repos:
     hooks:
       - id: mypy
         exclude: tests/
+        pass_filenames: false
+        args: ["--ignore-missing-imports", "--scripts-are-modules", elhub_sdk]
   - repo: https://github.com/ambv/black
     rev: 22.8.0
     hooks:
