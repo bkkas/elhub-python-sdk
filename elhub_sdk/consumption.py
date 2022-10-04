@@ -146,11 +146,10 @@ def poll_consumption(third_party_gsn: str) -> Optional[str]:
     )
     try:
         response = client.service.PollForData(request)
-        if "ResultDataSet" in response:
+        if "ResultDataSet" in response and history.last_received:
             xml_response = ET.tostring(history.last_received["envelope"], encoding="unicode")
             return xml_response
-        else:
-            logger.error(f"Unknown response: {response}")
+        logger.error(f"Unknown response: {response}")
     except zeep.exceptions.Fault as ex:
         logger.error(f"Bad response: {ex}")
 
