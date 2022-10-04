@@ -30,12 +30,12 @@
 		<abie:ConsumerInvolvedCustomerParty>
 			<abie:Identification schemeAgencyIdentifier="Z01">01018035871</abie:Identification>
 			<abie:GivenName>Ola</abie:GivenName>
-			<abie:FamilyName>Nordmann</abie:FamilyName>	
+			<abie:FamilyName>Nordmann</abie:FamilyName>
 			<abie:Communication>
 				<abie:CommunicationChannel>Mobile</abie:CommunicationChannel>
 				<abie:CompleteNumber>944 56 123</abie:CompleteNumber>
-			</abie:Communication>	
-		</abie:ConsumerInvolvedCustomerParty>		
+			</abie:Communication>
+		</abie:ConsumerInvolvedCustomerParty>
 		<abie:ConsumerInvolvedCustomerAddress>
 				<abie:AddressType>postaladr</abie:AddressType>
 				<abie:StreetName>Kirkegt.</abie:StreetName>

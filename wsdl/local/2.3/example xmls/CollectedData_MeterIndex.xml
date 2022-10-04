@@ -29,7 +29,7 @@
 			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
 		</abie:MeteringPointUsedDomainLocation>
 		<abie:ProfiledObservation>
-				<abie:MeterIndex MeterReadReasonCode="1">100</abie:MeterIndex>				
+				<abie:MeterIndex MeterReadReasonCode="1">100</abie:MeterIndex>
 		</abie:ProfiledObservation>
 	</rsm:PayloadEnergyTimeSeries>
 </rsm:CollectedData>

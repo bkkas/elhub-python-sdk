@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rsm:UpdateThirdPartyAccess  xmlns:rsm="urn:no:elhub:emif:thirdpartyaccess:UpdateThirdPartyAccess:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:thirdpartyaccess:UpdateThirdPartyAccess:v2 ../bim/thirdpartyaccess/UpdateThirdPartyAccess.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
 	<rsm:Header>
-		<abie:Identification>123e4567-e89b-12d3-a456-426655449087</abie:Identification> 
+		<abie:Identification>123e4567-e89b-12d3-a456-426655449087</abie:Identification>
 		<abie:DocumentType listAgencyIdentifier="260">E10</abie:DocumentType>
 		<abie:Creation>2015-04-30T09:30:47+02:00</abie:Creation>
 		<abie:PhysicalSenderEnergyParty>
@@ -26,6 +26,6 @@
 		</abie:MeteringPointUsedDomainLocation>
 		<abie:ConsumerInvolvedCustomerParty>
 			<abie:ExtendedStorageMeteringValues>true</abie:ExtendedStorageMeteringValues>
-		</abie:ConsumerInvolvedCustomerParty>		
+		</abie:ConsumerInvolvedCustomerParty>
 	</rsm:PayloadMPEvent>
 </rsm:UpdateThirdPartyAccess>

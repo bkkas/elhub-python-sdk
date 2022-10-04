@@ -39,5 +39,5 @@
 				<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
 			</abie:MeteringPointUsedDomainLocation>
 		</abie:Reminder>
-	</rsm:PayloadMeasuredDataRequest>	
+	</rsm:PayloadMeasuredDataRequest>
 </rsm:RequestCollectedData>

@@ -50,6 +50,15 @@ class BinarySignatureTimestamp(BinarySignature):
     """
 
     def apply(self, envelope, headers):
+        """
+        Apply header
+        Args:
+            envelope:
+            headers:
+
+        Returns:
+
+        """
         security = utils.get_security_header(envelope)
 
         created = datetime.utcnow()
@@ -64,4 +73,11 @@ class BinarySignatureTimestamp(BinarySignature):
         return envelope, headers
 
     def verify(self, envelope):
+        """
+        Args:
+            envelope:
+
+        Returns:
+
+        """
         return envelope

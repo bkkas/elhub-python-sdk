@@ -31,9 +31,9 @@
 		<abie:ProductIncludedProductCharacteristics>
 			<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>
 			<abie:UnitType>kWh</abie:UnitType>
-		</abie:ProductIncludedProductCharacteristics>	
+		</abie:ProductIncludedProductCharacteristics>
 		<abie:MPDetailMeasurementMeteringPointCharacteristic>
-			<abie:Direction>Out</abie:Direction>	
+			<abie:Direction>Out</abie:Direction>
 		</abie:MPDetailMeasurementMeteringPointCharacteristic>
 		<abie:MeteringPointUsedDomainLocation>
 			<abie:Identification schemeAgencyIdentifier="9">707057500022939815</abie:Identification>
@@ -41,7 +41,7 @@
 		<abie:Observation Sequence="1">
 			<abie:Metered>10.456</abie:Metered>
 		</abie:Observation>
-		<abie:Observation Sequence="2">	
+		<abie:Observation Sequence="2">
 			<abie:Estimated Quality="56" EstimationCode="E001" ValidationCode="V002">15</abie:Estimated>
 		</abie:Observation>
 		<abie:Observation Sequence="3">

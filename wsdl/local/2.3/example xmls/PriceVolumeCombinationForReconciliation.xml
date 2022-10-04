@@ -44,23 +44,23 @@
 		</abie:BalanceSupplierInvolvedEnergyParty>
 		<abie:Observation Sequence="1">
 			<abie:BalanceVolume>10</abie:BalanceVolume>
-			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>
 		</abie:Observation>
 		<abie:Observation Sequence="2">
 			<abie:BalanceVolume>8</abie:BalanceVolume>
-			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>
 		</abie:Observation>
 		<abie:Observation Sequence="3">
 			<abie:BalanceVolume>19</abie:BalanceVolume>
-			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>
 		</abie:Observation>
 		<abie:Observation Sequence="4">
 			<abie:BalanceVolume>14</abie:BalanceVolume>
-			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>
 		</abie:Observation>
 		<abie:Observation Sequence="5">
 			<abie:BalanceVolume>11</abie:BalanceVolume>
-			<abie:BalanceAmount>1.6</abie:BalanceAmount>	
+			<abie:BalanceAmount>1.6</abie:BalanceAmount>
 		</abie:Observation>
 	</rsm:PayloadEnergyTimeSeries>
 </rsm:PriceVolumeCombinationForReconciliation>

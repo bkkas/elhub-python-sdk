@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rsm:ResponseUpfrontMeteringPointCharacteristics  xmlns:rsm="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:query:ResponseUpfrontMeteringPointCharacteristics:v2 ../bim/query/ResponseUpfrontMeteringPointCharacteristics.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
 	<rsm:Header>
-		<abie:Identification>123e4567-e89b-12d3-a456-426655445871</abie:Identification> 
+		<abie:Identification>123e4567-e89b-12d3-a456-426655445871</abie:Identification>
 		<abie:DocumentType listAgencyIdentifier="260">E07</abie:DocumentType>
 		<abie:Creation>2015-04-30T13:56:18+02:00</abie:Creation>
 		<abie:PhysicalSenderEnergyParty>
@@ -67,7 +67,7 @@
 		<abie:MPTaxationProfile>
 			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
 			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
-		</abie:MPTaxationProfile>	
+		</abie:MPTaxationProfile>
 	</rsm:PayloadMasterDataMPEvent>
 	<rsm:PayloadMasterDataMPEvent>
 		<abie:OriginalBusinessDocumentReference>123e4567-e89b-12d3-a456-426655445910</abie:OriginalBusinessDocumentReference>
@@ -116,7 +116,7 @@
 		<abie:MPTaxationProfile>
 			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
 			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
-		</abie:MPTaxationProfile>	
+		</abie:MPTaxationProfile>
 	</rsm:PayloadMasterDataMPEvent>
 	<rsm:PayloadMasterDataMPEvent>
 		<abie:OriginalBusinessDocumentReference>123e4567-e89b-12d3-a456-426655445910</abie:OriginalBusinessDocumentReference>
@@ -169,6 +169,6 @@
 		<abie:MPTaxationProfile>
 			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
 			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
-		</abie:MPTaxationProfile>	
+		</abie:MPTaxationProfile>
 	</rsm:PayloadMasterDataMPEvent>
 </rsm:ResponseUpfrontMeteringPointCharacteristics>

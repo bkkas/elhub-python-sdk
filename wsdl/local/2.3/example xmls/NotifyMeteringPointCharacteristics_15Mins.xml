@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rsm:NotifyMeteringPointCharacteristics xmlns:rsm="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:masterdata:NotifyMeteringPointCharacteristics:v2 ../bim/masterdata/NotifyMeteringPointCharacteristics.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
 	<rsm:Header>
-		<abie:Identification>123e4567-e89b-12d3-a456-426675643591</abie:Identification> 
+		<abie:Identification>123e4567-e89b-12d3-a456-426675643591</abie:Identification>
 		<abie:DocumentType listAgencyIdentifier="6">21</abie:DocumentType>
 		<abie:Creation>2015-06-11T09:30:47+02:00</abie:Creation>
 		<abie:PhysicalSenderEnergyParty>
@@ -48,7 +48,7 @@
 		<abie:ConsumerInvolvedCustomerParty>
 			<abie:Identification schemeAgencyIdentifier="Z01">01018035871</abie:Identification>
 			<abie:GivenName>Ola</abie:GivenName>
-			<abie:FamilyName>Nordmann</abie:FamilyName>	
+			<abie:FamilyName>Nordmann</abie:FamilyName>
 			<abie:ExtendedStorageMeteringValues>false</abie:ExtendedStorageMeteringValues>
 			<abie:Communication>
 				<abie:CommunicationChannel>Email</abie:CommunicationChannel>
@@ -91,7 +91,7 @@
 			<abie:ElCertificateShare>80</abie:ElCertificateShare>
 			<abie:ConsumptionCode>zz</abie:ConsumptionCode>
 			<abie:NACE_DivisionCode>XX</abie:NACE_DivisionCode>
-		</abie:MPTaxationProfile>	
+		</abie:MPTaxationProfile>
 		<abie:MeasurementDefinition>
 			<abie:ProductIncludedProductCharacteristics>
 				<abie:Identification schemeAgencyIdentifier="9">8716867000030</abie:Identification>

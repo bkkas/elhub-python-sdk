@@ -3,7 +3,7 @@
   <con:settings/>
   <con:interface xsi:type="con:WsdlInterface" id="c69f20a2-f87c-447e-a7a6-9779c7c708bc" wsaVersion="NONE" name="MeteringValuesPollingSoapBinding" type="wsdl" bindingName="{urn:no:elhub:emif:wsdl:polling:meteringvalues:v2}MeteringValuesPollingSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMeteringValues.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    
+
     <con:definitionCache type="TEXT" rootPart="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMeteringValues.wsdl"><con:part><con:url>file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMeteringValues.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" xmlns:tns="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
   <wsdl:types>
     <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" version="2.3" xmlns="http://www.w3.org/2001/XMLSchema">

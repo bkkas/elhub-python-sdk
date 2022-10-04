@@ -3,7 +3,7 @@
   <con:settings/>
   <con:interface xsi:type="con:WsdlInterface" id="49f43766-8680-4761-b63c-e3596f8cd63a" wsaVersion="NONE" name="QuerySoapBinding" type="wsdl" bindingName="{urn:no:elhub:emif:wsdl:query:v2}QuerySoapBinding" soapVersion="1_1" anonymous="optional" definition="${projectDir}/../wsdl/Query.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    
+
     <con:definitionCache type="TEXT" rootPart="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/Query.wsdl"><con:part><con:url>file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/Query.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:no:elhub:emif:wsdl:query:v2" xmlns:tns="urn:no:elhub:emif:wsdl:query:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
   <wsdl:types>
     <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:query:v2" version="2.3" xmlns="http://www.w3.org/2001/XMLSchema">

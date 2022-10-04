@@ -37,7 +37,7 @@
 			<abie:Communication>
 				<abie:CommunicationChannel>Email</abie:CommunicationChannel>
 				<abie:CompleteNumber>ole.olsen@company.no</abie:CompleteNumber>
-			</abie:Communication>	
+			</abie:Communication>
 		</abie:ConsumerInvolvedCustomerParty>
 		<abie:ConsumerInvolvedCustomerAddress>
 			<abie:AddressType>postaladr</abie:AddressType>

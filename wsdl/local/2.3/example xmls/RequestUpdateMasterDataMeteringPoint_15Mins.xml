@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rsm:RequestUpdateMasterDataMeteringPoint xmlns:rsm="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2 ../bim/masterdata/RequestUpdateMasterDataMeteringPoint.xsd urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2 ../bim/common/Elhub_AggregatedBusinessInformationEntities.xsd">
 	<rsm:Header>
-		<abie:Identification>123e4567-e89b-12d3-a456-426656756520</abie:Identification> 
+		<abie:Identification>123e4567-e89b-12d3-a456-426656756520</abie:Identification>
 		<abie:DocumentType listAgencyIdentifier="260">E58</abie:DocumentType>
 		<abie:Creation>2015-06-11T09:30:47+02:00</abie:Creation>
 		<abie:PhysicalSenderEnergyParty>

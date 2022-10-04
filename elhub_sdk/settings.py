@@ -1,5 +1,5 @@
 """
-    Settings module
+Settings module
 """
 import logging.config
 from os import getenv

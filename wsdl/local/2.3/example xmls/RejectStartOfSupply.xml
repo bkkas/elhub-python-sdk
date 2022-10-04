@@ -6,7 +6,7 @@
 		<abie:Creation>2015-04-28T09:32:33+02:00</abie:Creation>
 		<abie:PhysicalSenderEnergyParty>
 			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
-		</abie:PhysicalSenderEnergyParty>	
+		</abie:PhysicalSenderEnergyParty>
 		<abie:JuridicalSenderEnergyParty>
 			<abie:Identification schemeAgencyIdentifier="9">9876543210123</abie:Identification>
 		</abie:JuridicalSenderEnergyParty>
