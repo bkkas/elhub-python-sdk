@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: ${{ matrix.python-versions }}
 
+      - name: Install libxmlsec
+        run: sudo apt-get install -y libxmlsec1 libxmlsec1-dev
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
