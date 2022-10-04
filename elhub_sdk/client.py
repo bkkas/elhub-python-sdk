@@ -9,8 +9,6 @@ from zeep.plugins import HistoryPlugin
 from zeep.wsse import utils
 from zeep.wsse.signature import BinarySignature
 
-from elhub_sdk.settings import CERT_FILE, KEY_FILE, SECURE
-
 
 class APIClient:
     """
@@ -18,15 +16,28 @@ class APIClient:
     """
 
     @staticmethod
-    def get_zeep_client(wsdl) -> Tuple[Client, HistoryPlugin]:
+    def get_zeep_client(
+        wsdl, secure: bool = True, key_file: str = "", cert_file: str = ""
+    ) -> Tuple[Client, HistoryPlugin]:
+        """
+        Returns a client
+        Args:
+            wsdl:
+            key_file:
+            cert_file:
+            secure:
+
+        Returns:
+
+        """
         history = HistoryPlugin()
 
         client_settings = Settings(strict=False)
         binary_signature = None
-        if SECURE:
+        if secure:
             binary_signature = BinarySignatureTimestamp(
-                key_file=KEY_FILE,
-                certfile=CERT_FILE,
+                key_file=key_file,
+                certfile=cert_file,
             )
 
         client = Client(wsdl=wsdl, plugins=[history], wsse=binary_signature, settings=client_settings)

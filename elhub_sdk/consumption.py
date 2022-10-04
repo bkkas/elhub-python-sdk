@@ -14,38 +14,46 @@ from datetime import datetime
 from typing import Optional
 
 import zeep
+from zeep.plugins import HistoryPlugin
 
-from elhub_sdk.client import APIClient
 from elhub_sdk.constants import ELHUB_GSN, TIME_FORMAT
 from elhub_sdk.enums import (
     BSR_IDS,
     DOCUMENT_TYPE_EBIX,
     DOCUMENT_TYPE_UN_CEFACT,
+    ENERGY_INDUSTRY_CLASSIFICATION,
     LIST_AGENCY_IDENTIFIER,
     QUERY_MARKET,
     ROLES,
     SCHEME_AGENCY_IDENTIFIER,
 )
-from elhub_sdk.settings import WSDL_FILES
 
 logger = logging.getLogger()
 
 
 def request_consumption(
-    meter_identificator: str, third_party_gsn: str, start: datetime, end: datetime
-) -> Optional[dict]:
+    client: zeep.Client,
+    history: HistoryPlugin,
+    meter_identificator: str,
+    sender_gsn: str,
+    start: datetime,
+    end: datetime,
+    process_role: ROLES = ROLES.THIRD_PARTY,
+) -> bool:
     """
 
     Args:
+        history:
+        client:
         meter_identificator:
-        third_party_gsn:
+        sender_gsn:
         start:
         end:
+        process_role:
 
     Returns:
 
     """
-    client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES['QUERY'])
 
     factory = client.type_factory('ns4')
     eh_request = factory.RequestDataFromElhub(
@@ -58,13 +66,13 @@ def request_consumption(
             'Creation': f'{datetime.utcnow().strftime(TIME_FORMAT)}',
             'PhysicalSenderEnergyParty': {
                 'Identification': {
-                    '_value_1': third_party_gsn,
+                    '_value_1': sender_gsn,
                     'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
                 }
             },
             'JuridicalSenderEnergyParty': {
                 'Identification': {
-                    '_value_1': third_party_gsn,
+                    '_value_1': sender_gsn,
                     'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
                 }
             },
@@ -78,7 +86,7 @@ def request_consumption(
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value,
             },
             'EnergyBusinessProcessRole': {
-                '_value_1': ROLES.THIRD_PARTY.value,
+                '_value_1': process_role.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.UN_CEFACT.value,
             },
             'EnergyIndustryClassification': "23",
@@ -95,20 +103,30 @@ def request_consumption(
         },
     )
 
-    response = client.service.RequestDataFromElhub(eh_request)
-    return response
+    try:
+        response = client.service.RequestDataFromElhub(eh_request)
+        if history.last_received:
+            return True
+        logger.error(f"Unknown error: {response}")
+    except Exception as ex:
+        logger.exception(ex)
+    return False
 
 
-def poll_consumption(third_party_gsn: str) -> Optional[str]:
+def poll_consumption(
+    client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
+) -> Optional[str]:
     """
 
     Args:
-        third_party_gsn:
+        client:
+        history:
+        sender_gsn:
 
     Returns:
         xml document with the consumption
     """
-    client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES['POOL_METERING'])
+
     factory = client.type_factory('ns8')
     request = factory.PollForData(
         Header={
@@ -120,13 +138,13 @@ def poll_consumption(third_party_gsn: str) -> Optional[str]:
             'Creation': f'{datetime.utcnow().strftime(TIME_FORMAT)}',
             'PhysicalSenderEnergyParty': {
                 'Identification': {
-                    '_value_1': third_party_gsn,
+                    '_value_1': sender_gsn,
                     'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
                 }
             },
             'JuridicalSenderEnergyParty': {
                 'Identification': {
-                    '_value_1': third_party_gsn,
+                    '_value_1': sender_gsn,
                     'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
                 }
             },
@@ -137,10 +155,10 @@ def poll_consumption(third_party_gsn: str) -> Optional[str]:
         ProcessEnergyContext={
             'EnergyBusinessProcess': {'_value_1': 'POLL', 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value},
             'EnergyBusinessProcessRole': {
-                '_value_1': 'DDQ',
+                '_value_1': process_role.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.UN_CEFACT.value,
             },
-            'EnergyIndustryClassification': "23",
+            'EnergyIndustryClassification': ENERGY_INDUSTRY_CLASSIFICATION.ELECTRICITY_SUPPLY.value,
         },
         Payload={},
     )

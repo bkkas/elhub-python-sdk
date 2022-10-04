@@ -28,7 +28,12 @@ class BSR_IDS(Enum):
 
 class ROLES(Enum):
     THIRD_PARTY = "AG"  # https://dok.elhub.no/ediel200utkast/roles-and-domains
+    BALANCE_SUPPLIER = "DDQ"
 
 
 class QUERY_MARKET(Enum):  # https://dok.elhub.no/ediel200utkast/5-query-from-market-parties
     METERING_VALUES_TIME_SERIES = "MVTS"
+
+
+class ENERGY_INDUSTRY_CLASSIFICATION(Enum):  # https://dok.elhub.no/ediel200utkast/general
+    ELECTRICITY_SUPPLY = "23"
