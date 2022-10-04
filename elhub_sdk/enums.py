@@ -1,4 +1,6 @@
-
+"""
+Enums, mainly to create SOAP requests
+"""
 from enum import Enum
 
 
@@ -9,7 +11,7 @@ class LIST_AGENCY_IDENTIFIER(Enum):
 
 
 class DOCUMENT_TYPE_EBIX(Enum):
-    METERING_DATA = "E13"   # Metering data: https://dok.elhub.no/ediel200utkast/document-type
+    METERING_DATA = "E13"  # Metering data: https://dok.elhub.no/ediel200utkast/document-type
 
 
 class DOCUMENT_TYPE_UN_CEFACT(Enum):
@@ -21,11 +23,11 @@ class SCHEME_AGENCY_IDENTIFIER(Enum):
 
 
 class BSR_IDS(Enum):
-    METERING_VALUES = "BRS-NO-315" # https://dok.elhub.no/ediel200utkast/elhub-brs-identifications
+    METERING_VALUES = "BRS-NO-315"  # https://dok.elhub.no/ediel200utkast/elhub-brs-identifications
 
 
 class ROLES(Enum):
-    THIRD_PARTY = "AG" # https://dok.elhub.no/ediel200utkast/roles-and-domains
+    THIRD_PARTY = "AG"  # https://dok.elhub.no/ediel200utkast/roles-and-domains
 
 
 class QUERY_MARKET(Enum):  # https://dok.elhub.no/ediel200utkast/5-query-from-market-parties
