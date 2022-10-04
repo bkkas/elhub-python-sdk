@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="Default" id="1fb24d83-ce1d-48e8-9c32-29e07d64f364" name="Elhub-Query - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="Default" id="1fb24d83-ce1d-48e8-9c32-29e07d64f364" name="Elhub-Query - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface anonymous="optional" bindingName="{urn:no:elhub:emif:wsdl:query:v2}QuerySoapBinding" definition="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/Query%20-%20WS-Security.wsdl" id="49f43766-8680-4761-b63c-e3596f8cd63a" name="QuerySoapBinding" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xsi:type="con:WsdlInterface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    
+
     <con:definitionCache type="TEXT" rootPart="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/Query%20-%20WS-Security.wsdl"><con:part><con:url>file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/Query%20-%20WS-Security.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:no:elhub:emif:wsdl:query:v2" xmlns:tns="urn:no:elhub:emif:wsdl:query:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
   <wsp1_2:Policy ns1:Id="wss10_x509_certificates_sign_encrypt" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
     <wsp1_2:ExactlyOne>
@@ -2220,7 +2220,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://localhost:8084/WebService/services/Query</con:endpoint>
+        <con:endpoint>http://localhost:8084/</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:query:v2" xmlns:urn1="urn:no:elhub:emif:query:RequestDataFromElhub:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
@@ -2824,7 +2824,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>iso-8859-1</con:encoding>
-        <con:endpoint>http://localhost:8094/WebService/services/Query</con:endpoint>
+        <con:endpoint>http://localhost:8084/WebService/services/Query</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:query:v2" xmlns:urn1="urn:no:elhub:emif:query:RequestToElhub:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
    <soapenv:Header/>
    <soapenv:Body>

@@ -3,11 +3,11 @@ Tests for `elhub_sdk` package.
 """
 
 import datetime
-from pprint import pprint
-
-from elhub_sdk.consumption import request_consumption, poll_consumption
-from elhub_sdk.settings import THIRD_PARTY_GSN
 import logging
+
+from elhub_sdk.consumption import poll_consumption, request_consumption
+from elhub_sdk.settings import THIRD_PARTY_GSN
+
 logger = logging.getLogger(__name__)
 
 
@@ -19,15 +19,11 @@ def test_request_consumption():
     """
     meter_identificator = "707057500057411768"
     start = datetime.datetime.now() - datetime.timedelta(days=30)
-    end = start+datetime.timedelta(days=1)
+    end = start + datetime.timedelta(days=1)
 
-    response = request_consumption(
-        meter_identificator,
-        third_party_gsn = THIRD_PARTY_GSN,
-        start=start,
-        end=end)
+    response = request_consumption(meter_identificator, third_party_gsn=THIRD_PARTY_GSN, start=start, end=end)
 
-    assert response == None
+    assert response is None
 
 
 def test_poll_consumption():
@@ -38,5 +34,3 @@ def test_poll_consumption():
     """
     response = poll_consumption(THIRD_PARTY_GSN)
     assert response
-
-

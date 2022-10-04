@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="Default" id="88ea98c5-ef15-4b9b-92a5-d057993c1f35" name="Elhub-MeteringValues - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="Default" id="88ea98c5-ef15-4b9b-92a5-d057993c1f35" name="Elhub-MeteringValues - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface anonymous="optional" bindingName="{urn:no:elhub:emif:wsdl:meteringvalues:v2}MeteringValuesSoapBinding" definition="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/MeteringValues%20-%20WS-Security.wsdl" id="7bebb3bb-772c-4a61-9d40-52bd0e5673e2" name="MeteringValuesSoapBinding" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xsi:type="con:WsdlInterface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    
+
     <con:definitionCache type="TEXT" rootPart="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/MeteringValues%20-%20WS-Security.wsdl"><con:part><con:url>file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/MeteringValues%20-%20WS-Security.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:no:elhub:emif:wsdl:meteringvalues:v2" xmlns:tns="urn:no:elhub:emif:wsdl:meteringvalues:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
   <wsp1_2:Policy ns1:Id="wss10_x509_certificates_sign_encrypt" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
     <wsp1_2:ExactlyOne>
@@ -2649,45 +2649,45 @@
       <con:settings/>
       <con:defaultResponse>Response 1</con:defaultResponse>
       <con:dispatchStyle>SCRIPT</con:dispatchStyle>
-      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockService 
-import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange 
-import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext 
-import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator 
-import com.eviware.soapui.model.testsuite.AssertionError 
-import org.apache.xmlbeans.impl.soap.SOAPBody 
-import org.slf4j.Logger 
-import org.slf4j.LoggerFactory 
+      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockService
+import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
+import com.eviware.soapui.model.testsuite.AssertionError
+import org.apache.xmlbeans.impl.soap.SOAPBody
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import com.eviware.soapui.support.types.*
 
-WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext(); 
-WsdlValidator validator = new WsdlValidator(wsdlContext); 
-String soapAction = mockRequest.getSoapAction(); 
-log.info(context.getMockService().toString() + "::" +soapAction); 
+WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext();
+WsdlValidator validator = new WsdlValidator(wsdlContext);
+String soapAction = mockRequest.getSoapAction();
+log.info(context.getMockService().toString() + "::" +soapAction);
 StringToStringsMap headers = mockRequest.getRequestHeaders();
 String contentType = headers.get("Content-Type");
 if (contentType == null || !contentType.toLowerCase().contains("utf-8")) {
    context.setProperty("contentType", contentType);
    return "EncodingError";
 }
-WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction); 
-if ((mockRequest.getRequestContent().length() / 1000000) > 100) { 
-	int messageLength = mockRequest.getRequestContent().length() / 1000000; 
-	context.setProperty("errors", "Message size of " + messageLength + " MB is too big"); 
-	return "SizeError"; 
-} 
-WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation); 
-AssertionError[] errors = validator.assertRequest(messageExchange, false); 
-if (errors.size() > 0) { 
-	String errorString = Arrays.toString(errors.collect()); 
-	int stringLength = errorString.length() > 1000 ? 1000 : errorString.length(); 
-	context.setProperty("errors", errorString.substring(0,stringLength)); 
-	return "ValidationError"; 
-} else { 
-	return "OKResponse"; 
+WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction);
+if ((mockRequest.getRequestContent().length() / 1000000) > 100) {
+	int messageLength = mockRequest.getRequestContent().length() / 1000000;
+	context.setProperty("errors", "Message size of " + messageLength + " MB is too big");
+	return "SizeError";
+}
+WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation);
+AssertionError[] errors = validator.assertRequest(messageExchange, false);
+if (errors.size() > 0) {
+	String errorString = Arrays.toString(errors.collect());
+	int stringLength = errorString.length() > 1000 ? 1000 : errorString.length();
+	context.setProperty("errors", errorString.substring(0,stringLength));
+	return "ValidationError";
+} else {
+	return "OKResponse";
 }</con:dispatchPath>
       <con:response encoding="UTF-8" httpResponseStatus="200" id="afbe5c4a-0639-440e-9ad4-9d190e64d864" name="OKResponse" outgoingWss="SignBody">
         <con:settings/>
@@ -2760,40 +2760,40 @@ if (errors.size() > 0) {
       <con:settings/>
       <con:defaultResponse>Response 1</con:defaultResponse>
       <con:dispatchStyle>SCRIPT</con:dispatchStyle>
-      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner 
-import com.eviware.soapui.impl.wsdl.mock.WsdlMockService 
-import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange 
-import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext 
-import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator 
-import com.eviware.soapui.model.testsuite.AssertionError 
-import org.apache.xmlbeans.impl.soap.SOAPBody 
-import org.slf4j.Logger 
-import org.slf4j.LoggerFactory 
+      <con:dispatchPath>import com.eviware.soapui.impl.wsdl.mock.WsdlMockOperation
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRequest
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunContext
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockRunner
+import com.eviware.soapui.impl.wsdl.mock.WsdlMockService
+import com.eviware.soapui.impl.wsdl.panels.mockoperation.WsdlMockRequestMessageExchange
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlContext
+import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlValidator
+import com.eviware.soapui.model.testsuite.AssertionError
+import org.apache.xmlbeans.impl.soap.SOAPBody
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import com.eviware.soapui.support.types.*
 
-WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext(); 
-WsdlValidator validator = new WsdlValidator(wsdlContext); 
-String soapAction = mockRequest.getSoapAction(); 
-log.info(context.getMockService().toString() + "::" +soapAction); 
+WsdlContext wsdlContext = ((WsdlMockService)context.getMockService()).getMockedInterfaces()[0].getDefinitionContext();
+WsdlValidator validator = new WsdlValidator(wsdlContext);
+String soapAction = mockRequest.getSoapAction();
+log.info(context.getMockService().toString() + "::" +soapAction);
 StringToStringsMap headers = mockRequest.getRequestHeaders();
 String contentType = headers.get("Content-Type");
 if (contentType == null || !contentType.toLowerCase().contains("utf-8")) {
    context.setProperty("contentType", contentType);
    return "EncodingError";
 }
-WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction); 
-WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation); 
-AssertionError[] errors = validator.assertRequest(messageExchange, false); 
-if (errors.size() > 0) { 
-	String errorString = Arrays.toString(errors.collect()); 
-	int stringLength = errorString.length() > 1000 ? 1000 : errorString.length(); 
-	context.setProperty("errors", errorString.substring(0,stringLength)); 
-	return "ValidationError"; 
-} else { 
-	return "OKResponse"; 
+WsdlMockOperation mockOperation = context.getMockService().getMockOperationByName(soapAction);
+WsdlMockRequestMessageExchange messageExchange = new WsdlMockRequestMessageExchange(mockRequest, mockOperation);
+AssertionError[] errors = validator.assertRequest(messageExchange, false);
+if (errors.size() > 0) {
+	String errorString = Arrays.toString(errors.collect());
+	int stringLength = errorString.length() > 1000 ? 1000 : errorString.length();
+	context.setProperty("errors", errorString.substring(0,stringLength));
+	return "ValidationError";
+} else {
+	return "OKResponse";
 }</con:dispatchPath>
       <con:response name="OKResponse" id="ed2aeb9a-4e86-4ef2-84cb-4890982f01f8" httpResponseStatus="200" encoding="UTF-8" outgoingWss="SignBody">
         <con:settings/>

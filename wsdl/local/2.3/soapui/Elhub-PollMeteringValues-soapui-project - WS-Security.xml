@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project abortOnError="false" activeEnvironment="Default" id="d0793b48-2e20-492b-9a49-972cf614c5a2" name="Elhub-PollMeteringValues - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project abortOnError="false" activeEnvironment="Default" id="d0793b48-2e20-492b-9a49-972cf614c5a2" name="Elhub-PollMeteringValues - WS-Security" resourceRoot="" runType="SEQUENTIAL" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
   <con:interface anonymous="optional" bindingName="{urn:no:elhub:emif:wsdl:polling:meteringvalues:v2}MeteringValuesPollingSoapBinding" definition="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMeteringValues%20-%20WS-Security.wsdl" id="c69f20a2-f87c-447e-a7a6-9779c7c708bc" name="MeteringValuesPollingSoapBinding" soapVersion="1_1" type="wsdl" wsaVersion="NONE" xsi:type="con:WsdlInterface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    
+
     <con:definitionCache type="TEXT" rootPart="file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMeteringValues%20-%20WS-Security.wsdl"><con:part><con:url>file:/C:/ELHUB/market_wsdl/elhub_wsdl/2.3/wsdl/PollMeteringValues%20-%20WS-Security.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" xmlns:tns="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
   <wsp1_2:Policy ns1:Id="wss10_x509_certificates_sign_encrypt" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
     <wsp1_2:ExactlyOne>
@@ -2281,7 +2281,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://localhost:8083/WebService/services/PollMeteringValues</con:endpoint>
+        <con:endpoint>http://localhost:8083/</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:polling:meteringvalues:v2" xmlns:urn1="urn:no:elhub:emif:PollForData:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
    <soapenv:Header/>
    <soapenv:Body>
