@@ -167,8 +167,8 @@ def poll_consumption(
         if "ResultDataSet" in response and history.last_received:
             xml_response = ET.tostring(history.last_received["envelope"], encoding="unicode")
             return xml_response
-        logger.error(f"Unknown response:{response}")
+        logger.error(f"Unknown response: {response}")
     except zeep.exceptions.Fault as ex:
-        logger.error(f"Bad response:{ex}")
+        logger.error(f"Bad response: {ex}")
 
     return None
