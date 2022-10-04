@@ -18,6 +18,16 @@ logger = logging.getLogger(__name__)
 THIRD_PARTY_GSN = "123456789"
 
 
+def test_dummy():
+    """
+    This is needed for pytest to return 0 on exit, most of the tests are marked
+    as integration
+    Returns:
+
+    """
+    assert True
+
+
 @pytest.mark.integrationtest
 def test_request_consumption():
     """
