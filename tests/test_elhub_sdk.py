@@ -6,6 +6,8 @@ These are meant to be run against a SOAPUI instance, they don't use security
 import datetime
 import logging
 
+import pytest
+
 from elhub_sdk.client import APIClient
 from elhub_sdk.consumption import poll_consumption, request_consumption
 from elhub_sdk.settings import WSDL_FILES_CONFIG
@@ -16,6 +18,7 @@ logger = logging.getLogger(__name__)
 THIRD_PARTY_GSN = "123456789"
 
 
+@pytest.mark.integrationtest
 def test_request_consumption():
     """
     Query requesting consumption for a meter
@@ -35,6 +38,7 @@ def test_request_consumption():
     assert response
 
 
+@pytest.mark.integrationtest
 def test_poll_consumption():
     """
     Pooling data from Elhub

@@ -104,3 +104,9 @@ skip_gitignore = true
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-m 'not integrationtest'"
+markers = [
+    "integrationtest"
+    ]
