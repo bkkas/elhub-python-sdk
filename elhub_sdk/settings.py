@@ -34,4 +34,5 @@ WSDL_FILES_CONFIG = {
     # This is meant to be used against SoapUI Mock services or ElHub environment
     "QUERY": getenv("WSDL_QUERY", "wsdl/local/2.3/wsdl/Query.wsdl"),
     "POOL_METERING": getenv("WSDL_POOL_METERING", "wsdl/local/2.3/wsdl/PollMeteringValues.wsdl"),
+    "MARKET_PROCESSES": getenv("WSDL_MARKET_PROCESSES", "wsdl/local/2.3/wsdl/MarketProcesses.wsdl"),
 }

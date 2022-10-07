@@ -47,6 +47,7 @@ class BSR_IDS(Enum):
     """
 
     METERING_VALUES = "BRS-NO-315"
+    THIRD_PARTY = "BRS-NO-622"
 
 
 class ROLES(Enum):
@@ -74,3 +75,13 @@ class ENERGY_INDUSTRY_CLASSIFICATION(Enum):
     """
 
     ELECTRICITY_SUPPLY = "23"
+
+
+class THIRD_PARTY_ACTION(Enum):
+    """
+    Determines the action you want to do
+    """
+
+    ADD = "Add"
+    DELETE = "Delete"
+    UPDATE = "Update"

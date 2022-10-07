@@ -10,7 +10,9 @@ import pytest
 
 from elhub_sdk.client import APIClient
 from elhub_sdk.consumption import poll_consumption, request_consumption
+from elhub_sdk.enums import THIRD_PARTY_ACTION
 from elhub_sdk.settings import WSDL_FILES_CONFIG
+from elhub_sdk.third_party import request_action
 
 logger = logging.getLogger(__name__)
 
@@ -57,4 +59,14 @@ def test_poll_consumption():
     """
     client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES_CONFIG['POOL_METERING'], secure=False)
     response = poll_consumption(client, history, THIRD_PARTY_GSN)
+    assert response
+
+
+@pytest.mark.integrationtest
+def test_third_party_add():
+    client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES_CONFIG['MARKET_PROCESSES'], secure=False)
+    meter_identificator = "807057500057411761"
+    response = request_action(
+        client, THIRD_PARTY_GSN, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.ADD
+    )
     assert response
