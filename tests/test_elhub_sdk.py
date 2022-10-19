@@ -30,6 +30,8 @@ def test_dummy():
     assert True
 
 
+'''
+
 @pytest.mark.integrationtest
 def test_request_consumption():
     """
@@ -60,10 +62,16 @@ def test_poll_consumption():
     client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES_CONFIG['POOL_METERING'], secure=False)
     response = poll_consumption(client, history, THIRD_PARTY_GSN)
     assert response
+'''
 
 
 @pytest.mark.integrationtest
 def test_third_party_add():
+    """
+    Tests the addition of a third party
+    Returns:
+
+    """
     client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES_CONFIG['MARKET_PROCESSES'], secure=False)
     meter_identificator = "807057500057411761"
     response = request_action(
