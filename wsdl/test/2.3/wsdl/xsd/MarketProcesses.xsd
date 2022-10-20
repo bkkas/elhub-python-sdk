@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:tns="urn:no:elhub:emif:wsdl:marketprocesses:v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="urn:no:elhub:emif:market:RequestStartOfSupply:v2" xmlns:ns2="urn:no:elhub:emif:market:RequestEndOfSupply:v2" xmlns:ns7="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" xmlns:ns8="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" xmlns:ns29="urn:no:elhub:emif:market:RejectStartOfSupply:v2" xmlns:ns24="urn:no:elhub:emif:thirdpartyaccess:UpdateThirdPartyAccess:v2" xmlns:ns28="urn:no:elhub:emif:wsdl:common:v2" targetNamespace="urn:no:elhub:emif:wsdl:marketprocesses:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
+	<xsd:import namespace="urn:no:elhub:emif:market:RequestStartOfSupply:v2" schemaLocation="../../bim/market/RequestStartOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:RequestEndOfSupply:v2" schemaLocation="../../bim/market/RequestEndOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:masterdata:RequestUpdateMasterDataMeteringPoint:v2" schemaLocation="../../bim/masterdata/RequestUpdateMasterDataMeteringPoint.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:masterdata:RequestUpdateCustomerInformation:v2" schemaLocation="../../bim/masterdata/RequestUpdateCustomerInformation.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:thirdpartyaccess:UpdateThirdPartyAccess:v2" schemaLocation="../../bim/thirdpartyaccess/UpdateThirdPartyAccess.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:market:RejectStartOfSupply:v2" schemaLocation="../../bim/market/RejectStartOfSupply.xsd"/>
+	<xsd:import namespace="urn:no:elhub:emif:wsdl:common:v2" schemaLocation="common.xsd"/>
+	<xsd:element name="RequestStartOfSupplyRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns1:RequestStartOfSupply" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestEndOfSupplyRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns2:RequestEndOfSupply" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestUpdateMasterDataMeteringPointRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns7:RequestUpdateMasterDataMeteringPoint" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RequestUpdateCustomerInformationRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns8:RequestUpdateCustomerInformation" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="UpdateThirdPartyAccessRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns24:UpdateThirdPartyAccess" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="RejectStartOfSupplyRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="ns29:RejectStartOfSupply" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

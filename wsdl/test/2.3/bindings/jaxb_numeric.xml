@@ -1,0 +1,1954 @@
+<jxb:bindings
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+    version="2.1">
+    <jxb:bindings schemaLocation="../bim/common/Elhub_BusinessDataType.xsd">
+        <jxb:bindings node="//xsd:simpleType[@name='AcknowledgementStatus']/xsd:restriction/xsd:enumeration[@value='39']">
+            <jxb:typesafeEnumMember name="VALUE_39"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='AcknowledgementStatus']/xsd:restriction/xsd:enumeration[@value='41']">
+            <jxb:typesafeEnumMember name="VALUE_41"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='AddDeleteUpdate']/xsd:restriction/xsd:enumeration[@value='Add']">
+            <jxb:typesafeEnumMember name="ADD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='AddDeleteUpdate']/xsd:restriction/xsd:enumeration[@value='Delete']">
+            <jxb:typesafeEnumMember name="DELETE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='AddDeleteUpdate']/xsd:restriction/xsd:enumeration[@value='Update']">
+            <jxb:typesafeEnumMember name="UPDATE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='AddressTypeType']/xsd:restriction/xsd:enumeration[@value='invoiceadr']">
+            <jxb:typesafeEnumMember name="INVOICEADR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='AddressTypeType']/xsd:restriction/xsd:enumeration[@value='postaladr']">
+            <jxb:typesafeEnumMember name="POSTALADR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-101']">
+            <jxb:typesafeEnumMember name="BRS_NO_101"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-102']">
+            <jxb:typesafeEnumMember name="BRS_NO_102"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-103']">
+            <jxb:typesafeEnumMember name="BRS_NO_103"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-104']">
+            <jxb:typesafeEnumMember name="BRS_NO_104"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-111']">
+            <jxb:typesafeEnumMember name="BRS_NO_111"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-121']">
+            <jxb:typesafeEnumMember name="BRS_NO_121"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-122']">
+            <jxb:typesafeEnumMember name="BRS_NO_122"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-123']">
+            <jxb:typesafeEnumMember name="BRS_NO_123"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-131']">
+            <jxb:typesafeEnumMember name="BRS_NO_131"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-132']">
+            <jxb:typesafeEnumMember name="BRS_NO_132"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-133']">
+            <jxb:typesafeEnumMember name="BRS_NO_133"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-201']">
+            <jxb:typesafeEnumMember name="BRS_NO_201"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-202']">
+            <jxb:typesafeEnumMember name="BRS_NO_202"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-211']">
+            <jxb:typesafeEnumMember name="BRS_NO_211"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-212']">
+            <jxb:typesafeEnumMember name="BRS_NO_212"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-213']">
+            <jxb:typesafeEnumMember name="BRS_NO_213"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-214']">
+            <jxb:typesafeEnumMember name="BRS_NO_214"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-221']">
+            <jxb:typesafeEnumMember name="BRS_NO_221"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-222']">
+            <jxb:typesafeEnumMember name="BRS_NO_222"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-223']">
+            <jxb:typesafeEnumMember name="BRS_NO_223"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-224']">
+            <jxb:typesafeEnumMember name="BRS_NO_224"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-301']">
+            <jxb:typesafeEnumMember name="BRS_NO_301"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-302']">
+            <jxb:typesafeEnumMember name="BRS_NO_302"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-303']">
+            <jxb:typesafeEnumMember name="BRS_NO_303"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-305']">
+            <jxb:typesafeEnumMember name="BRS_NO_305"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-306']">
+            <jxb:typesafeEnumMember name="BRS_NO_306"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-311']">
+            <jxb:typesafeEnumMember name="BRS_NO_311"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-312']">
+            <jxb:typesafeEnumMember name="BRS_NO_312"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-313']">
+            <jxb:typesafeEnumMember name="BRS_NO_313"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-314']">
+            <jxb:typesafeEnumMember name="BRS_NO_314"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-315']">
+            <jxb:typesafeEnumMember name="BRS_NO_315"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-317']">
+            <jxb:typesafeEnumMember name="BRS_NO_317"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-318']">
+            <jxb:typesafeEnumMember name="BRS_NO_318"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-321']">
+            <jxb:typesafeEnumMember name="BRS_NO_321"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-322']">
+            <jxb:typesafeEnumMember name="BRS_NO_322"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-324']">
+            <jxb:typesafeEnumMember name="BRS_NO_324"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-332']">
+            <jxb:typesafeEnumMember name="BRS_NO_332"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-391']">
+            <jxb:typesafeEnumMember name="BRS_NO_391"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-402']">
+            <jxb:typesafeEnumMember name="BRS_NO_402"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-501']">
+            <jxb:typesafeEnumMember name="BRS_NO_501"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-502']">
+            <jxb:typesafeEnumMember name="BRS_NO_502"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-503']">
+            <jxb:typesafeEnumMember name="BRS_NO_503"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-511']">
+            <jxb:typesafeEnumMember name="BRS_NO_511"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-512']">
+            <jxb:typesafeEnumMember name="BRS_NO_512"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-601']">
+            <jxb:typesafeEnumMember name="BRS_NO_601"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-602']">
+            <jxb:typesafeEnumMember name="BRS_NO_602"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-611']">
+            <jxb:typesafeEnumMember name="BRS_NO_611"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-622']">
+            <jxb:typesafeEnumMember name="BRS_NO_622"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='BRS-NO-623']">
+            <jxb:typesafeEnumMember name="BRS_NO_623"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BRSIdentification']/xsd:restriction/xsd:enumeration[@value='POLL']">
+            <jxb:typesafeEnumMember name="POLL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='HP01']">
+            <jxb:typesafeEnumMember name="HP01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='HP02']">
+            <jxb:typesafeEnumMember name="HP02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='HP03']">
+            <jxb:typesafeEnumMember name="HP03"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='HP04']">
+            <jxb:typesafeEnumMember name="HP04"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS01']">
+            <jxb:typesafeEnumMember name="LS01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS02']">
+            <jxb:typesafeEnumMember name="LS02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS03']">
+            <jxb:typesafeEnumMember name="LS03"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS04']">
+            <jxb:typesafeEnumMember name="LS04"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS05']">
+            <jxb:typesafeEnumMember name="LS05"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS06']">
+            <jxb:typesafeEnumMember name="LS06"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS07']">
+            <jxb:typesafeEnumMember name="LS07"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='LS08']">
+            <jxb:typesafeEnumMember name="LS08"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='MP01']">
+            <jxb:typesafeEnumMember name="MP01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='MP02']">
+            <jxb:typesafeEnumMember name="MP02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='RE01']">
+            <jxb:typesafeEnumMember name="RE01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='RE02']">
+            <jxb:typesafeEnumMember name="RE02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='RE03']">
+            <jxb:typesafeEnumMember name="RE03"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='RE04']">
+            <jxb:typesafeEnumMember name="RE04"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE02']">
+            <jxb:typesafeEnumMember name="SE02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE04']">
+            <jxb:typesafeEnumMember name="SE04"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE05']">
+            <jxb:typesafeEnumMember name="SE05"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE06']">
+            <jxb:typesafeEnumMember name="SE06"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE07']">
+            <jxb:typesafeEnumMember name="SE07"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE08']">
+            <jxb:typesafeEnumMember name="SE08"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE09']">
+            <jxb:typesafeEnumMember name="SE09"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE10']">
+            <jxb:typesafeEnumMember name="SE10"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE11']">
+            <jxb:typesafeEnumMember name="SE11"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE12']">
+            <jxb:typesafeEnumMember name="SE12"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE13']">
+            <jxb:typesafeEnumMember name="SE13"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE14']">
+            <jxb:typesafeEnumMember name="SE14"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE15']">
+            <jxb:typesafeEnumMember name="SE15"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE16']">
+            <jxb:typesafeEnumMember name="SE16"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE17']">
+            <jxb:typesafeEnumMember name="SE17"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE18']">
+            <jxb:typesafeEnumMember name="SE18"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE19']">
+            <jxb:typesafeEnumMember name="SE19"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE20']">
+            <jxb:typesafeEnumMember name="SE20"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE21']">
+            <jxb:typesafeEnumMember name="SE21"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE22']">
+            <jxb:typesafeEnumMember name="SE22"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE23']">
+            <jxb:typesafeEnumMember name="SE23"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE24']">
+            <jxb:typesafeEnumMember name="SE24"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE25']">
+            <jxb:typesafeEnumMember name="SE25"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE26']">
+            <jxb:typesafeEnumMember name="SE26"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE27']">
+            <jxb:typesafeEnumMember name="SE27"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE28']">
+            <jxb:typesafeEnumMember name="SE28"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE29']">
+            <jxb:typesafeEnumMember name="SE29"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE30']">
+            <jxb:typesafeEnumMember name="SE30"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='BusinessTypeCode']/xsd:restriction/xsd:enumeration[@value='SE31']">
+            <jxb:typesafeEnumMember name="SE31"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CalculationMethod']/xsd:restriction/xsd:enumeration[@value='Automatic']">
+            <jxb:typesafeEnumMember name="AUTOMATIC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CalculationMethod']/xsd:restriction/xsd:enumeration[@value='Manual']">
+            <jxb:typesafeEnumMember name="MANUAL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ChannelResolutionType']/xsd:restriction/xsd:enumeration[@value='N']">
+            <jxb:typesafeEnumMember name="N"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ChannelResolutionType']/xsd:restriction/xsd:enumeration[@value='PT15M']">
+            <jxb:typesafeEnumMember name="PT15M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ChannelResolutionType']/xsd:restriction/xsd:enumeration[@value='PT1H']">
+            <jxb:typesafeEnumMember name="PT1H"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ChannelResolutionType']/xsd:restriction/xsd:enumeration[@value='PT5M']">
+            <jxb:typesafeEnumMember name="PT5M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ChannelResolutionType']/xsd:restriction/xsd:enumeration[@value='PT60M']">
+            <jxb:typesafeEnumMember name="PT60M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CommunicationChannelType']/xsd:restriction/xsd:enumeration[@value='Email']">
+            <jxb:typesafeEnumMember name="EMAIL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CommunicationChannelType']/xsd:restriction/xsd:enumeration[@value='Mobile']">
+            <jxb:typesafeEnumMember name="MOBILE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CommunicationChannelType']/xsd:restriction/xsd:enumeration[@value='Phone']">
+            <jxb:typesafeEnumMember name="PHONE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CommunicationChannelType']/xsd:restriction/xsd:enumeration[@value='Telefax']">
+            <jxb:typesafeEnumMember name="TELEFAX"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ConsumptionCode']/xsd:restriction/xsd:enumeration[@value='A04']">
+            <jxb:typesafeEnumMember name="A04"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ConsumptionCode']/xsd:restriction/xsd:enumeration[@value='A07']">
+            <jxb:typesafeEnumMember name="A07"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ConsumptionCode']/xsd:restriction/xsd:enumeration[@value='A15']">
+            <jxb:typesafeEnumMember name="A15"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ConsumptionCode']/xsd:restriction/xsd:enumeration[@value='B27']">
+            <jxb:typesafeEnumMember name="B27"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AD']">
+            <jxb:typesafeEnumMember name="AD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AE']">
+            <jxb:typesafeEnumMember name="AE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AF']">
+            <jxb:typesafeEnumMember name="AF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AG']">
+            <jxb:typesafeEnumMember name="AG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AI']">
+            <jxb:typesafeEnumMember name="AI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AL']">
+            <jxb:typesafeEnumMember name="AL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AM']">
+            <jxb:typesafeEnumMember name="AM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AO']">
+            <jxb:typesafeEnumMember name="AO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AQ']">
+            <jxb:typesafeEnumMember name="AQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AR']">
+            <jxb:typesafeEnumMember name="AR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AS']">
+            <jxb:typesafeEnumMember name="AS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AT']">
+            <jxb:typesafeEnumMember name="AT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AU']">
+            <jxb:typesafeEnumMember name="AU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AW']">
+            <jxb:typesafeEnumMember name="AW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AX']">
+            <jxb:typesafeEnumMember name="AX"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='AZ']">
+            <jxb:typesafeEnumMember name="AZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BA']">
+            <jxb:typesafeEnumMember name="BA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BB']">
+            <jxb:typesafeEnumMember name="BB"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BD']">
+            <jxb:typesafeEnumMember name="BD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BE']">
+            <jxb:typesafeEnumMember name="BE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BF']">
+            <jxb:typesafeEnumMember name="BF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BG']">
+            <jxb:typesafeEnumMember name="BG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BH']">
+            <jxb:typesafeEnumMember name="BH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BI']">
+            <jxb:typesafeEnumMember name="BI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BJ']">
+            <jxb:typesafeEnumMember name="BJ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BL']">
+            <jxb:typesafeEnumMember name="BL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BM']">
+            <jxb:typesafeEnumMember name="BM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BN']">
+            <jxb:typesafeEnumMember name="BN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BO']">
+            <jxb:typesafeEnumMember name="BO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BQ']">
+            <jxb:typesafeEnumMember name="BQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BR']">
+            <jxb:typesafeEnumMember name="BR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BS']">
+            <jxb:typesafeEnumMember name="BS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BT']">
+            <jxb:typesafeEnumMember name="BT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BV']">
+            <jxb:typesafeEnumMember name="BV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BW']">
+            <jxb:typesafeEnumMember name="BW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BY']">
+            <jxb:typesafeEnumMember name="BY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='BZ']">
+            <jxb:typesafeEnumMember name="BZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CA']">
+            <jxb:typesafeEnumMember name="CA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CC']">
+            <jxb:typesafeEnumMember name="CC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CD']">
+            <jxb:typesafeEnumMember name="CD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CF']">
+            <jxb:typesafeEnumMember name="CF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CG']">
+            <jxb:typesafeEnumMember name="CG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CH']">
+            <jxb:typesafeEnumMember name="CH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CI']">
+            <jxb:typesafeEnumMember name="CI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CK']">
+            <jxb:typesafeEnumMember name="CK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CL']">
+            <jxb:typesafeEnumMember name="CL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CM']">
+            <jxb:typesafeEnumMember name="CM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CN']">
+            <jxb:typesafeEnumMember name="CN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CO']">
+            <jxb:typesafeEnumMember name="CO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CR']">
+            <jxb:typesafeEnumMember name="CR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CU']">
+            <jxb:typesafeEnumMember name="CU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CV']">
+            <jxb:typesafeEnumMember name="CV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CW']">
+            <jxb:typesafeEnumMember name="CW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CX']">
+            <jxb:typesafeEnumMember name="CX"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CY']">
+            <jxb:typesafeEnumMember name="CY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='CZ']">
+            <jxb:typesafeEnumMember name="CZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='DE']">
+            <jxb:typesafeEnumMember name="DE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='DJ']">
+            <jxb:typesafeEnumMember name="DJ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='DK']">
+            <jxb:typesafeEnumMember name="DK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='DM']">
+            <jxb:typesafeEnumMember name="DM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='DO']">
+            <jxb:typesafeEnumMember name="DO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='DZ']">
+            <jxb:typesafeEnumMember name="DZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='EC']">
+            <jxb:typesafeEnumMember name="EC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='EE']">
+            <jxb:typesafeEnumMember name="EE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='EG']">
+            <jxb:typesafeEnumMember name="EG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='EH']">
+            <jxb:typesafeEnumMember name="EH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ER']">
+            <jxb:typesafeEnumMember name="ER"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ES']">
+            <jxb:typesafeEnumMember name="ES"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ET']">
+            <jxb:typesafeEnumMember name="ET"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='FI']">
+            <jxb:typesafeEnumMember name="FI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='FJ']">
+            <jxb:typesafeEnumMember name="FJ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='FK']">
+            <jxb:typesafeEnumMember name="FK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='FM']">
+            <jxb:typesafeEnumMember name="FM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='FO']">
+            <jxb:typesafeEnumMember name="FO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='FR']">
+            <jxb:typesafeEnumMember name="FR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GA']">
+            <jxb:typesafeEnumMember name="GA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GB']">
+            <jxb:typesafeEnumMember name="GB"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GD']">
+            <jxb:typesafeEnumMember name="GD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GE']">
+            <jxb:typesafeEnumMember name="GE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GF']">
+            <jxb:typesafeEnumMember name="GF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GG']">
+            <jxb:typesafeEnumMember name="GG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GH']">
+            <jxb:typesafeEnumMember name="GH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GI']">
+            <jxb:typesafeEnumMember name="GI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GL']">
+            <jxb:typesafeEnumMember name="GL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GM']">
+            <jxb:typesafeEnumMember name="GM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GN']">
+            <jxb:typesafeEnumMember name="GN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GP']">
+            <jxb:typesafeEnumMember name="GP"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GQ']">
+            <jxb:typesafeEnumMember name="GQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GR']">
+            <jxb:typesafeEnumMember name="GR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GS']">
+            <jxb:typesafeEnumMember name="GS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GT']">
+            <jxb:typesafeEnumMember name="GT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GU']">
+            <jxb:typesafeEnumMember name="GU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GW']">
+            <jxb:typesafeEnumMember name="GW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='GY']">
+            <jxb:typesafeEnumMember name="GY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='HK']">
+            <jxb:typesafeEnumMember name="HK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='HM']">
+            <jxb:typesafeEnumMember name="HM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='HN']">
+            <jxb:typesafeEnumMember name="HN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='HR']">
+            <jxb:typesafeEnumMember name="HR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='HT']">
+            <jxb:typesafeEnumMember name="HT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='HU']">
+            <jxb:typesafeEnumMember name="HU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ID']">
+            <jxb:typesafeEnumMember name="ID"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IE']">
+            <jxb:typesafeEnumMember name="IE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IL']">
+            <jxb:typesafeEnumMember name="IL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IM']">
+            <jxb:typesafeEnumMember name="IM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IN']">
+            <jxb:typesafeEnumMember name="IN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IO']">
+            <jxb:typesafeEnumMember name="IO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IQ']">
+            <jxb:typesafeEnumMember name="IQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IR']">
+            <jxb:typesafeEnumMember name="IR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IS']">
+            <jxb:typesafeEnumMember name="IS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='IT']">
+            <jxb:typesafeEnumMember name="IT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='JE']">
+            <jxb:typesafeEnumMember name="JE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='JM']">
+            <jxb:typesafeEnumMember name="JM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='JO']">
+            <jxb:typesafeEnumMember name="JO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='JP']">
+            <jxb:typesafeEnumMember name="JP"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KE']">
+            <jxb:typesafeEnumMember name="KE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KG']">
+            <jxb:typesafeEnumMember name="KG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KH']">
+            <jxb:typesafeEnumMember name="KH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KI']">
+            <jxb:typesafeEnumMember name="KI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KM']">
+            <jxb:typesafeEnumMember name="KM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KN']">
+            <jxb:typesafeEnumMember name="KN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KP']">
+            <jxb:typesafeEnumMember name="KP"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KR']">
+            <jxb:typesafeEnumMember name="KR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KW']">
+            <jxb:typesafeEnumMember name="KW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KY']">
+            <jxb:typesafeEnumMember name="KY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='KZ']">
+            <jxb:typesafeEnumMember name="KZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LA']">
+            <jxb:typesafeEnumMember name="LA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LB']">
+            <jxb:typesafeEnumMember name="LB"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LC']">
+            <jxb:typesafeEnumMember name="LC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LI']">
+            <jxb:typesafeEnumMember name="LI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LK']">
+            <jxb:typesafeEnumMember name="LK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LR']">
+            <jxb:typesafeEnumMember name="LR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LS']">
+            <jxb:typesafeEnumMember name="LS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LT']">
+            <jxb:typesafeEnumMember name="LT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LU']">
+            <jxb:typesafeEnumMember name="LU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LV']">
+            <jxb:typesafeEnumMember name="LV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='LY']">
+            <jxb:typesafeEnumMember name="LY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MA']">
+            <jxb:typesafeEnumMember name="MA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MC']">
+            <jxb:typesafeEnumMember name="MC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MD']">
+            <jxb:typesafeEnumMember name="MD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ME']">
+            <jxb:typesafeEnumMember name="ME"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MF']">
+            <jxb:typesafeEnumMember name="MF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MG']">
+            <jxb:typesafeEnumMember name="MG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MH']">
+            <jxb:typesafeEnumMember name="MH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MK']">
+            <jxb:typesafeEnumMember name="MK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ML']">
+            <jxb:typesafeEnumMember name="ML"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MM']">
+            <jxb:typesafeEnumMember name="MM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MN']">
+            <jxb:typesafeEnumMember name="MN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MO']">
+            <jxb:typesafeEnumMember name="MO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MP']">
+            <jxb:typesafeEnumMember name="MP"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MQ']">
+            <jxb:typesafeEnumMember name="MQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MR']">
+            <jxb:typesafeEnumMember name="MR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MS']">
+            <jxb:typesafeEnumMember name="MS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MT']">
+            <jxb:typesafeEnumMember name="MT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MU']">
+            <jxb:typesafeEnumMember name="MU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MV']">
+            <jxb:typesafeEnumMember name="MV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MW']">
+            <jxb:typesafeEnumMember name="MW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MX']">
+            <jxb:typesafeEnumMember name="MX"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MY']">
+            <jxb:typesafeEnumMember name="MY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='MZ']">
+            <jxb:typesafeEnumMember name="MZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NA']">
+            <jxb:typesafeEnumMember name="NA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NC']">
+            <jxb:typesafeEnumMember name="NC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NE']">
+            <jxb:typesafeEnumMember name="NE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NF']">
+            <jxb:typesafeEnumMember name="NF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NG']">
+            <jxb:typesafeEnumMember name="NG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NI']">
+            <jxb:typesafeEnumMember name="NI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NL']">
+            <jxb:typesafeEnumMember name="NL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NO']">
+            <jxb:typesafeEnumMember name="NO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NP']">
+            <jxb:typesafeEnumMember name="NP"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NR']">
+            <jxb:typesafeEnumMember name="NR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NU']">
+            <jxb:typesafeEnumMember name="NU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='NZ']">
+            <jxb:typesafeEnumMember name="NZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='OM']">
+            <jxb:typesafeEnumMember name="OM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PA']">
+            <jxb:typesafeEnumMember name="PA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PE']">
+            <jxb:typesafeEnumMember name="PE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PF']">
+            <jxb:typesafeEnumMember name="PF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PG']">
+            <jxb:typesafeEnumMember name="PG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PH']">
+            <jxb:typesafeEnumMember name="PH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PK']">
+            <jxb:typesafeEnumMember name="PK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PL']">
+            <jxb:typesafeEnumMember name="PL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PM']">
+            <jxb:typesafeEnumMember name="PM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PN']">
+            <jxb:typesafeEnumMember name="PN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PR']">
+            <jxb:typesafeEnumMember name="PR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PS']">
+            <jxb:typesafeEnumMember name="PS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PT']">
+            <jxb:typesafeEnumMember name="PT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PW']">
+            <jxb:typesafeEnumMember name="PW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='PY']">
+            <jxb:typesafeEnumMember name="PY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='QA']">
+            <jxb:typesafeEnumMember name="QA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='RE']">
+            <jxb:typesafeEnumMember name="RE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='RO']">
+            <jxb:typesafeEnumMember name="RO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='RS']">
+            <jxb:typesafeEnumMember name="RS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='RU']">
+            <jxb:typesafeEnumMember name="RU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='RW']">
+            <jxb:typesafeEnumMember name="RW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SA']">
+            <jxb:typesafeEnumMember name="SA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SB']">
+            <jxb:typesafeEnumMember name="SB"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SC']">
+            <jxb:typesafeEnumMember name="SC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SD']">
+            <jxb:typesafeEnumMember name="SD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SE']">
+            <jxb:typesafeEnumMember name="SE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SG']">
+            <jxb:typesafeEnumMember name="SG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SH']">
+            <jxb:typesafeEnumMember name="SH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SI']">
+            <jxb:typesafeEnumMember name="SI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SJ']">
+            <jxb:typesafeEnumMember name="SJ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SK']">
+            <jxb:typesafeEnumMember name="SK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SL']">
+            <jxb:typesafeEnumMember name="SL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SM']">
+            <jxb:typesafeEnumMember name="SM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SN']">
+            <jxb:typesafeEnumMember name="SN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SO']">
+            <jxb:typesafeEnumMember name="SO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SR']">
+            <jxb:typesafeEnumMember name="SR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SS']">
+            <jxb:typesafeEnumMember name="SS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ST']">
+            <jxb:typesafeEnumMember name="ST"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SV']">
+            <jxb:typesafeEnumMember name="SV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SX']">
+            <jxb:typesafeEnumMember name="SX"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SY']">
+            <jxb:typesafeEnumMember name="SY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='SZ']">
+            <jxb:typesafeEnumMember name="SZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TC']">
+            <jxb:typesafeEnumMember name="TC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TD']">
+            <jxb:typesafeEnumMember name="TD"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TF']">
+            <jxb:typesafeEnumMember name="TF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TG']">
+            <jxb:typesafeEnumMember name="TG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TH']">
+            <jxb:typesafeEnumMember name="TH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TJ']">
+            <jxb:typesafeEnumMember name="TJ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TK']">
+            <jxb:typesafeEnumMember name="TK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TL']">
+            <jxb:typesafeEnumMember name="TL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TM']">
+            <jxb:typesafeEnumMember name="TM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TN']">
+            <jxb:typesafeEnumMember name="TN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TO']">
+            <jxb:typesafeEnumMember name="TO"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TR']">
+            <jxb:typesafeEnumMember name="TR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TT']">
+            <jxb:typesafeEnumMember name="TT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TV']">
+            <jxb:typesafeEnumMember name="TV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TW']">
+            <jxb:typesafeEnumMember name="TW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='TZ']">
+            <jxb:typesafeEnumMember name="TZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='UA']">
+            <jxb:typesafeEnumMember name="UA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='UG']">
+            <jxb:typesafeEnumMember name="UG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='UM']">
+            <jxb:typesafeEnumMember name="UM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='US']">
+            <jxb:typesafeEnumMember name="US"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='UY']">
+            <jxb:typesafeEnumMember name="UY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='UZ']">
+            <jxb:typesafeEnumMember name="UZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VA']">
+            <jxb:typesafeEnumMember name="VA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VC']">
+            <jxb:typesafeEnumMember name="VC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VE']">
+            <jxb:typesafeEnumMember name="VE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VG']">
+            <jxb:typesafeEnumMember name="VG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VI']">
+            <jxb:typesafeEnumMember name="VI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VN']">
+            <jxb:typesafeEnumMember name="VN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='VU']">
+            <jxb:typesafeEnumMember name="VU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='WF']">
+            <jxb:typesafeEnumMember name="WF"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='WS']">
+            <jxb:typesafeEnumMember name="WS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='YE']">
+            <jxb:typesafeEnumMember name="YE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='YT']">
+            <jxb:typesafeEnumMember name="YT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ZA']">
+            <jxb:typesafeEnumMember name="ZA"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ZM']">
+            <jxb:typesafeEnumMember name="ZM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CountryCode']/xsd:restriction/xsd:enumeration[@value='ZW']">
+            <jxb:typesafeEnumMember name="ZW"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CurrencyCode']/xsd:restriction/xsd:enumeration[@value='DKK']">
+            <jxb:typesafeEnumMember name="DKK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CurrencyCode']/xsd:restriction/xsd:enumeration[@value='EUR']">
+            <jxb:typesafeEnumMember name="EUR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CurrencyCode']/xsd:restriction/xsd:enumeration[@value='NOK']">
+            <jxb:typesafeEnumMember name="NOK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='CurrencyCode']/xsd:restriction/xsd:enumeration[@value='SEK']">
+            <jxb:typesafeEnumMember name="SEK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DirectionType']/xsd:restriction/xsd:enumeration[@value='In']">
+            <jxb:typesafeEnumMember name="IN"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DirectionType']/xsd:restriction/xsd:enumeration[@value='Out']">
+            <jxb:typesafeEnumMember name="OUT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='P1D']">
+            <jxb:typesafeEnumMember name="P1D"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='P1M']">
+            <jxb:typesafeEnumMember name="P1M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='P1Y']">
+            <jxb:typesafeEnumMember name="P1Y"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='PT5M']">
+            <jxb:typesafeEnumMember name="PT5M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='PT15M']">
+            <jxb:typesafeEnumMember name="PT15M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='PT1H']">
+            <jxb:typesafeEnumMember name="PT1H"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='PT30M']">
+            <jxb:typesafeEnumMember name="PT30M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='DurationCodeType']/xsd:restriction/xsd:enumeration[@value='PT60M']">
+            <jxb:typesafeEnumMember name="PT60M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='AG']">
+            <jxb:typesafeEnumMember name="AG"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='BSL']">
+            <jxb:typesafeEnumMember name="BSL"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='DDE']">
+            <jxb:typesafeEnumMember name="DDE"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='DDK']">
+            <jxb:typesafeEnumMember name="DDK"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='DDM']">
+            <jxb:typesafeEnumMember name="DDM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='DDQ']">
+            <jxb:typesafeEnumMember name="DDQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='DDZ']">
+            <jxb:typesafeEnumMember name="DDZ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='DDX']">
+            <jxb:typesafeEnumMember name="DDX"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='MDR']">
+            <jxb:typesafeEnumMember name="MDR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='PQ']">
+            <jxb:typesafeEnumMember name="PQ"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='QRY']">
+            <jxb:typesafeEnumMember name="QRY"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_BusinessProcessRole']/xsd:restriction/xsd:enumeration[@value='SLR']">
+            <jxb:typesafeEnumMember name="SLR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='21']">
+            <jxb:typesafeEnumMember name="VALUE_21"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='392']">
+            <jxb:typesafeEnumMember name="VALUE_392"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='406']">
+            <jxb:typesafeEnumMember name="VALUE_406"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='414']">
+            <jxb:typesafeEnumMember name="VALUE_414"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='432']">
+            <jxb:typesafeEnumMember name="VALUE_432"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E02']">
+            <jxb:typesafeEnumMember name="E02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E07']">
+            <jxb:typesafeEnumMember name="E07"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E10']">
+            <jxb:typesafeEnumMember name="E10"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E13']">
+            <jxb:typesafeEnumMember name="E13"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E30']">
+            <jxb:typesafeEnumMember name="E30"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E31']">
+            <jxb:typesafeEnumMember name="E31"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E39']">
+            <jxb:typesafeEnumMember name="E39"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E58']">
+            <jxb:typesafeEnumMember name="E58"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E65']">
+            <jxb:typesafeEnumMember name="E65"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E66']">
+            <jxb:typesafeEnumMember name="E66"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='E67']">
+            <jxb:typesafeEnumMember name="E67"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='ERR']">
+            <jxb:typesafeEnumMember name="ERR"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_DocumentType']/xsd:restriction/xsd:enumeration[@value='294']">
+            <jxb:typesafeEnumMember name="VALUE_294"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_EnergyIndustryClassificationType']/xsd:restriction/xsd:enumeration[@value='23']">
+            <jxb:typesafeEnumMember name="VALUE_23"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_MeteringPointTypeCode']/xsd:restriction/xsd:enumeration[@value='E17']">
+            <jxb:typesafeEnumMember name="E17"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_MeteringPointTypeCode']/xsd:restriction/xsd:enumeration[@value='E18']">
+            <jxb:typesafeEnumMember name="E18"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_MeteringPointTypeCode']/xsd:restriction/xsd:enumeration[@value='E19']">
+            <jxb:typesafeEnumMember name="E19"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_MeteringPointTypeCode']/xsd:restriction/xsd:enumeration[@value='E20']">
+            <jxb:typesafeEnumMember name="E20"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_PhysicalStatusCode']/xsd:restriction/xsd:enumeration[@value='E22']">
+            <jxb:typesafeEnumMember name="E22"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_PhysicalStatusCode']/xsd:restriction/xsd:enumeration[@value='E23']">
+            <jxb:typesafeEnumMember name="E23"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_PhysicalStatusCode']/xsd:restriction/xsd:enumeration[@value='E31']">
+            <jxb:typesafeEnumMember name="E31"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='8716867000030']">
+            <jxb:typesafeEnumMember name="VALUE_8716867000030"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='8716867000047']">
+            <jxb:typesafeEnumMember name="VALUE_8716867000047"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='8716867000139']">
+            <jxb:typesafeEnumMember name="VALUE_8716867000139"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='8716867000146']">
+            <jxb:typesafeEnumMember name="VALUE_8716867000146"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='4700000000201']">
+            <jxb:typesafeEnumMember name="VALUE_4700000000201"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='4700000000101']">
+            <jxb:typesafeEnumMember name="VALUE_4700000000101"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='4700000000301']">
+            <jxb:typesafeEnumMember name="VALUE_4700000000301"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='4700000000302']">
+            <jxb:typesafeEnumMember name="VALUE_4700000000302"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ProductIdentifierCode']/xsd:restriction/xsd:enumeration[@value='4700000000303']">
+            <jxb:typesafeEnumMember name="VALUE_4700000000303"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E09']">
+            <jxb:typesafeEnumMember name="E09"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH001']">
+            <jxb:typesafeEnumMember name="EH001"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH002']">
+            <jxb:typesafeEnumMember name="EH002"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH003']">
+            <jxb:typesafeEnumMember name="EH003"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH004']">
+            <jxb:typesafeEnumMember name="EH004"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH005']">
+            <jxb:typesafeEnumMember name="EH005"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH006']">
+            <jxb:typesafeEnumMember name="EH006"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH007']">
+            <jxb:typesafeEnumMember name="EH007"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH008']">
+            <jxb:typesafeEnumMember name="EH008"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH009']">
+            <jxb:typesafeEnumMember name="EH009"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH010']">
+            <jxb:typesafeEnumMember name="EH010"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH011']">
+            <jxb:typesafeEnumMember name="EH011"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH012']">
+            <jxb:typesafeEnumMember name="EH012"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH013']">
+            <jxb:typesafeEnumMember name="EH013"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH014']">
+            <jxb:typesafeEnumMember name="EH014"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH015']">
+            <jxb:typesafeEnumMember name="EH015"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH016']">
+            <jxb:typesafeEnumMember name="EH016"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH017']">
+            <jxb:typesafeEnumMember name="EH017"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH018']">
+            <jxb:typesafeEnumMember name="EH018"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH019']">
+            <jxb:typesafeEnumMember name="EH019"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH020']">
+            <jxb:typesafeEnumMember name="EH020"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH021']">
+            <jxb:typesafeEnumMember name="EH021"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH022']">
+            <jxb:typesafeEnumMember name="EH022"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH023']">
+            <jxb:typesafeEnumMember name="EH023"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH024']">
+            <jxb:typesafeEnumMember name="EH024"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH025']">
+            <jxb:typesafeEnumMember name="EH025"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH026']">
+            <jxb:typesafeEnumMember name="EH026"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH027']">
+            <jxb:typesafeEnumMember name="EH027"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH028']">
+            <jxb:typesafeEnumMember name="EH028"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH029']">
+            <jxb:typesafeEnumMember name="EH029"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH030']">
+            <jxb:typesafeEnumMember name="EH030"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH031']">
+            <jxb:typesafeEnumMember name="EH031"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH032']">
+            <jxb:typesafeEnumMember name="EH032"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH033']">
+            <jxb:typesafeEnumMember name="EH033"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH034']">
+            <jxb:typesafeEnumMember name="EH034"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH035']">
+            <jxb:typesafeEnumMember name="EH035"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH036']">
+            <jxb:typesafeEnumMember name="EH036"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH037']">
+            <jxb:typesafeEnumMember name="EH037"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH038']">
+            <jxb:typesafeEnumMember name="EH038"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH039']">
+            <jxb:typesafeEnumMember name="EH039"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH040']">
+            <jxb:typesafeEnumMember name="EH040"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E10']">
+            <jxb:typesafeEnumMember name="E10"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E11']">
+            <jxb:typesafeEnumMember name="E11"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E12']">
+            <jxb:typesafeEnumMember name="E12"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E13']">
+            <jxb:typesafeEnumMember name="E13"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E14']">
+            <jxb:typesafeEnumMember name="E14"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E15']">
+            <jxb:typesafeEnumMember name="E15"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E16']">
+            <jxb:typesafeEnumMember name="E16"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E17']">
+            <jxb:typesafeEnumMember name="E17"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E18']">
+            <jxb:typesafeEnumMember name="E18"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E19']">
+            <jxb:typesafeEnumMember name="E19"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E22']">
+            <jxb:typesafeEnumMember name="E22"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E29']">
+            <jxb:typesafeEnumMember name="E29"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E36']">
+            <jxb:typesafeEnumMember name="E36"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E37']">
+            <jxb:typesafeEnumMember name="E37"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E47']">
+            <jxb:typesafeEnumMember name="E47"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E49']">
+            <jxb:typesafeEnumMember name="E49"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E50']">
+            <jxb:typesafeEnumMember name="E50"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E51']">
+            <jxb:typesafeEnumMember name="E51"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E52']">
+            <jxb:typesafeEnumMember name="E52"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E54']">
+            <jxb:typesafeEnumMember name="E54"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E55']">
+            <jxb:typesafeEnumMember name="E55"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E59']">
+            <jxb:typesafeEnumMember name="E59"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E61']">
+            <jxb:typesafeEnumMember name="E61"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E62']">
+            <jxb:typesafeEnumMember name="E62"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E72']">
+            <jxb:typesafeEnumMember name="E72"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E73']">
+            <jxb:typesafeEnumMember name="E73"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E86']">
+            <jxb:typesafeEnumMember name="E86"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E87']">
+            <jxb:typesafeEnumMember name="E87"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E97']">
+            <jxb:typesafeEnumMember name="E97"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E98']">
+            <jxb:typesafeEnumMember name="E98"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E81']">
+            <jxb:typesafeEnumMember name="E81"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E90']">
+            <jxb:typesafeEnumMember name="E90"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E91']">
+            <jxb:typesafeEnumMember name="E91"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E0H']">
+            <jxb:typesafeEnumMember name="E0H"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E0I']">
+            <jxb:typesafeEnumMember name="E0I"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E0J']">
+            <jxb:typesafeEnumMember name="E0J"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E0K']">
+            <jxb:typesafeEnumMember name="E0K"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E0L']">
+            <jxb:typesafeEnumMember name="E0L"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='E0M']">
+            <jxb:typesafeEnumMember name="E0M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH041']">
+            <jxb:typesafeEnumMember name="EH041"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH042']">
+            <jxb:typesafeEnumMember name="EH042"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH043']">
+            <jxb:typesafeEnumMember name="EH043"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH044']">
+            <jxb:typesafeEnumMember name="EH044"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH045']">
+            <jxb:typesafeEnumMember name="EH045"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH046']">
+            <jxb:typesafeEnumMember name="EH046"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH047']">
+            <jxb:typesafeEnumMember name="EH047"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH048']">
+            <jxb:typesafeEnumMember name="EH048"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH049']">
+            <jxb:typesafeEnumMember name="EH049"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH050']">
+            <jxb:typesafeEnumMember name="EH050"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH051']">
+            <jxb:typesafeEnumMember name="EH051"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH052']">
+            <jxb:typesafeEnumMember name="EH052"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH053']">
+            <jxb:typesafeEnumMember name="EH053"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH054']">
+            <jxb:typesafeEnumMember name="EH054"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH055']">
+            <jxb:typesafeEnumMember name="EH055"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH056']">
+            <jxb:typesafeEnumMember name="EH056"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH057']">
+            <jxb:typesafeEnumMember name="EH057"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH058']">
+            <jxb:typesafeEnumMember name="EH058"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH059']">
+            <jxb:typesafeEnumMember name="EH059"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH060']">
+            <jxb:typesafeEnumMember name="EH060"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH061']">
+            <jxb:typesafeEnumMember name="EH061"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH062']">
+            <jxb:typesafeEnumMember name="EH062"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH063']">
+            <jxb:typesafeEnumMember name="EH063"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH064']">
+            <jxb:typesafeEnumMember name="EH064"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH065']">
+            <jxb:typesafeEnumMember name="EH065"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH066']">
+            <jxb:typesafeEnumMember name="EH066"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH067']">
+            <jxb:typesafeEnumMember name="EH067"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH068']">
+            <jxb:typesafeEnumMember name="EH068"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH069']">
+            <jxb:typesafeEnumMember name="EH069"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH070']">
+            <jxb:typesafeEnumMember name="EH070"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH071']">
+            <jxb:typesafeEnumMember name="EH071"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH072']">
+            <jxb:typesafeEnumMember name="EH072"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH073']">
+            <jxb:typesafeEnumMember name="EH073"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH074']">
+            <jxb:typesafeEnumMember name="EH074"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH075']">
+            <jxb:typesafeEnumMember name="EH075"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH076']">
+            <jxb:typesafeEnumMember name="EH076"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH077']">
+            <jxb:typesafeEnumMember name="EH077"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH078']">
+            <jxb:typesafeEnumMember name="EH078"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH079']">
+            <jxb:typesafeEnumMember name="EH079"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH080']">
+            <jxb:typesafeEnumMember name="EH080"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH081']">
+            <jxb:typesafeEnumMember name="EH081"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH082']">
+            <jxb:typesafeEnumMember name="EH082"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH083']">
+            <jxb:typesafeEnumMember name="EH083"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH084']">
+            <jxb:typesafeEnumMember name="EH084"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH085']">
+            <jxb:typesafeEnumMember name="EH085"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH086']">
+            <jxb:typesafeEnumMember name="EH086"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH087']">
+            <jxb:typesafeEnumMember name="EH087"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH088']">
+            <jxb:typesafeEnumMember name="EH088"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH089']">
+            <jxb:typesafeEnumMember name="EH089"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH090']">
+            <jxb:typesafeEnumMember name="EH090"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH091']">
+            <jxb:typesafeEnumMember name="EH091"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH092']">
+            <jxb:typesafeEnumMember name="EH092"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH093']">
+            <jxb:typesafeEnumMember name="EH093"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH094']">
+            <jxb:typesafeEnumMember name="EH094"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH095']">
+            <jxb:typesafeEnumMember name="EH095"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH096']">
+            <jxb:typesafeEnumMember name="EH096"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH097']">
+            <jxb:typesafeEnumMember name="EH097"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH098']">
+            <jxb:typesafeEnumMember name="EH098"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_ResponseReasonCode']/xsd:restriction/xsd:enumeration[@value='EH099']">
+            <jxb:typesafeEnumMember name="EH099"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_schemeAgencyIdentifierType']/xsd:restriction/xsd:enumeration[@value='82']">
+            <jxb:typesafeEnumMember name="VALUE_82"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_schemeAgencyIdentifierType']/xsd:restriction/xsd:enumeration[@value='Z01']">
+            <jxb:typesafeEnumMember name="Z01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_SettlementMethodCode']/xsd:restriction/xsd:enumeration[@value='E01']">
+            <jxb:typesafeEnumMember name="E01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_SettlementMethodCode']/xsd:restriction/xsd:enumeration[@value='E02']">
+            <jxb:typesafeEnumMember name="E02"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_SettlementMethodCode']/xsd:restriction/xsd:enumeration[@value='Z01']">
+            <jxb:typesafeEnumMember name="Z01"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_UnitType']/xsd:restriction/xsd:enumeration[@value='kWh']">
+            <jxb:typesafeEnumMember name="KWH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='Elhub_UnitType']/xsd:restriction/xsd:enumeration[@value='kvarh']">
+            <jxb:typesafeEnumMember name="KVARH"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EndReasonType']/xsd:restriction/xsd:enumeration[@value='Z41']">
+            <jxb:typesafeEnumMember name="Z41"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EndReasonType']/xsd:restriction/xsd:enumeration[@value='Z42']">
+            <jxb:typesafeEnumMember name="Z42"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EndReasonType']/xsd:restriction/xsd:enumeration[@value='Z44']">
+            <jxb:typesafeEnumMember name="Z44"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EndReasonType']/xsd:restriction/xsd:enumeration[@value='Z45']">
+            <jxb:typesafeEnumMember name="Z45"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EnovaFeeType']/xsd:restriction/xsd:enumeration[@value='ConsumptionDependent']">
+            <jxb:typesafeEnumMember name="CONSUMPTIONDEPENDENT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EnovaFeeType']/xsd:restriction/xsd:enumeration[@value='Fixed']">
+            <jxb:typesafeEnumMember name="FIXED"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimatedQualityCodeType']/xsd:restriction/xsd:enumeration[@value='56']">
+            <jxb:typesafeEnumMember name="VALUE_56"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimatedQualityCodeType']/xsd:restriction/xsd:enumeration[@value='81']">
+            <jxb:typesafeEnumMember name="VALUE_81"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E001']">
+            <jxb:typesafeEnumMember name="E001"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E002']">
+            <jxb:typesafeEnumMember name="E002"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E003']">
+            <jxb:typesafeEnumMember name="E003"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E004']">
+            <jxb:typesafeEnumMember name="E004"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E005']">
+            <jxb:typesafeEnumMember name="E005"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E006']">
+            <jxb:typesafeEnumMember name="E006"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E007']">
+            <jxb:typesafeEnumMember name="E007"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='EstimationCodeType']/xsd:restriction/xsd:enumeration[@value='E008']">
+            <jxb:typesafeEnumMember name="E008"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType']/xsd:restriction/xsd:enumeration[@value='260']">
+            <jxb:typesafeEnumMember name="VALUE_260"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType']/xsd:restriction/xsd:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="VALUE_6"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType260']/xsd:restriction/xsd:enumeration[@value='260']">
+            <jxb:typesafeEnumMember name="VALUE_260"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType5']/xsd:restriction/xsd:enumeration[@value='5']">
+            <jxb:typesafeEnumMember name="VALUE_5"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType6']/xsd:restriction/xsd:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="VALUE_6"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType89']/xsd:restriction/xsd:enumeration[@value='89']">
+            <jxb:typesafeEnumMember name="VALUE_89"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType89_260']/xsd:restriction/xsd:enumeration[@value='260']">
+            <jxb:typesafeEnumMember name="VALUE_260"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType89_260']/xsd:restriction/xsd:enumeration[@value='89']">
+            <jxb:typesafeEnumMember name="VALUE_89"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType89_6']/xsd:restriction/xsd:enumeration[@value='6']">
+            <jxb:typesafeEnumMember name="VALUE_6"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='listAgencyIdentifierType89_6']/xsd:restriction/xsd:enumeration[@value='89']">
+            <jxb:typesafeEnumMember name="VALUE_89"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingCharacteristicsCode']/xsd:restriction/xsd:enumeration[@value='E13']">
+            <jxb:typesafeEnumMember name="E13"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingCharacteristicsCode']/xsd:restriction/xsd:enumeration[@value='E14']">
+            <jxb:typesafeEnumMember name="E14"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingCharacteristicsCode']/xsd:restriction/xsd:enumeration[@value='E16']">
+            <jxb:typesafeEnumMember name="E16"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingOccurrenceType']/xsd:restriction/xsd:enumeration[@value='PT15M']">
+            <jxb:typesafeEnumMember name="PT15M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingOccurrenceType']/xsd:restriction/xsd:enumeration[@value='PT1H']">
+            <jxb:typesafeEnumMember name="PT1H"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingOccurrenceType']/xsd:restriction/xsd:enumeration[@value='PT5M']">
+            <jxb:typesafeEnumMember name="PT5M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadingOccurrenceType']/xsd:restriction/xsd:enumeration[@value='PT60M']">
+            <jxb:typesafeEnumMember name="PT60M"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadReasonCodeType']/xsd:restriction/xsd:enumeration[@value='1']">
+            <jxb:typesafeEnumMember name="VALUE_1"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='MeterReadReasonCodeType']/xsd:restriction/xsd:enumeration[@value='4']">
+            <jxb:typesafeEnumMember name="VALUE_4"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='PriorityCodeType']/xsd:restriction/xsd:enumeration[@value='A']">
+            <jxb:typesafeEnumMember name="A"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='PriorityCodeType']/xsd:restriction/xsd:enumeration[@value='B']">
+            <jxb:typesafeEnumMember name="B"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='PriorityCodeType']/xsd:restriction/xsd:enumeration[@value='C']">
+            <jxb:typesafeEnumMember name="C"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='PriorityCodeType']/xsd:restriction/xsd:enumeration[@value='D']">
+            <jxb:typesafeEnumMember name="D"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='PriorityCodeType']/xsd:restriction/xsd:enumeration[@value='P']">
+            <jxb:typesafeEnumMember name="P"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ProductionCode']/xsd:restriction/xsd:enumeration[@value='B14']">
+            <jxb:typesafeEnumMember name="B14"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ProductionCode']/xsd:restriction/xsd:enumeration[@value='B16']">
+            <jxb:typesafeEnumMember name="B16"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ProductionCode']/xsd:restriction/xsd:enumeration[@value='B20']">
+            <jxb:typesafeEnumMember name="B20"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ProductionCode']/xsd:restriction/xsd:enumeration[@value='Z04']">
+            <jxb:typesafeEnumMember name="Z04"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ProductionCode']/xsd:restriction/xsd:enumeration[@value='Z05']">
+            <jxb:typesafeEnumMember name="Z05"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ProductionCode']/xsd:restriction/xsd:enumeration[@value='Z06']">
+            <jxb:typesafeEnumMember name="Z06"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='QueryCategoryCodeType']/xsd:restriction/xsd:enumeration[@value='MVRV']">
+            <jxb:typesafeEnumMember name="MVRV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='QueryCategoryCodeType']/xsd:restriction/xsd:enumeration[@value='MVTS']">
+            <jxb:typesafeEnumMember name="MVTS"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='QueryCategoryCodeType']/xsd:restriction/xsd:enumeration[@value='MVVT']">
+            <jxb:typesafeEnumMember name="MVVT"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='QueryCategoryCodeType']/xsd:restriction/xsd:enumeration[@value='MDCU']">
+            <jxb:typesafeEnumMember name="MDCU"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='QueryCategoryCodeType']/xsd:restriction/xsd:enumeration[@value='MDMP']">
+            <jxb:typesafeEnumMember name="MDMP"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='QueryCategoryCodeType']/xsd:restriction/xsd:enumeration[@value='STLM']">
+            <jxb:typesafeEnumMember name="STLM"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ReminderType']/xsd:restriction/xsd:enumeration[@value='EAC']">
+            <jxb:typesafeEnumMember name="EAC"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ReminderType']/xsd:restriction/xsd:enumeration[@value='IV']">
+            <jxb:typesafeEnumMember name="IV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ReminderType']/xsd:restriction/xsd:enumeration[@value='MI']">
+            <jxb:typesafeEnumMember name="MI"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ReminderType']/xsd:restriction/xsd:enumeration[@value='PV']">
+            <jxb:typesafeEnumMember name="PV"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='schemeAgencyIdentifierEICType']/xsd:restriction/xsd:enumeration[@value='305']">
+            <jxb:typesafeEnumMember name="VALUE_305"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='schemeAgencyIdentifierGS1ElhubType']/xsd:restriction/xsd:enumeration[@value='89']">
+            <jxb:typesafeEnumMember name="VALUE_89"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='schemeAgencyIdentifierGS1ElhubType']/xsd:restriction/xsd:enumeration[@value='9']">
+            <jxb:typesafeEnumMember name="VALUE_9"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='schemeAgencyIdentifierGS1Type']/xsd:restriction/xsd:enumeration[@value='9']">
+            <jxb:typesafeEnumMember name="VALUE_9"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V001']">
+            <jxb:typesafeEnumMember name="V001"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V002']">
+            <jxb:typesafeEnumMember name="V002"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V003']">
+            <jxb:typesafeEnumMember name="V003"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V004']">
+            <jxb:typesafeEnumMember name="V004"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V011']">
+            <jxb:typesafeEnumMember name="V011"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V012']">
+            <jxb:typesafeEnumMember name="V012"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V013']">
+            <jxb:typesafeEnumMember name="V013"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V014']">
+            <jxb:typesafeEnumMember name="V014"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValidationCodeType']/xsd:restriction/xsd:enumeration[@value='V999']">
+            <jxb:typesafeEnumMember name="V999"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValuesIndicatorType']/xsd:restriction/xsd:enumeration[@value='B']">
+            <jxb:typesafeEnumMember name="B"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValuesIndicatorType']/xsd:restriction/xsd:enumeration[@value='I']">
+            <jxb:typesafeEnumMember name="I"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='ValuesIndicatorType']/xsd:restriction/xsd:enumeration[@value='V']">
+            <jxb:typesafeEnumMember name="V"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='VATCode']/xsd:restriction/xsd:enumeration[@value='E']">
+            <jxb:typesafeEnumMember name="E"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xsd:simpleType[@name='VATCode']/xsd:restriction/xsd:enumeration[@value='S']">
+            <jxb:typesafeEnumMember name="S"/>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>
