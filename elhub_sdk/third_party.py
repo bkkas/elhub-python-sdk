@@ -36,19 +36,43 @@ from elhub_sdk.enums import (
 logger = logging.getLogger()
 
 
-def request_action(client: zeep.Client, sender_gsn: str, meter_identificator: str, action: THIRD_PARTY_ACTION):
+def request_action(
+    client: zeep.Client,
+    history: zeep.plugins.HistoryPlugin,
+    sender_gsn: str,
+    meter_identificator: str,
+    action: THIRD_PARTY_ACTION,
+    extended_storage=False,
+):
     """
 
     Args:
+        history:
         client:
         sender_gsn:
         meter_identificator:
         action:
-
+        extended_storage:
     Returns:
 
     """
+
     factory = client.type_factory('ns7')
+
+    playload_event = {
+        'UpdateIndicator': action.value,
+        'MeteringPointUsedDomainLocation': {
+            'Identification': {
+                '_value_1': meter_identificator,
+                'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
+            }
+        },
+        'ConsumerInvolvedCustomerParty': {'ExtendedStorageMeteringValues': "false"},
+    }
+
+    if extended_storage:
+        playload_event['ConsumerInvolvedCustomerParty'] = {'ExtendedStorageMeteringValues': "true"}
+
     eh_request = factory.UpdateThirdPartyAccess(
         Header={
             'Identification': uuid.uuid4(),
@@ -84,18 +108,7 @@ def request_action(client: zeep.Client, sender_gsn: str, meter_identificator: st
             },
             'EnergyIndustryClassification': "23",
         },
-        PayloadMPEvent={
-            'UpdateIndicator': action.value,
-            'MeteringPointUsedDomainLocation': {
-                'Identification': {
-                    '_value_1': meter_identificator,
-                    'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
-                }
-            },
-            'ConsumerInvolvedCustomerParty': {  # This is optional, check out the meaning
-                'ExtendedStorageMeteringValues': "true"
-            },
-        },
+        PayloadMPEvent=playload_event,
     )
 
     try:

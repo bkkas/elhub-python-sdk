@@ -75,6 +75,6 @@ def test_third_party_add():
     client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES_CONFIG['MARKET_PROCESSES'], secure=False)
     meter_identificator = "807057500057411761"
     response = request_action(
-        client, THIRD_PARTY_GSN, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.ADD
+        client, history, THIRD_PARTY_GSN, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.ADD
     )
     assert response
