@@ -33,7 +33,7 @@ from elhub_sdk.enums import (
     THIRD_PARTY_ACTION,
 )
 
-logger = logging.getLogger()
+logger = logging.getLogger("django")
 
 
 def request_action(
@@ -67,7 +67,6 @@ def request_action(
                 'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value,
             }
         },
-        'ConsumerInvolvedCustomerParty': {'ExtendedStorageMeteringValues': "false"},
     }
 
     if extended_storage:
