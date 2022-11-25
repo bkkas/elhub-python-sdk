@@ -10,15 +10,13 @@ import pytest
 
 from elhub_sdk.client import APIClient
 from elhub_sdk.consumption import poll_consumption, request_consumption
+from elhub_sdk.enrollment import get_meter_characteristics
 from elhub_sdk.enums import THIRD_PARTY_ACTION
 from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG, WSDL_FILES_CONFIG_TEST
 from elhub_sdk.third_party import request_action
+from tests.config import THIRD_PARTY_GSN
 
 logger = logging.getLogger(__name__)
-
-# Third party GSN
-THIRD_PARTY_GSN = "123456789"
-THIRD_PARTY_GSN_EXA = "7080004168879"
 
 
 def test_dummy():
@@ -124,5 +122,15 @@ def test_third_party_delete():
     meter_identificator = "807057500057411761"
     response = request_action(
         client, history, THIRD_PARTY_GSN, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.DELETE
+    )
+    assert response
+
+
+@pytest.mark.soapuitest
+def test_get_meter_characteristics():
+    client, history = APIClient.get_zeep_client(wsdl=WSDL_FILES_CONFIG['QUERY'], secure=False)
+    meter_identificator = "707057500022939815"
+    response = get_meter_characteristics(
+        client=client, history=history, meter_identificator=meter_identificator, sender_gsn=THIRD_PARTY_GSN
     )
     assert response

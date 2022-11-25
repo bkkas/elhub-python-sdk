@@ -19,7 +19,7 @@ ns2: Elhub_UpdateThirdPartyAccessType(
 """
 import logging
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import zeep
 
@@ -33,7 +33,7 @@ from elhub_sdk.enums import (
     THIRD_PARTY_ACTION,
 )
 
-logger = logging.getLogger("django")
+logger = logging.getLogger()
 
 
 def request_action(
@@ -76,7 +76,7 @@ def request_action(
         Header={
             'Identification': uuid.uuid4(),
             'DocumentType': {
-                '_value_1': DOCUMENT_TYPE_EBIX.METERING_DATA.value,
+                '_value_1': DOCUMENT_TYPE_EBIX.CHANGE_DATA.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.EBIX.value,
             },
             'Creation': f'{datetime.utcnow().strftime(TIME_FORMAT)}',

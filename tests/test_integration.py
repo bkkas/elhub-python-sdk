@@ -8,12 +8,9 @@ from elhub_sdk.consumption import poll_consumption, request_consumption
 from elhub_sdk.enums import THIRD_PARTY_ACTION
 from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG, WSDL_FILES_CONFIG_TEST
 from elhub_sdk.third_party import request_action
+from tests.config import THIRD_PARTY_GSN_EXA
 
 logger = logging.getLogger(__name__)
-
-# Third party GSN
-THIRD_PARTY_GSN = "123456789"
-THIRD_PARTY_GSN_EXA = "7080004168879"
 
 
 @pytest.mark.integrationtest
