@@ -20,7 +20,7 @@ def update_third_party():
         wsdl=WSDL_FILES_CONFIG_TEST['MARKET_PROCESSES'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
     )
     response = request_action(
-        client, history, VOLTE_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.ADD
+        client, history, THIRD_PARTY_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.ADD
     )
     return response
 
@@ -36,7 +36,7 @@ def get_consumption():
         wsdl=WSDL_FILES_CONFIG_TEST['POOL_METERING'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
     )
 
-    response = poll_consumption(client, history, VOLTE_GSN_EXA)
+    response = poll_consumption(client, history, THIRD_PARTY_GSN_EXA)
     return response
 
 
@@ -51,7 +51,7 @@ def remove_third_party():
     )
 
     response = request_action(
-        client, history, VOLTE_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.DELETE
+        client, history, THIRD_PARTY_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.DELETE
     )
     return response
 
@@ -59,7 +59,7 @@ def remove_third_party():
 if __name__ == "__main__":
     logger.debug(f"Initiating tests with identificator: {METER_IDENTIFICATOR}")
     response = update_third_party()
-    print(response)
+    # print(response)
 
     # response = get_consumption()
     # print(response)

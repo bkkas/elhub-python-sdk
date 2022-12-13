@@ -5,7 +5,7 @@ from elhub_sdk.consumption import poll_consumption
 from elhub_sdk.enums import THIRD_PARTY_ACTION
 from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG_TEST
 from elhub_sdk.third_party import request_action
-from tests.config import TEST_METER_IDENTIFICATORS, VOLTE_GSN_EXA
+from tests.config import TEST_METER_IDENTIFICATORS, THIRD_PARTY_GSN_EXA, VOLTE_GSN_EXA
 
 logger = logging.getLogger()
 logging.basicConfig(level=logging.DEBUG)
@@ -20,7 +20,7 @@ def add_third_party():
         wsdl=WSDL_FILES_CONFIG_TEST['MARKET_PROCESSES'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
     )
     response = request_action(
-        client, history, VOLTE_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.ADD
+        client, history, THIRD_PARTY_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.ADD
     )
     return response
 
@@ -36,11 +36,11 @@ def get_consumption():
         wsdl=WSDL_FILES_CONFIG_TEST['POOL_METERING'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
     )
 
-    response = poll_consumption(client, history, VOLTE_GSN_EXA)
+    response = poll_consumption(client, history, THIRD_PARTY_GSN_EXA)
     return response
 
 
-def remove_third_party():
+def extended_storage():
     """
 
     Returns:
@@ -51,7 +51,12 @@ def remove_third_party():
     )
 
     response = request_action(
-        client, history, VOLTE_GSN_EXA, meter_identificator=METER_IDENTIFICATOR, action=THIRD_PARTY_ACTION.DELETE
+        client,
+        history,
+        THIRD_PARTY_GSN_EXA,
+        meter_identificator=METER_IDENTIFICATOR,
+        action=THIRD_PARTY_ACTION.ADD,
+        extended_storage=True,
     )
     return response
 
@@ -59,10 +64,5 @@ def remove_third_party():
 if __name__ == "__main__":
     logger.debug(f"Initiating tests with identificator: {METER_IDENTIFICATOR}")
     response = add_third_party()
-    print(response)
-
-    response = get_consumption()
-    print(response)
-
-    response = remove_third_party()
-    print(response)
+    # response = get_consumption()
+    # response = extended_storage()
