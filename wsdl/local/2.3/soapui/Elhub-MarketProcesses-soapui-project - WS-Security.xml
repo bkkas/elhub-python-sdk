@@ -3178,7 +3178,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>http://localhost:8080/WebService/services/MarketProcesses</con:endpoint>
+        <con:endpoint>http://M5-L-18Q4ST2:8088/</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:no:elhub:emif:wsdl:marketprocesses:v2" xmlns:urn1="urn:no:elhub:emif:thirdpartyaccess:UpdateThirdPartyAccess:v2" xmlns:urn2="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2">
    <soapenv:Header/>
    <soapenv:Body>

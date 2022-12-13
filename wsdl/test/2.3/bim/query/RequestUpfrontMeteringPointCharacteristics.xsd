@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema targetNamespace="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2"
-            xmlns:rsm="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2"
-            xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" elementFormDefault="qualified" version="2.3">
+<xsd:schema targetNamespace="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" xmlns:rsm="urn:no:elhub:emif:query:RequestUpfrontMeteringPointCharacteristics:v2" xmlns:abie="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" elementFormDefault="qualified" version="2.3">
 	<xsd:import namespace="urn:no:elhub:emif:common:AggregatedBusinessInformationEntities:v2" schemaLocation="../common/Elhub_AggregatedBusinessInformationEntities.xsd"/>
 	<xsd:element name="RequestUpfrontMeteringPointCharacteristics" type="rsm:RequestUpfrontMeteringPointCharacteristics"/>
 	<xsd:complexType name="RequestUpfrontMeteringPointCharacteristics">

@@ -21,7 +21,9 @@ class DOCUMENT_TYPE_EBIX(Enum):
     Metering data: https://dok.elhub.no/ediel200utkast/document-type
     """
 
+    CHANGE_DATA = "E10"
     METERING_DATA = "E13"
+    MASTER_DATA = "E07"
 
 
 class DOCUMENT_TYPE_UN_CEFACT(Enum):
@@ -47,6 +49,8 @@ class BSR_IDS(Enum):
     """
 
     METERING_VALUES = "BRS-NO-315"
+    THIRD_PARTY = "BRS-NO-622"
+    METERING_POINT_CHARACTERISTICS = "BRS-NO-611"
 
 
 class ROLES(Enum):
@@ -74,3 +78,13 @@ class ENERGY_INDUSTRY_CLASSIFICATION(Enum):
     """
 
     ELECTRICITY_SUPPLY = "23"
+
+
+class THIRD_PARTY_ACTION(Enum):
+    """
+    Determines the action you want to do
+    """
+
+    ADD = "Add"
+    DELETE = "Delete"
+    UPDATE = "Update"

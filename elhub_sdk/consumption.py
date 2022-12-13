@@ -41,7 +41,7 @@ def request_consumption(
     process_role: ROLES = ROLES.THIRD_PARTY,
 ) -> bool:
     """
-
+    Query WSDL
     Args:
         history:
         client:
@@ -117,7 +117,7 @@ def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
 ) -> Optional[str]:
     """
-
+    PoolMeteringValues WSDL
     Args:
         client:
         history:
