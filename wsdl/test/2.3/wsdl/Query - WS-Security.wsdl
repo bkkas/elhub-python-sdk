@@ -239,7 +239,7 @@
 	</wsdl:binding>
 	<wsdl:service name="QueryService">
 		<wsdl:port name="Query" binding="tns:QuerySoapBinding">
-			<soap:address location="https://service-test2.elhub.no:8200/WebService/services/Query"/>
+			<soap:address location="https://service-mt1.elhub.no/WebService/services/Query"/>
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>

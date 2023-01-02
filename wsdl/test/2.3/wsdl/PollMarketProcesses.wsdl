@@ -82,7 +82,7 @@
 
     <wsdl:service name="MarketProcessesPollingService">
         <wsdl:port binding="tns:MarketProcessesPollingSoapBinding" name="MarketProcessesPolling">
-            <soap:address location="https://service-test2.elhub.no:8200/WebService/services/PollMarketProcesses"/>
+            <soap:address location="https://service-mt1.elhub.no/WebService/services/PollMarketProcesses"/>
         </wsdl:port>
 
     </wsdl:service>

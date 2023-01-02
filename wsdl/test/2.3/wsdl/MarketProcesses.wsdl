@@ -166,7 +166,8 @@
 	</wsdl:binding>
 	<wsdl:service name="MarketProcessesService">
 		<wsdl:port name="MarketProcesses" binding="tns:MarketProcessesSoapBinding">
-			<soap:address location="https://service-test2.elhub.no:8200/WebService/services/MarketProcesses"/>
+			<soap:address location="https://service-mt1.elhub.no/WebService/services/MarketProcesses"/>
+
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
