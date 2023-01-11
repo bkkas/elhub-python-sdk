@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "elhub-python-sdk"
-version = "0.1.1"
+version = "0.1.2"
 homepage = "https://github.com/bkkas/elhub-python-sdk"
 description = "Non official Python SDK for ElHub API."
 authors = ["Volte <jesus.condon@eviny.no>"]
@@ -106,7 +106,8 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-addopts = "-m 'not integrationtest'"
+addopts = "-m 'not integrationtest and not soapuitest'"
 markers = [
-    "integrationtest"
+    "integrationtest",
+    "soapuitest"
     ]
