@@ -12,9 +12,9 @@ from elhub_sdk.client import APIClient
 from elhub_sdk.consumption import poll_consumption, request_consumption
 from elhub_sdk.enrollment import get_meter_characteristics
 from elhub_sdk.enums import THIRD_PARTY_ACTION
-from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG, WSDL_FILES_CONFIG_TEST
+from elhub_sdk.settings import WSDL_FILES_CONFIG
 from elhub_sdk.third_party import request_action
-from tests.config import THIRD_PARTY_GSN
+from tests.tests_examples.config import THIRD_PARTY_GSN
 
 logger = logging.getLogger(__name__)
 

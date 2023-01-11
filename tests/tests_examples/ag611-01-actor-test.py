@@ -3,7 +3,7 @@ import logging
 from elhub_sdk.client import APIClient
 from elhub_sdk.enrollment import get_meter_characteristics
 from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG_TEST
-from tests.config import TEST_METER_IDENTIFICATORS, VOLTE_GSN_EXA
+from tests.tests_examples.config import TEST_METER_IDENTIFICATORS, VOLTE_GSN_EXA
 
 logger = logging.getLogger()
 logging.basicConfig(level=logging.DEBUG)
