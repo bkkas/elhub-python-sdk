@@ -3,10 +3,12 @@ Manages third party requests
 
 It mainly uses the endpoint UpdateThirdPartyAccessRequest
 
-ns7:UpdateThirdPartyAccess(Header: ns2:Elhub_HeaderType, ProcessEnergyContext: ns2:Elhub_EnergyContextType, PayloadMPEvent: ns2:Elhub_UpdateThirdPartyAccessType)
+ns7:UpdateThirdPartyAccess(Header: ns2:Elhub_HeaderType, ProcessEnergyContext: ns2:Elhub_EnergyContextType,
+    PayloadMPEvent: ns2:Elhub_UpdateThirdPartyAccessType)
 
 ns2: Elhub_UpdateThirdPartyAccessType(
-    UpdateIndicator: ns3: AddDeleteUpdate, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType, ConsumerInvolvedCustomerParty: ns2:Elhub_EndUserType)
+    UpdateIndicator: ns3: AddDeleteUpdate, MeteringPointUsedDomainLocation: ns2:Elhub_MeteringPointType,
+    ConsumerInvolvedCustomerParty: ns2:Elhub_EndUserType)
 
 <xsd:simpleType name="AddDeleteUpdate">
     <xsd:restriction base="xsd:string">
@@ -19,7 +21,7 @@ ns2: Elhub_UpdateThirdPartyAccessType(
 """
 import logging
 import uuid
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import zeep
 
@@ -47,12 +49,12 @@ def request_action(
     """
 
     Args:
-        history:
-        client:
-        sender_gsn:
-        meter_identificator:
-        action:
-        extended_storage:
+        history: zeep history
+        client: zeep client
+        sender_gsn: sender gsn
+        meter_identificator: meter identificator
+        action: action to perform
+        extended_storage: extended storage
     Returns:
 
     """
