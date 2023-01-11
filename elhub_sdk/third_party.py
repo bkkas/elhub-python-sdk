@@ -22,6 +22,7 @@ ns2: Elhub_UpdateThirdPartyAccessType(
 import logging
 import uuid
 from datetime import datetime
+from typing import Any, Dict
 
 import zeep
 
@@ -61,7 +62,7 @@ def request_action(
 
     factory = client.type_factory('ns7')
 
-    playload_event = {
+    playload_event: Dict[str, Any] = {
         'UpdateIndicator': action.value,
         'MeteringPointUsedDomainLocation': {
             'Identification': {

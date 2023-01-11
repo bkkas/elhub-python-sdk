@@ -5,6 +5,7 @@ import logging
 import uuid
 import xml.etree.ElementTree as ET
 from datetime import datetime
+from typing import Optional
 
 import zeep
 
@@ -20,7 +21,7 @@ def get_meter_characteristics(
     meter_identificator: str,
     sender_gsn: str,
     process_role: ROLES = ROLES.THIRD_PARTY,
-) -> list:
+) -> Optional[str]:
     """
     https://dok.elhub.no/ediel200utkast/requestupfrontmeteringpointcharacteristics
     Args:
@@ -88,4 +89,5 @@ def get_meter_characteristics(
         logger.error(f"Unknown error: {response}")
     except Exception as ex:
         logger.exception(ex)
-    return False
+
+    return None
