@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="urn:no:elhub:emif:wsdl:query:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2" targetNamespace="urn:no:elhub:emif:wsdl:query:v2">
+	<wsp1_2:Policy xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="wss10_x509_certificates_sign_encrypt">
+		<wsp1_2:ExactlyOne>
+			<wsp1_2:All>
+				<ns2:AsymmetricBinding xmlns:ns2="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+					<wsp1_2:Policy>
+						<wsp1_2:ExactlyOne>
+							<wsp1_2:All>
+								<ns2:AlgorithmSuite>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:Basic256/>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:AlgorithmSuite>
+								<ns2:IncludeTimestamp/>
+								<ns2:InitiatorToken>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+													<wsp1_2:Policy>
+														<wsp1_2:ExactlyOne>
+															<wsp1_2:All>
+																<ns2:WssX509V3Token10/>
+															</wsp1_2:All>
+														</wsp1_2:ExactlyOne>
+													</wsp1_2:Policy>
+												</ns2:X509Token>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:InitiatorToken>
+								<ns2:Layout>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:Strict/>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:Layout>
+								<ns2:OnlySignEntireHeadersAndBody/>
+								<ns2:RecipientToken>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+													<wsp1_2:Policy>
+														<wsp1_2:ExactlyOne>
+															<wsp1_2:All>
+																<ns2:WssX509V3Token10/>
+															</wsp1_2:All>
+														</wsp1_2:ExactlyOne>
+													</wsp1_2:Policy>
+												</ns2:X509Token>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:RecipientToken>
+							</wsp1_2:All>
+						</wsp1_2:ExactlyOne>
+					</wsp1_2:Policy>
+				</ns2:AsymmetricBinding>
+				<ns3:Wss10 xmlns:ns3="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+					<wsp1_2:Policy>
+						<wsp1_2:ExactlyOne>
+							<wsp1_2:All>
+								<ns3:MustSupportRefKeyIdentifier/>
+							</wsp1_2:All>
+						</wsp1_2:ExactlyOne>
+					</wsp1_2:Policy>
+				</ns3:Wss10>
+			</wsp1_2:All>
+		</wsp1_2:ExactlyOne>
+	</wsp1_2:Policy>
+	<wsp1_2:Policy xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="sign_body">
+		<wsp1_2:ExactlyOne>
+			<wsp1_2:All>
+				<ns2:SignedParts xmlns:ns2="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<ns2:Body/>
+				</ns2:SignedParts>
+			</wsp1_2:All>
+		</wsp1_2:ExactlyOne>
+	</wsp1_2:Policy>
+	<wsdl:types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:query:v2" version="2.3">
+			<xsd:include schemaLocation="xsd/Query.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="RequestUpfrontMeteringPointCharacteristicsRequest">
+		<wsdl:part name="RequestUpfrontMeteringPointCharacteristicsRequest" element="tns:RequestUpfrontMeteringPointCharacteristicsRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestUpfrontMeteringPointCharacteristicsResponse">
+		<wsdl:part name="RequestUpfrontMeteringPointCharacteristicsResponse" element="tns:RequestUpfrontMeteringPointCharacteristicsResponse">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestDataFromElhubRequest">
+		<wsdl:part name="RequestDataFromElhubRequest" element="tns:RequestDataFromElhubRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestDataFromElhubResponse">
+	</wsdl:message>
+	<wsdl:message name="ResponseFromGridAccessProviderRequest">
+		<wsdl:part name="ResponseFromGridAccessProviderRequest" element="tns:ResponseFromGridAccessProviderRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="ResponseFromGridAccessProviderResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestToGridAccessProviderRequest">
+		<wsdl:part name="RequestToGridAccessProviderRequest" element="tns:RequestToGridAccessProviderRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestToGridAccessProviderResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestToElhubRequest">
+		<wsdl:part name="RequestToElhubRequest" element="tns:RequestToElhubRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestToElhubResponse">
+	</wsdl:message>
+	<wsdl:message name="ElhubSOAPFault">
+		<wsdl:part name="ElhubSOAPFault" element="cmn:ElhubSOAPFault"/>
+	</wsdl:message>
+	<wsdl:portType name="Query">
+		<wsdl:operation name="RequestUpfrontMeteringPointCharacteristics">
+			<wsdl:input name="RequestUpfrontMeteringPointCharacteristicsRequest" message="tns:RequestUpfrontMeteringPointCharacteristicsRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestUpfrontMeteringPointCharacteristicsResponse" message="tns:RequestUpfrontMeteringPointCharacteristicsResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestDataFromElhub">
+			<wsdl:input name="RequestDataFromElhubRequest" message="tns:RequestDataFromElhubRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestDataFromElhubResponse" message="tns:RequestDataFromElhubResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToGridAccessProvider">
+			<wsdl:input name="RequestToGridAccessProviderRequest" message="tns:RequestToGridAccessProviderRequest">
+			</wsdl:input>
+			<wsdl:output name="RequestToGridAccessProviderResponse" message="tns:RequestToGridAccessProviderResponse">
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="ResponseFromGridAccessProvider">
+			<wsdl:input name="ResponseFromGridAccessProviderRequest" message="tns:ResponseFromGridAccessProviderRequest">
+            </wsdl:input>
+			<wsdl:output name="ResponseFromGridAccessProviderResponse" message="tns:ResponseFromGridAccessProviderResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToElhub">
+			<wsdl:input name="RequestToElhubRequest" message="tns:RequestToElhubRequest">
+			</wsdl:input>
+			<wsdl:output name="RequestToElhubResponse" message="tns:RequestToElhubResponse">
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="QuerySoapBinding" type="tns:Query">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss10_x509_certificates_sign_encrypt"/>
+		<wsdl:operation name="RequestUpfrontMeteringPointCharacteristics">
+			<soap:operation soapAction="RequestUpfrontMeteringPointCharacteristics"/>
+			<wsdl:input name="RequestUpfrontMeteringPointCharacteristicsRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestUpfrontMeteringPointCharacteristicsResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestDataFromElhub">
+			<soap:operation soapAction="RequestDataFromElhub"/>
+			<wsdl:input name="RequestDataFromElhubRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestDataFromElhubResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToGridAccessProvider">
+			<soap:operation soapAction="RequestToGridAccessProvider"/>
+			<wsdl:input name="RequestToGridAccessProviderRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestToGridAccessProviderResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ResponseFromGridAccessProvider">
+			<soap:operation soapAction="ResponseFromGridAccessProvider"/>
+			<wsdl:input name="ResponseFromGridAccessProviderRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="ResponseFromGridAccessProviderResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestToElhub">
+			<soap:operation soapAction="RequestToElhub"/>
+			<wsdl:input name="RequestToElhubRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestToElhubResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="QueryService">
+		<wsdl:port name="Query" binding="tns:QuerySoapBinding">
+			<soap:address location="https://service.elhub.no:8200/WebService/services/Query"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

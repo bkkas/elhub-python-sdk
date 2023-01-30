@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2">
+	<wsp1_2:Policy xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="wss10_x509_certificates_sign_encrypt">
+		<wsp1_2:ExactlyOne>
+			<wsp1_2:All>
+				<ns2:AsymmetricBinding xmlns:ns2="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+					<wsp1_2:Policy>
+						<wsp1_2:ExactlyOne>
+							<wsp1_2:All>
+								<ns2:AlgorithmSuite>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:Basic256/>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:AlgorithmSuite>
+								<ns2:IncludeTimestamp/>
+								<ns2:InitiatorToken>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+													<wsp1_2:Policy>
+														<wsp1_2:ExactlyOne>
+															<wsp1_2:All>
+																<ns2:WssX509V3Token10/>
+															</wsp1_2:All>
+														</wsp1_2:ExactlyOne>
+													</wsp1_2:Policy>
+												</ns2:X509Token>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:InitiatorToken>
+								<ns2:Layout>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:Strict/>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:Layout>
+								<ns2:OnlySignEntireHeadersAndBody/>
+								<ns2:RecipientToken>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+													<wsp1_2:Policy>
+														<wsp1_2:ExactlyOne>
+															<wsp1_2:All>
+																<ns2:WssX509V3Token10/>
+															</wsp1_2:All>
+														</wsp1_2:ExactlyOne>
+													</wsp1_2:Policy>
+												</ns2:X509Token>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:RecipientToken>
+							</wsp1_2:All>
+						</wsp1_2:ExactlyOne>
+					</wsp1_2:Policy>
+				</ns2:AsymmetricBinding>
+				<ns3:Wss10 xmlns:ns3="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+					<wsp1_2:Policy>
+						<wsp1_2:ExactlyOne>
+							<wsp1_2:All>
+								<ns3:MustSupportRefKeyIdentifier/>
+							</wsp1_2:All>
+						</wsp1_2:ExactlyOne>
+					</wsp1_2:Policy>
+				</ns3:Wss10>
+			</wsp1_2:All>
+		</wsp1_2:ExactlyOne>
+	</wsp1_2:Policy>
+	<wsp1_2:Policy xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="sign_body">
+		<wsp1_2:ExactlyOne>
+			<wsp1_2:All>
+				<ns2:SignedParts xmlns:ns2="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<ns2:Body/>
+				</ns2:SignedParts>
+			</wsp1_2:All>
+		</wsp1_2:ExactlyOne>
+	</wsp1_2:Policy>
+	<wsdl:types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:polling:marketprocesses:v2" version="2.3">
+			<xsd:include schemaLocation="xsd/PollMarketProcesses.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="PollForDataRequest">
+		<wsdl:part element="tns:PollForDataRequest" name="PollForDataRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="PollForDataResponse">
+		<wsdl:part element="tns:PollForDataResponse" name="PollForDataResponse">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AcknowledgePollRequest">
+		<wsdl:part element="tns:AcknowledgePollRequest" name="AcknowledgePollRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AcknowledgePollResponse">
+    </wsdl:message>
+	<wsdl:message name="ElhubSOAPFault">
+		<wsdl:part name="ElhubSOAPFault" element="cmn:ElhubSOAPFault"/>
+	</wsdl:message>
+	<wsdl:portType name="MarketProcessesPolling">
+		<wsdl:operation name="PollForData">
+			<wsdl:input message="tns:PollForDataRequest" name="PollForDataRequest">
+            </wsdl:input>
+			<wsdl:output message="tns:PollForDataResponse" name="PollForDataResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="AcknowledgePoll">
+			<wsdl:input message="tns:AcknowledgePollRequest" name="AcknowledgePollRequest">
+            </wsdl:input>
+			<wsdl:output message="tns:AcknowledgePollResponse" name="AcknowledgePollResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MarketProcessesPollingSoapBinding" type="tns:MarketProcessesPolling">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss10_x509_certificates_sign_encrypt"/>
+		<wsdl:operation name="PollForData">
+			<soap:operation soapAction="PollForData"/>
+			<wsdl:input name="PollForDataRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="PollForDataResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="AcknowledgePoll">
+			<soap:operation soapAction="AcknowledgePoll"/>
+			<wsdl:input name="AcknowledgePollRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="AcknowledgePollResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MarketProcessesPollingService">
+		<wsdl:port binding="tns:MarketProcessesPollingSoapBinding" name="MarketProcessesPolling">
+			<soap:address location="https://service-mt1.elhub.no/WebService/services/PollMarketProcesses"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
