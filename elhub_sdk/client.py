@@ -53,7 +53,7 @@ class APIClient:
 
         """
         return APIClient._get_zeep_client(
-            wsdl=os.path.join(os.path.dirname(__file__), "wsdl", environment, service),
+            wsdl=os.path.join(os.path.dirname(__file__), "wsdl", environment, "2.3", "wsdl", service),
             secure=True,
             key_file=key_file,
             cert_file=cert_file,

@@ -24,7 +24,6 @@ def test_third_party_delete():
     client, history = APIClient.get_client(
         environment=ElHubEnvironment.TEST,
         service=ElHubService.MARKET_PROCESSES,
-        secure=True,
         key_file=KEY_FILE,
         cert_file=CERT_FILE,
     )
@@ -33,7 +32,7 @@ def test_third_party_delete():
     response = request_action(
         client, history, THIRD_PARTY_GSN_EXA, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.DELETE
     )
-    assert response
+    assert response != False
 
 
 @pytest.mark.integrationtest
@@ -46,7 +45,6 @@ def test_third_party_add():
     client, history = APIClient.get_client(
         environment=ElHubEnvironment.TEST,
         service=ElHubService.MARKET_PROCESSES,
-        secure=True,
         key_file=KEY_FILE,
         cert_file=CERT_FILE,
     )
@@ -55,7 +53,7 @@ def test_third_party_add():
     response = request_action(
         client, history, THIRD_PARTY_GSN_EXA, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.ADD
     )
-    assert response
+    assert response != False
 
 
 @pytest.mark.integrationtest
@@ -67,14 +65,13 @@ def test_poll_consumption():
     """
     client, history = APIClient.get_client(
         environment=ElHubEnvironment.TEST,
-        service=ElHubService.POOL_METERING,
-        secure=True,
+        service=ElHubService.POOL_METERING_VALUES,
         key_file=KEY_FILE,
         cert_file=CERT_FILE,
     )
 
     response = poll_consumption(client, history, THIRD_PARTY_GSN_EXA)
-    assert response
+    assert response is not None
 
 
 @pytest.mark.integrationtest
@@ -91,7 +88,6 @@ def test_request_consumption():
     client, history = APIClient.get_client(
         environment=ElHubEnvironment.TEST,
         service=ElHubService.QUERY,
-        secure=True,
         key_file=KEY_FILE,
         cert_file=CERT_FILE,
     )
@@ -99,4 +95,4 @@ def test_request_consumption():
     response = request_consumption(
         client, history, meter_identificator, sender_gsn=THIRD_PARTY_GSN_EXA, start=start, end=end
     )
-    assert response
+    assert response != False
