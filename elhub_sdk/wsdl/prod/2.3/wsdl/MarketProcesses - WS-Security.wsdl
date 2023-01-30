@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:tns="urn:no:elhub:emif:wsdl:marketprocesses:v2" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cmn="urn:no:elhub:emif:wsdl:common:v2" targetNamespace="urn:no:elhub:emif:wsdl:marketprocesses:v2">
+	<wsp1_2:Policy xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="wss10_x509_certificates_sign_encrypt">
+		<wsp1_2:ExactlyOne>
+			<wsp1_2:All>
+				<ns2:AsymmetricBinding xmlns:ns2="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+					<wsp1_2:Policy>
+						<wsp1_2:ExactlyOne>
+							<wsp1_2:All>
+								<ns2:AlgorithmSuite>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:Basic256/>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:AlgorithmSuite>
+								<ns2:IncludeTimestamp/>
+								<ns2:InitiatorToken>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+													<wsp1_2:Policy>
+														<wsp1_2:ExactlyOne>
+															<wsp1_2:All>
+																<ns2:WssX509V3Token10/>
+															</wsp1_2:All>
+														</wsp1_2:ExactlyOne>
+													</wsp1_2:Policy>
+												</ns2:X509Token>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:InitiatorToken>
+								<ns2:Layout>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:Strict/>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:Layout>
+								<ns2:OnlySignEntireHeadersAndBody/>
+								<ns2:RecipientToken>
+									<wsp1_2:Policy>
+										<wsp1_2:ExactlyOne>
+											<wsp1_2:All>
+												<ns2:X509Token ns2:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/Never">
+													<wsp1_2:Policy>
+														<wsp1_2:ExactlyOne>
+															<wsp1_2:All>
+																<ns2:WssX509V3Token10/>
+															</wsp1_2:All>
+														</wsp1_2:ExactlyOne>
+													</wsp1_2:Policy>
+												</ns2:X509Token>
+											</wsp1_2:All>
+										</wsp1_2:ExactlyOne>
+									</wsp1_2:Policy>
+								</ns2:RecipientToken>
+							</wsp1_2:All>
+						</wsp1_2:ExactlyOne>
+					</wsp1_2:Policy>
+				</ns2:AsymmetricBinding>
+				<ns3:Wss10 xmlns:ns3="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+					<wsp1_2:Policy>
+						<wsp1_2:ExactlyOne>
+							<wsp1_2:All>
+								<ns3:MustSupportRefKeyIdentifier/>
+							</wsp1_2:All>
+						</wsp1_2:ExactlyOne>
+					</wsp1_2:Policy>
+				</ns3:Wss10>
+			</wsp1_2:All>
+		</wsp1_2:ExactlyOne>
+	</wsp1_2:Policy>
+	<wsp1_2:Policy xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:ns1="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" ns1:Id="sign_body">
+		<wsp1_2:ExactlyOne>
+			<wsp1_2:All>
+				<ns2:SignedParts xmlns:ns2="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+					<ns2:Body/>
+				</ns2:SignedParts>
+			</wsp1_2:All>
+		</wsp1_2:ExactlyOne>
+	</wsp1_2:Policy>
+	<wsdl:types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="urn:no:elhub:emif:wsdl:marketprocesses:v2" version="2.3">
+			<xsd:include schemaLocation="xsd/MarketProcesses.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="RequestStartOfSupplyRequest">
+		<wsdl:part name="RequestStartOfSupplyRequest" element="tns:RequestStartOfSupplyRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestStartOfSupplyResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestEndOfSupplyRequest">
+		<wsdl:part name="RequestEndOfSupplyRequest" element="tns:RequestEndOfSupplyRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestEndOfSupplyResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestUpdateMasterDataMeteringPointRequest">
+		<wsdl:part name="RequestUpdateMasterDataMeteringPointRequest" element="tns:RequestUpdateMasterDataMeteringPointRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestUpdateMasterDataMeteringPointResponse">
+	</wsdl:message>
+	<wsdl:message name="RequestUpdateCustomerInformationRequest">
+		<wsdl:part name="RequestUpdateCustomerInformationRequest" element="tns:RequestUpdateCustomerInformationRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RequestUpdateCustomerInformationResponse">
+	</wsdl:message>
+	<wsdl:message name="UpdateThirdPartyAccessRequest">
+		<wsdl:part name="UpdateThirdPartyAccessRequest" element="tns:UpdateThirdPartyAccessRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="UpdateThirdPartyAccessResponse">
+	</wsdl:message>
+	<wsdl:message name="RejectStartOfSupplyRequest">
+		<wsdl:part name="RejectStartOfSupplyRequest" element="tns:RejectStartOfSupplyRequest">
+        </wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RejectStartOfSupplyResponse">
+	</wsdl:message>
+	<wsdl:message name="ElhubSOAPFault">
+		<wsdl:part name="ElhubSOAPFault" element="cmn:ElhubSOAPFault"/>
+	</wsdl:message>
+	<wsdl:portType name="MarketProcesses">
+		<wsdl:operation name="RequestStartOfSupply">
+			<wsdl:input name="RequestStartOfSupplyRequest" message="tns:RequestStartOfSupplyRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestStartOfSupplyResponse" message="tns:RequestStartOfSupplyResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestEndOfSupply">
+			<wsdl:input name="RequestEndOfSupplyRequest" message="tns:RequestEndOfSupplyRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestEndOfSupplyResponse" message="tns:RequestEndOfSupplyResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestUpdateMasterDataMeteringPoint">
+			<wsdl:input name="RequestUpdateMasterDataMeteringPointRequest" message="tns:RequestUpdateMasterDataMeteringPointRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestUpdateMasterDataMeteringPointResponse" message="tns:RequestUpdateMasterDataMeteringPointResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RequestUpdateCustomerInformation">
+			<wsdl:input name="RequestUpdateCustomerInformationRequest" message="tns:RequestUpdateCustomerInformationRequest">
+            </wsdl:input>
+			<wsdl:output name="RequestUpdateCustomerInformationResponse" message="tns:RequestUpdateCustomerInformationResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateThirdPartyAccess">
+			<wsdl:input name="UpdateThirdPartyAccessRequest" message="tns:UpdateThirdPartyAccessRequest">
+            </wsdl:input>
+			<wsdl:output name="UpdateThirdPartyAccessResponse" message="tns:UpdateThirdPartyAccessResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="RejectStartOfSupply">
+			<wsdl:input name="RejectStartOfSupplyRequest" message="tns:RejectStartOfSupplyRequest">
+            </wsdl:input>
+			<wsdl:output name="RejectStartOfSupplyResponse" message="tns:RejectStartOfSupplyResponse">
+            </wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault" message="tns:ElhubSOAPFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MarketProcessesSoapBinding" type="tns:MarketProcesses">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#wss10_x509_certificates_sign_encrypt"/>
+		<wsdl:operation name="RequestStartOfSupply">
+			<soap:operation soapAction="RequestStartOfSupply"/>
+			<wsdl:input name="RequestStartOfSupplyRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestStartOfSupplyResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestEndOfSupply">
+			<soap:operation soapAction="RequestEndOfSupply"/>
+			<wsdl:input name="RequestEndOfSupplyRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestEndOfSupplyResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestUpdateMasterDataMeteringPoint">
+			<soap:operation soapAction="RequestUpdateMasterDataMeteringPoint"/>
+			<wsdl:input name="RequestUpdateMasterDataMeteringPointRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestUpdateMasterDataMeteringPointResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RequestUpdateCustomerInformation">
+			<soap:operation soapAction="RequestUpdateCustomerInformation"/>
+			<wsdl:input name="RequestUpdateCustomerInformationRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RequestUpdateCustomerInformationResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateThirdPartyAccess">
+			<soap:operation soapAction="UpdateThirdPartyAccess"/>
+			<wsdl:input name="UpdateThirdPartyAccessRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="UpdateThirdPartyAccessResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="RejectStartOfSupply">
+			<soap:operation soapAction="RejectStartOfSupply"/>
+			<wsdl:input name="RejectStartOfSupplyRequest">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:input>
+			<wsdl:output name="RejectStartOfSupplyResponse">
+				<soap:body use="literal"/>
+				<PolicyReference xmlns="http://schemas.xmlsoap.org/ws/2004/09/policy" URI="#sign_body"/>
+			</wsdl:output>
+			<wsdl:fault name="ElhubSOAPFault">
+				<soap:fault name="ElhubSOAPFault" use="literal" URI="#sign_body"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="MarketProcessesService">
+		<wsdl:port name="MarketProcesses" binding="tns:MarketProcessesSoapBinding">
+			<soap:address location="https://service.elhub.no:8200/WebService/services/MarketProcesses"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

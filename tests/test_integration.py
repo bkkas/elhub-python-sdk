@@ -3,10 +3,10 @@ import logging
 
 import pytest
 
-from elhub_sdk.client import APIClient
+from elhub_sdk.client import APIClient, ElHubEnvironment, ElHubService
 from elhub_sdk.consumption import poll_consumption, request_consumption
 from elhub_sdk.enums import THIRD_PARTY_ACTION
-from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG_TEST
+from elhub_sdk.settings import CERT_FILE, KEY_FILE
 from elhub_sdk.third_party import request_action
 from tests.tests_examples.config import THIRD_PARTY_GSN_EXA
 
@@ -20,14 +20,19 @@ def test_third_party_delete():
     Returns:
 
     """
-    client, history = APIClient.get_zeep_client(
-        wsdl=WSDL_FILES_CONFIG_TEST['MARKET_PROCESSES'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
+
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.MARKET_PROCESSES,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
     )
+
     meter_identificator = "707057500084111792"
     response = request_action(
         client, history, THIRD_PARTY_GSN_EXA, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.DELETE
     )
-    assert response
+    assert response != False
 
 
 @pytest.mark.integrationtest
@@ -37,14 +42,18 @@ def test_third_party_add():
     Returns:
 
     """
-    client, history = APIClient.get_zeep_client(
-        wsdl=WSDL_FILES_CONFIG_TEST['MARKET_PROCESSES'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.MARKET_PROCESSES,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
     )
+
     meter_identificator = "707057500084111792"
     response = request_action(
         client, history, THIRD_PARTY_GSN_EXA, meter_identificator=meter_identificator, action=THIRD_PARTY_ACTION.ADD
     )
-    assert response
+    assert response != False
 
 
 @pytest.mark.integrationtest
@@ -54,12 +63,15 @@ def test_poll_consumption():
     Returns:
 
     """
-    client, history = APIClient.get_zeep_client(
-        wsdl=WSDL_FILES_CONFIG_TEST['POOL_METERING'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.POOL_METERING_VALUES,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
     )
 
     response = poll_consumption(client, history, THIRD_PARTY_GSN_EXA)
-    assert response
+    assert response is not None
 
 
 @pytest.mark.integrationtest
@@ -73,11 +85,14 @@ def test_request_consumption():
     start = datetime.datetime(2022, 5, 1)
     end = start + datetime.timedelta(days=7)
 
-    client, history = APIClient.get_zeep_client(
-        wsdl=WSDL_FILES_CONFIG_TEST['QUERY'], secure=True, key_file=KEY_FILE, cert_file=CERT_FILE
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.QUERY,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
     )
 
     response = request_consumption(
         client, history, meter_identificator, sender_gsn=THIRD_PARTY_GSN_EXA, start=start, end=end
     )
-    assert response
+    assert response != False

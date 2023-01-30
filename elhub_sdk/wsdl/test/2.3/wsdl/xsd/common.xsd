@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:no:elhub:emif:wsdl:common:v2" targetNamespace="urn:no:elhub:emif:wsdl:common:v2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.3">
+	<xsd:element name="ElhubSOAPFault" type="tns:ElhubSOAPFaultType"/>
+	<xsd:complexType name="ElhubSOAPFaultType">
+		<xsd:sequence>
+			<xsd:element name="CodeGroup" type="tns:CodeGroupType"/>
+			<xsd:element name="Description">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="100"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="ExceptionDateTime">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:dateTime">
+						<xsd:pattern value=".+T.+(Z|[+-].+)"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="FaultText" minOccurs="0">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="1000"/>
+						<xsd:minLength value="1"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="CodeGroupType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="XSD"/>
+			<xsd:enumeration value="Compression"/>
+			<xsd:enumeration value="Security"/>
+			<xsd:enumeration value="System"/>
+			<xsd:enumeration value="UUID"/>
+			<xsd:enumeration value="Size"/>
+			<xsd:enumeration value="Date"/>
+			<xsd:enumeration value="Other"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>
