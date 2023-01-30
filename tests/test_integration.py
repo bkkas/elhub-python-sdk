@@ -6,7 +6,7 @@ import pytest
 from elhub_sdk.client import APIClient, ElHubEnvironment, ElHubService
 from elhub_sdk.consumption import poll_consumption, request_consumption
 from elhub_sdk.enums import THIRD_PARTY_ACTION
-from elhub_sdk.settings import CERT_FILE, KEY_FILE, WSDL_FILES_CONFIG_TEST
+from elhub_sdk.settings import CERT_FILE, KEY_FILE
 from elhub_sdk.third_party import request_action
 from tests.tests_examples.config import THIRD_PARTY_GSN_EXA
 
