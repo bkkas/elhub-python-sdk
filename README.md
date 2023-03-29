@@ -24,7 +24,7 @@ at the following if you are interested.
 
 ## License
 
-GPL-3.0
+LGPL-3.0
 
 
 ## Credits
