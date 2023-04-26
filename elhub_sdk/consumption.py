@@ -80,7 +80,7 @@ def request_consumption(
                 'Identification': {'_value_1': ELHUB_GSN, 'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value}
             },
         },
-        ProcessEnergyContext={  # https://dok.elhub.no/ediel200utkast/general#General-Process
+        ProcessEnergyContext={  # https://dok.elhub.no/ediel2/general#General-Process
             'EnergyBusinessProcess': {
                 '_value_1': BSR_IDS.METERING_VALUES.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value,
