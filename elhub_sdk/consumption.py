@@ -19,7 +19,6 @@ from zeep.plugins import HistoryPlugin
 from elhub_sdk.constants import ELHUB_GSN, TIME_FORMAT
 from elhub_sdk.enums import (
     BSR_IDS,
-    DOCUMENT_TYPE_EBIX,
     DOCUMENT_TYPE_UN_CEFACT,
     ENERGY_INDUSTRY_CLASSIFICATION,
     LIST_AGENCY_IDENTIFIER,
@@ -60,8 +59,8 @@ def request_consumption(
         Header={
             'Identification': uuid.uuid4(),
             'DocumentType': {
-                '_value_1': DOCUMENT_TYPE_EBIX.METERING_DATA.value,
-                'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.EBIX.value,
+                '_value_1': DOCUMENT_TYPE_UN_CEFACT.QUERY.value,
+                'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.UN_CEFACT.value,
             },
             'Creation': f'{datetime.utcnow().strftime(TIME_FORMAT)}',
             'PhysicalSenderEnergyParty': {
