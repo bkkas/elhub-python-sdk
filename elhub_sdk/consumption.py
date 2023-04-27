@@ -19,7 +19,6 @@ from zeep.plugins import HistoryPlugin
 from elhub_sdk.constants import ELHUB_GSN, TIME_FORMAT
 from elhub_sdk.enums import (
     BSR_IDS,
-    DOCUMENT_TYPE_EBIX,
     DOCUMENT_TYPE_UN_CEFACT,
     ENERGY_INDUSTRY_CLASSIFICATION,
     LIST_AGENCY_IDENTIFIER,
