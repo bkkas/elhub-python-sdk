@@ -99,7 +99,7 @@ def request_action(
                 'Identification': {'_value_1': ELHUB_GSN, 'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value}
             },
         },
-        ProcessEnergyContext={  # https://dok.elhub.no/ediel200utkast/general#General-Process
+        ProcessEnergyContext={  # https://dok.elhub.no/ediel2/general#General-Process
             'EnergyBusinessProcess': {
                 '_value_1': BSR_IDS.THIRD_PARTY.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value,

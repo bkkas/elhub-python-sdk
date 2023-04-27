@@ -18,7 +18,7 @@ class LIST_AGENCY_IDENTIFIER(Enum):
 
 class DOCUMENT_TYPE_EBIX(Enum):
     """
-    Metering data: https://dok.elhub.no/ediel200utkast/document-type
+    Metering data: https://dok.elhub.no/ediel2/document-type
     """
 
     CHANGE_DATA = "E10"
@@ -45,7 +45,7 @@ class SCHEME_AGENCY_IDENTIFIER(Enum):
 class BSR_IDS(Enum):
     """
     Query type
-    https://dok.elhub.no/ediel200utkast/elhub-brs-identifications
+    https://dok.elhub.no/ediel2/elhub-brs-identifications
     """
 
     METERING_VALUES = "BRS-NO-315"
@@ -56,7 +56,7 @@ class BSR_IDS(Enum):
 class ROLES(Enum):
     """
     Roles:
-        https://dok.elhub.no/ediel200utkast/roles-and-domains
+        https://dok.elhub.no/ediel2/roles-and-domains
     """
 
     THIRD_PARTY = "AG"
@@ -65,7 +65,7 @@ class ROLES(Enum):
 
 class QUERY_MARKET(Enum):
     """
-    https://dok.elhub.no/ediel200utkast/5-query-from-market-parties
+    https://dok.elhub.no/ediel2/5-query-from-market-parties
     """
 
     METERING_VALUES_TIME_SERIES = "MVTS"
@@ -74,7 +74,7 @@ class QUERY_MARKET(Enum):
 class ENERGY_INDUSTRY_CLASSIFICATION(Enum):
     """
     Industry codes
-    https://dok.elhub.no/ediel200utkast/general
+    https://dok.elhub.no/ediel2/general
     """
 
     ELECTRICITY_SUPPLY = "23"

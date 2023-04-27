@@ -23,7 +23,7 @@ def get_meter_characteristics(
     process_role: ROLES = ROLES.THIRD_PARTY,
 ) -> Optional[str]:
     """
-    https://dok.elhub.no/ediel200utkast/requestupfrontmeteringpointcharacteristics
+    https://dok.elhub.no/ediel2/requestupfrontmeteringpointcharacteristics
     Args:
         client: zeep client
         history: zeep history
@@ -60,7 +60,7 @@ def get_meter_characteristics(
                 'Identification': {'_value_1': ELHUB_GSN, 'schemeAgencyIdentifier': SCHEME_AGENCY_IDENTIFIER.GS1.value}
             },
         },
-        ProcessEnergyContext={  # https://dok.elhub.no/ediel200utkast/general#General-Process
+        ProcessEnergyContext={  # https://dok.elhub.no/ediel2/general#General-Process
             'EnergyBusinessProcess': {
                 '_value_1': BSR_IDS.METERING_POINT_CHARACTERISTICS.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value,
