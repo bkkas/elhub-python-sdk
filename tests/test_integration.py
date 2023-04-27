@@ -5,12 +5,32 @@ import pytest
 
 from elhub_sdk.client import APIClient, ElHubEnvironment, ElHubService
 from elhub_sdk.consumption import poll_consumption, request_consumption
+from elhub_sdk.enrollment import get_meter_characteristics
 from elhub_sdk.enums import THIRD_PARTY_ACTION
 from elhub_sdk.settings import CERT_FILE, KEY_FILE
 from elhub_sdk.third_party import request_action
 from tests.tests_examples.config import THIRD_PARTY_GSN_EXA
 
 logger = logging.getLogger(__name__)
+
+
+@pytest.mark.integrationtest
+def test_meter_characteristics():
+    """Test meter characteristics"""
+    meter_identificator = "707057500010503271"
+
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.QUERY,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
+    )
+
+    response = get_meter_characteristics(
+        client=client, history=history, meter_identificator=meter_identificator, sender_gsn=THIRD_PARTY_GSN_EXA
+    )
+
+    assert response is not None
 
 
 @pytest.mark.integrationtest
