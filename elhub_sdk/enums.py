@@ -88,3 +88,11 @@ class THIRD_PARTY_ACTION(Enum):
     ADD = "Add"
     DELETE = "Delete"
     UPDATE = "Update"
+
+class STATUS_TYPE(Enum):
+    """
+    Status Type
+    """
+
+    ACCEPTED = '39'
+    REJECTED = '41'
