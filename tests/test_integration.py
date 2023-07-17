@@ -6,6 +6,7 @@ import pytest
 from elhub_sdk.client import APIClient, ElHubEnvironment, ElHubService
 from elhub_sdk.consumption import poll_consumption, request_consumption
 from elhub_sdk.enrollment import get_meter_characteristics
+from elhub_sdk.acknolwedgment import acknowledge_poll
 from elhub_sdk.enums import THIRD_PARTY_ACTION
 from elhub_sdk.settings import CERT_FILE, KEY_FILE
 from elhub_sdk.third_party import request_action
@@ -114,5 +115,31 @@ def test_request_consumption():
 
     response = request_consumption(
         client, history, meter_identificator, sender_gsn=THIRD_PARTY_GSN_EXA, start=start, end=end
+    )
+    assert response != False
+
+
+@pytest.mark.integrationtest
+def test_acknowledge_poll_metering_values():
+    """
+    Acknowledging Poll for metering values for given Original Business Document Reference
+    Returns:
+
+    """
+
+    original_business_document_reference = "66666666-ab50-4d9a-95bf-ae3964f8ea96"
+
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.METERING_VALUES,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
+    )
+
+    response = acknowledge_poll(
+        client,
+        history,
+        sender_gsn=THIRD_PARTY_GSN_EXA,
+        original_business_document_reference=original_business_document_reference,
     )
     assert response != False
