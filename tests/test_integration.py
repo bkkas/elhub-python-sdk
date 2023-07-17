@@ -143,3 +143,29 @@ def test_acknowledge_poll_metering_values():
         original_business_document_reference=original_business_document_reference,
     )
     assert response != False
+
+
+@pytest.mark.integrationtest
+def test_acknowledge_poll_market_processes():
+    """
+    Acknowledging Poll for metering values for given Original Business Document Reference
+    Returns:
+
+    """
+
+    original_business_document_reference = "66666666-ab50-4d9a-95bf-ae3964f8ea96"
+
+    client, history = APIClient.get_client(
+        environment=ElHubEnvironment.TEST,
+        service=ElHubService.MARKET_PROCESSES,
+        key_file=KEY_FILE,
+        cert_file=CERT_FILE,
+    )
+
+    response = acknowledge_poll(
+        client,
+        history,
+        sender_gsn=THIRD_PARTY_GSN_EXA,
+        original_business_document_reference=original_business_document_reference,
+    )
+    assert response != False
