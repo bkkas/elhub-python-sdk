@@ -88,3 +88,14 @@ class THIRD_PARTY_ACTION(Enum):
     ADD = "Add"
     DELETE = "Delete"
     UPDATE = "Update"
+
+
+
+class STATUS_TYPE(Enum):
+    """
+    Status Type
+    ref: https://dok.elhub.no/ediel2/acknowledgement
+    """
+
+    ACCEPTED = '39'
+    REJECTED = '41'
