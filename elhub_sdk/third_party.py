@@ -46,7 +46,7 @@ def request_action(
     meter_identificator: str,
     action: THIRD_PARTY_ACTION,
     extended_storage=False,
-):
+) -> Dict[str, Any]:
     """
 
     Args:

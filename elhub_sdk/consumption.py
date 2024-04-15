@@ -11,7 +11,7 @@ import logging
 import uuid
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict, Optional
 
 import zeep
 from zeep.plugins import HistoryPlugin
@@ -114,7 +114,7 @@ def request_consumption(
 
 def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
-) -> Optional[str]:
+) -> Dict[str, Any]:
     """
     Poll WSDL
     Args:
