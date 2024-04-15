@@ -114,8 +114,14 @@ def request_action(
     )
 
     try:
+        logger.info("Sending UpdateThirdPartyAccess request: %s", eh_request)
         response = client.service.UpdateThirdPartyAccess(eh_request)
-        return response
+        return {'success': True, 'response': response}
+    except zeep.exceptions.Fault as fault:
+        error_message = f"SOAP Fault occurred: {fault.message}"
+        logger.error(error_message, exc_info=True)
+        return {'success': False, 'error': error_message, 'details': str(fault.detail)}
     except Exception as ex:
-        logger.exception(ex)
-    return False
+        error_message = "An unexpected error occurred during the SOAP request."
+        logger.exception(error_message)
+        return {'success': False, 'error': error_message, 'details': str(ex)}
