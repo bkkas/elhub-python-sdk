@@ -11,7 +11,7 @@ import logging
 import uuid
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from typing import Optional
+from typing import Any, Dict
 
 import zeep
 from zeep.plugins import HistoryPlugin
@@ -114,7 +114,7 @@ def request_consumption(
 
 def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
-) -> Optional[str]:
+) -> Dict[str, Any]:
     """
     Poll WSDL
     Args:
@@ -166,9 +166,15 @@ def poll_consumption(
         response = client.service.PollForData(request)
         if "ResultDataSet" in response and history.last_received:
             xml_response = ET.tostring(history.last_received["envelope"], encoding="unicode")
-            return xml_response
-        logger.error(f"Unknown response: {response}")
-    except zeep.exceptions.Fault as ex:
-        logger.error(f"Bad response: {ex}")
+            return {'success': True, 'data': xml_response}
 
-    return None
+        logger.error(f"Unknown response: {response}")
+        return {'success': False, 'error': 'Unknown response format', 'details': str(response)}
+    
+    except zeep.exceptions.Fault as ex:
+        logger.error(f"SOAP Fault occurred: {ex}")
+        return {'success': False, 'error': 'SOAP Fault occurred', 'details': str(ex)}
+
+    except Exception as ex:
+        logger.error(f"An unexpected error occurred: {ex}")
+        return {'success': False, 'error': 'Unexpected error', 'details': str(ex)}
