@@ -11,7 +11,7 @@ import logging
 import uuid
 import xml.etree.ElementTree as ET
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 import zeep
 from zeep.plugins import HistoryPlugin
