@@ -9,6 +9,7 @@ The data will be made available on the polling service. If the query is related 
 """
 import logging
 import uuid
+import traceback
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from typing import Any, Dict
@@ -103,6 +104,7 @@ def request_consumption(
     )
 
     try:
+        logger.info(f"Elhub request: {eh_request}")
         response = client.service.RequestDataFromElhub(eh_request)
         if history.last_received:
             return {'success': True, 'data': response}
@@ -111,10 +113,11 @@ def request_consumption(
     except zeep.exceptions.Fault as ex:
         logger.error(f"SOAP Fault occurred: {ex}")
         return {'success': False, 'error': 'SOAP Fault occurred', 'details': str(ex)}
-
     except Exception as ex:
-        logger.error(f"An unexpected error occurred: {ex}")
-        return {'success': False, 'error': 'Unexpected error', 'details': str(ex)}
+        traceback_details = traceback.format_exc()
+        logger.error(f"An unexpected error occurred: {ex}\nTraceback: {traceback_details}")
+        return {'success': False, 'error': 'Unexpected error', 'details': str(ex) if str(ex) else "No details provided"}
+
 
 
 def poll_consumption(
