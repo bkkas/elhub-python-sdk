@@ -119,6 +119,7 @@ def request_consumption(
         return {'success': False, 'error': 'Unexpected error', 'details': str(ex) if str(ex) else "No details provided"}
 
 def log_history(history):
+    """ Log the history plugin """
     for hist in [history.last_sent, history.last_received]:
         if hist is not None and "envelope" in hist:
             envelope_str = ET.tostring(hist["envelope"], encoding='unicode')
