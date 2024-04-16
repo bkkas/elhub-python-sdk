@@ -104,7 +104,7 @@ def request_consumption(
     )
 
     try:
-        cleaned_eh_request = remove_none_values(eh_request)
+        cleaned_eh_request = clean_zeep_object(eh_request)
         logger.info(f"Elhub request: {cleaned_eh_request}")
         response = client.service.RequestDataFromElhub(cleaned_eh_request)
         if history.last_received:
@@ -119,16 +119,24 @@ def request_consumption(
         logger.error(f"An unexpected error occurred: {ex}\nTraceback: {traceback_details}")
         return {'success': False, 'error': 'Unexpected error', 'details': str(ex) if str(ex) else "No details provided"}
 
-def remove_none_values(d):
+def clean_zeep_object(zeep_object):
     """
-    Recursively remove all None values from dictionaries.
+    Recursively remove attributes set to None from a Zeep complex type object.
     """
-    if isinstance(d, dict):
-        return {k: remove_none_values(v) for k, v in d.items() if v is not None}
-    elif isinstance(d, list):
-        return [remove_none_values(v) for v in d if v is not None]
-    else:
-        return d
+    to_delete = []
+    for attribute in dir(zeep_object):
+        if attribute.startswith('__'):
+            continue
+        value = getattr(zeep_object, attribute, None)
+        if value is None:
+            to_delete.append(attribute)
+        elif isinstance(value, list):
+            setattr(zeep_object, attribute, [clean_zeep_object(item) for item in value if item is not None])
+        elif hasattr(value, '__dict__'):
+            clean_zeep_object(value)
+
+    for attribute in to_delete:
+        delattr(zeep_object, attribute)
 
 def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
