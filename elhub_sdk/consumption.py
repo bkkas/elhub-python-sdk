@@ -123,32 +123,31 @@ def clean_zeep_object(zeep_object):
     """
     Recursively remove attributes set to None from a Zeep complex type object.
     """
-    to_delete = []
-    for attribute in dir(zeep_object):
-        if attribute.startswith('__'):
-            continue
-
-        try:
+    if isinstance(zeep_object, list):
+        return [clean_zeep_object(item) for item in zeep_object if item is not None]
+    elif hasattr(zeep_object, '__dict__') or isinstance(zeep_object, object):
+        to_delete = []
+        for attribute in dir(zeep_object):
+            if attribute.startswith('__') or attribute.startswith('_'):
+                continue
+            
             value = getattr(zeep_object, attribute, None)
             if value is None:
                 to_delete.append(attribute)
-            elif isinstance(value, list):
+            elif isinstance(value, list) or hasattr(value, '__dict__'):
+                cleaned_value = clean_zeep_object(value)
+                setattr(zeep_object, attribute, cleaned_value)
+        
+        for attribute in to_delete:
+            if hasattr(zeep_object, attribute):
                 try:
-                    setattr(zeep_object, attribute, [clean_zeep_object(item) for item in value if item is not None])
-                except AttributeError as e:
-                    logger.warn(f"Error updating list attribute {attribute}: {e}")
-            elif hasattr(value, '__dict__'):
-                clean_zeep_object(value)
-        except AttributeError as e:
-            logger.warn(f"Error accessing or processing attribute {attribute}: {e}")
-
-    for attribute in to_delete:
-        try:
-            delattr(zeep_object, attribute)
-        except AttributeError as e:
-            logger.warn(f"Error deleting attribute {attribute}: {e}")
-    
+                    delattr(zeep_object, attribute)
+                except AttributeError as error:
+                    logger.warning(f"Failed to delete attribute {attribute}: {error}")
+                    
+        return zeep_object
     return zeep_object
+
 
 def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
