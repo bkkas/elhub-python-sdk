@@ -38,7 +38,7 @@ def request_consumption(
     start: datetime,
     end: datetime,
     process_role: ROLES = ROLES.THIRD_PARTY,
-) -> bool:
+) -> Dict[str, Any]:
     """
     Query WSDL
     Args:
@@ -105,11 +105,16 @@ def request_consumption(
     try:
         response = client.service.RequestDataFromElhub(eh_request)
         if history.last_received:
-            return True
+            return {'success': True, 'data': response}
         logger.error(f"Unknown error: {response}")
+        return {'success': False, 'error': 'Unknown response format', 'details': str(response)}
+    except zeep.exceptions.Fault as ex:
+        logger.error(f"SOAP Fault occurred: {ex}")
+        return {'success': False, 'error': 'SOAP Fault occurred', 'details': str(ex)}
+
     except Exception as ex:
-        logger.exception(ex)
-    return False
+        logger.error(f"An unexpected error occurred: {ex}")
+        return {'success': False, 'error': 'Unexpected error', 'details': str(ex)}
 
 
 def poll_consumption(
