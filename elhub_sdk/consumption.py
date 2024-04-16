@@ -126,23 +126,29 @@ def clean_zeep_object(zeep_object):
     to_delete = []
     for attribute in dir(zeep_object):
         if attribute.startswith('__'):
-            continue  
-        
-        if hasattr(zeep_object, attribute):
+            continue
+
+        try:
             value = getattr(zeep_object, attribute, None)
             if value is None:
                 to_delete.append(attribute)
             elif isinstance(value, list):
-                setattr(zeep_object, attribute, [clean_zeep_object(item) for item in value if item is not None])
-            elif hasattr(value, '__dict__') or isinstance(value, object):
+                try:
+                    setattr(zeep_object, attribute, [clean_zeep_object(item) for item in value if item is not None])
+                except AttributeError as e:
+                    logger.warn(f"Error updating list attribute {attribute}: {e}")
+            elif hasattr(value, '__dict__'):
                 clean_zeep_object(value)
+        except AttributeError as e:
+            logger.warn(f"Error accessing or processing attribute {attribute}: {e}")
 
     for attribute in to_delete:
-        if hasattr(zeep_object, attribute):
+        try:
             delattr(zeep_object, attribute)
-
+        except AttributeError as e:
+            logger.warn(f"Error deleting attribute {attribute}: {e}")
+    
     return zeep_object
-
 
 def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
