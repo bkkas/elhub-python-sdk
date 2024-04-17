@@ -17,7 +17,6 @@ request have been acknowledged.
 import logging
 import uuid
 from datetime import datetime
-from typing import Optional, Literal
 
 import zeep
 from zeep.plugins import HistoryPlugin
