@@ -51,6 +51,7 @@ class BSR_IDS(Enum):
     METERING_VALUES = "BRS-NO-315"
     THIRD_PARTY = "BRS-NO-622"
     METERING_POINT_CHARACTERISTICS = "BRS-NO-611"
+    POLL = "POLL"
 
 
 class ROLES(Enum):
@@ -88,7 +89,6 @@ class THIRD_PARTY_ACTION(Enum):
     ADD = "Add"
     DELETE = "Delete"
     UPDATE = "Update"
-
 
 
 class STATUS_TYPE(Enum):
