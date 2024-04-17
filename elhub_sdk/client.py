@@ -78,7 +78,9 @@ class APIClient:
 
         """
         history = HistoryPlugin()
-
+        if(key_file is None or cert_file is None):
+            key_file = os.getenv('KEY_FILE')
+            cert_file = os.getenv('CERT_FILE')
         client_settings = Settings(strict=False)
         binary_signature = None
         if secure:
