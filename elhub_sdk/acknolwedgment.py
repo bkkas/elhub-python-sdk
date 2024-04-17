@@ -40,7 +40,6 @@ def acknowledge_poll(
     history: HistoryPlugin,
     sender_gsn: str,
     original_business_document_reference: str,
-    status_type: Optional[Literal[39, 41]],
     process_role: ROLES = ROLES.THIRD_PARTY,
 ) -> bool:
     """
@@ -51,15 +50,13 @@ def acknowledge_poll(
         meter_identificator:
         sender_gsn:
         original_business_document_reference:
-        status_type:
         process_role:
 
     Returns:
 
     """
 
-    factory = client.type_factory('ns4')
-    status = STATUS_TYPE.ACCEPTED.value if status_type is None else status_type
+    factory = client.type_factory('ns7')
     eh_request = factory.Acknowledgement(
         Header={
             'Identification': uuid.uuid4(),
@@ -86,7 +83,7 @@ def acknowledge_poll(
         },
         ProcessEnergyContext={  # https://dok.elhub.no/ediel2/general#General-Process
             'EnergyBusinessProcess': {
-                '_value_1': BSR_IDS.METERING_VALUES.value,
+                '_value_1': BSR_IDS.POLL.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value,
             },
             'EnergyBusinessProcessRole': {
@@ -97,7 +94,7 @@ def acknowledge_poll(
         },
         PayloadResponseEvent={
             'StatusType': {
-                '_value_1': status,
+                '_value_1': STATUS_TYPE.ACCEPTED.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.UN_CEFACT.value,
             },
             'OriginalBusinessDocumentReference': original_business_document_reference,
@@ -105,7 +102,7 @@ def acknowledge_poll(
     )
 
     try:
-        response = client.service.Acknowledge(eh_request)
+        response = client.service.AcknowledgePoll(eh_request)
         if history.last_received:
             return True
         logger.error(f"Unknown error: {response}")
