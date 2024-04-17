@@ -2,7 +2,7 @@
 ElHub API client
 """
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from enum import Enum
 from typing import Tuple
 
@@ -123,7 +123,7 @@ class BinarySignatureTimestamp(BinarySignature):
         """
         security = utils.get_security_header(envelope)
 
-        created = datetime.utcnow()
+        created = datetime.now(timezone.utc)
         expired = created + timedelta(seconds=1 * 60)
 
         timestamp = utils.WSU('Timestamp')
