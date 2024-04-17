@@ -6,6 +6,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from enum import Enum
 from typing import Tuple
+import xml.etree.ElementTree as ET
 
 from zeep import Client, Settings
 from zeep.plugins import HistoryPlugin
@@ -133,7 +134,8 @@ class BinarySignatureTimestamp(BinarySignature):
         timestamp.append(utils.WSU('Expires', expired.replace(microsecond=0).isoformat() + 'Z'))
 
         security.append(timestamp)
-        logger.info(f"BinarySignatureTimestamp envelope: {envelope}")
+        envelope_string = ET.tostring(envelope, encoding='unicode')
+        logger.info(f"BinarySignatureTimestamp envelope: {envelope_string}")
         logger.info(f"BinarySignatureTimestamp headers: {headers}")
         super().apply(envelope, headers)
         return envelope, headers
