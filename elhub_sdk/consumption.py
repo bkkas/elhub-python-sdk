@@ -10,7 +10,6 @@ The data will be made available on the polling service. If the query is related 
 import logging
 import uuid
 import traceback
-from xml import etree
 import xml.etree.ElementTree as ET
 from datetime import datetime
 from typing import Any, Dict
@@ -105,7 +104,9 @@ def request_consumption(
     )
 
     try:
-        response = client.service.RequestDataFromElhub(eh_request)
+        cleaned_eh_request = clean_zeep_object(eh_request)
+        logger.info(f"Elhub request: {cleaned_eh_request}")
+        response = client.service.RequestDataFromElhub(cleaned_eh_request)
         if history.last_received:
             return {'success': True, 'data': response}
         logger.error(f"Unknown error: {response}")
@@ -114,11 +115,38 @@ def request_consumption(
         logger.error(f"SOAP Fault occurred: {ex}")
         return {'success': False, 'error': 'SOAP Fault occurred', 'details': str(ex)}
     except Exception as ex:
-        for hist in [history.last_sent, history.last_received]:
-            logger.info(etree.tostring(hist["envelope"], encoding="unicode", pretty_print=True))
         traceback_details = traceback.format_exc()
         logger.error(f"An unexpected error occurred: {ex}\nTraceback: {traceback_details}")
         return {'success': False, 'error': 'Unexpected error', 'details': str(ex) if str(ex) else "No details provided"}
+
+def clean_zeep_object(zeep_object):
+    """
+    Recursively remove attributes set to None from a Zeep complex type object.
+    """
+    if isinstance(zeep_object, list):
+        return [clean_zeep_object(item) for item in zeep_object if item is not None]
+    elif hasattr(zeep_object, '__dict__') or isinstance(zeep_object, object):
+        to_delete = []
+        for attribute in dir(zeep_object):
+            if attribute.startswith('__') or attribute.startswith('_'):
+                continue
+            
+            value = getattr(zeep_object, attribute, None)
+            if value is None:
+                to_delete.append(attribute)
+            elif isinstance(value, list) or hasattr(value, '__dict__'):
+                cleaned_value = clean_zeep_object(value)
+                setattr(zeep_object, attribute, cleaned_value)
+        
+        for attribute in to_delete:
+            if hasattr(zeep_object, attribute):
+                try:
+                    delattr(zeep_object, attribute)
+                except AttributeError as error:
+                    logger.warning(f"Failed to delete attribute {attribute}: {error}")
+                    
+        return zeep_object
+    return zeep_object
 
 
 def poll_consumption(
