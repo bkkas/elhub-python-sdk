@@ -104,9 +104,8 @@ def request_consumption(
     )
 
     try:
-        cleaned_eh_request = remove_none_values(eh_request)
-        logger.info(f"Elhub request: {cleaned_eh_request}")
-        response = client.service.RequestDataFromElhub(cleaned_eh_request)
+        logger.info(f"Elhub request: {eh_request}")
+        response = client.service.RequestDataFromElhub(eh_request)
         if history.last_received:
             return {'success': True, 'data': response}
         logger.error(f"Unknown error: {response}")
@@ -119,16 +118,7 @@ def request_consumption(
         logger.error(f"An unexpected error occurred: {ex}\nTraceback: {traceback_details}")
         return {'success': False, 'error': 'Unexpected error', 'details': str(ex) if str(ex) else "No details provided"}
 
-def remove_none_values(d):
-    """
-    Recursively remove all None values from dictionaries.
-    """
-    if isinstance(d, dict):
-        return {k: remove_none_values(v) for k, v in d.items() if v is not None}
-    elif isinstance(d, list):
-        return [remove_none_values(v) for v in d if v is not None]
-    else:
-        return d
+
 
 def poll_consumption(
     client: zeep.Client, history: HistoryPlugin, sender_gsn: str, process_role: ROLES = ROLES.THIRD_PARTY
