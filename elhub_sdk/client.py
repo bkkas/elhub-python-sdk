@@ -78,6 +78,11 @@ class APIClient:
 
         """
         history = HistoryPlugin()
+        if (key_file is None or key_file == "") or (cert_file is None or cert_file == ""):
+            key_file = os.getenv('ELHUB_KEY_FILE')
+            cert_file = os.getenv('ELHUB_CERT_FILE')
+            logger.info(f"Key file: {key_file}")
+            logger.info(f"Cert file: {cert_file}")
         client_settings = Settings(strict=False)
         binary_signature = None
         if secure:
@@ -135,7 +140,12 @@ class BinarySignatureTimestamp(BinarySignature):
         timestamp.append(utils.WSU('Expires', expired.replace(microsecond=0).isoformat() + 'Z'))
 
         security.append(timestamp)
-
+        if security is not None:
+            security_string = ET.tostring(security, encoding='unicode')
+            logger.info(f"BinarySignatureTimestamp security with timestamp: {security_string}")
+        envelope_string = ET.tostring(envelope, encoding='unicode')
+        logger.info(f"BinarySignatureTimestamp envelope: {envelope_string}")
+        logger.info(f"BinarySignatureTimestamp headers: {headers}")
         try:
             super().apply(envelope, headers)
         except Exception as e:
