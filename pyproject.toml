@@ -1,7 +1,7 @@
 [tool]
 [tool.poetry]
 name = "elhub-python-sdk"
-version = "0.1.6"
+version = "0.1.5"
 homepage = "https://github.com/bkkas/elhub-python-sdk"
 description = "Non official Python SDK for ElHub API."
 authors = ["Volte <jesus.condon@eviny.no>"]
