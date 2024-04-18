@@ -125,9 +125,7 @@ class BinarySignatureTimestamp(BinarySignature):
 
         """
         security = utils.get_security_header(envelope)
-        if security is not None:
-            security_string = ET.tostring(security, encoding='unicode')
-            logger.info(f"BinarySignatureTimestamp security: {security_string}")
+
         created = datetime.now(timezone.utc)
         expired = created + timedelta(seconds=1 * 60)
 
@@ -136,16 +134,10 @@ class BinarySignatureTimestamp(BinarySignature):
         timestamp.append(utils.WSU('Expires', expired.replace(microsecond=0).isoformat() + 'Z'))
 
         security.append(timestamp)
-        if security is not None:
-            security_string = ET.tostring(security, encoding='unicode')
-            logger.info(f"BinarySignatureTimestamp security with timestamp: {security_string}")
         envelope_string = ET.tostring(envelope, encoding='unicode')
         logger.info(f"BinarySignatureTimestamp envelope: {envelope_string}")
         logger.info(f"BinarySignatureTimestamp headers: {headers}")
-        try:
-            super().apply(envelope, headers)
-        except Exception as e:
-            logger.error(f"Zeep BinarySignature error: {e}")
+        super().apply(envelope, headers)
         return envelope, headers
 
     def verify(self, envelope):
