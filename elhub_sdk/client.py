@@ -1,7 +1,6 @@
 """
 ElHub API client
 """
-import logging
 import os
 from datetime import datetime, timedelta, timezone
 from enum import Enum
@@ -12,7 +11,6 @@ from zeep.plugins import HistoryPlugin
 from zeep.wsse import utils
 from zeep.wsse.signature import BinarySignature
 
-logger = logging.getLogger()
 
 class ElHubService(str, Enum):
     """
@@ -133,8 +131,6 @@ class BinarySignatureTimestamp(BinarySignature):
         timestamp.append(utils.WSU('Expires', expired.replace(microsecond=0).isoformat() + 'Z'))
 
         security.append(timestamp)
-        logger.info(f"BinarySignatureTimestamp envelope: {envelope}")
-        logger.info(f"BinarySignatureTimestamp headers: {headers}")
         super().apply(envelope, headers)
         return envelope, headers
 
