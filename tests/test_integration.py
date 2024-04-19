@@ -131,7 +131,7 @@ def test_acknowledge_poll_metering_values():
 
     client, history = APIClient.get_client(
         environment=ElHubEnvironment.TEST,
-        service=ElHubService.METERING_VALUES,
+        service=ElHubService.POOL_METERING_VALUES,
         key_file=KEY_FILE,
         cert_file=CERT_FILE,
     )

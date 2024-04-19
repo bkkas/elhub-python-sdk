@@ -13,6 +13,7 @@ acknowlegment was sucessfull poll again and check if the
 request have been acknowledged.
 
 """
+
 import logging
 import uuid
 from datetime import datetime
@@ -54,7 +55,7 @@ def acknowledge_poll(
 
     """
 
-    factory = client.type_factory('ns4')
+    factory = client.type_factory('ns7')
     eh_request = factory.Acknowledgement(
         Header={
             'Identification': uuid.uuid4(),
@@ -81,7 +82,7 @@ def acknowledge_poll(
         },
         ProcessEnergyContext={  # https://dok.elhub.no/ediel2/general#General-Process
             'EnergyBusinessProcess': {
-                '_value_1': BSR_IDS.METERING_VALUES.value,
+                '_value_1': BSR_IDS.POLL.value,
                 'listAgencyIdentifier': LIST_AGENCY_IDENTIFIER.ELHUB.value,
             },
             'EnergyBusinessProcessRole': {
@@ -100,7 +101,7 @@ def acknowledge_poll(
     )
 
     try:
-        response = client.service.Acknowledge(eh_request)
+        response = client.service.AcknowledgePoll(eh_request)
         if history.last_received:
             return True
         logger.error(f"Unknown error: {response}")
